@@ -1,0 +1,22 @@
+<%# navigation styled for Twitter Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle navbar-static-top">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Home</a>
+      <a href="#" class="navbar-brand">Tech News</a>
+      <a href="#" class="navbar-brand">Interview Questions <span class="badge">1</span></a>
+      <a href="#" class="navbar-brand">Algorithms <span class="badge">1</span></a>
+    </div>
+    <div class="collapse navbar-collapse pull-right">
+      <!-- <ul class="nav navbar-nav"> -->
+        <%= render 'layouts/navigation_links' %>
+      <!-- </ul> -->
+    </div>
+  </div>
+</nav>

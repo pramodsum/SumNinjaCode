@@ -1,0 +1,158 @@
+// import the CSS framework
+@import "bootstrap";
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  background-color: #474747;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
+
+body {
+  background-color:#474747;
+}
+
+.badge {
+  background-color:#FF3D73;
+}
+
+.jumbotron {
+  background-color: #fafafa;
+}
+
+@keyframes typing { from { width: 0; } }
+@keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: #36E0C6 }
+}
+@-moz-keyframes typing { from { width: 0; } }
+@-moz-keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: #36E0C6 }
+}
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: #36E0C6 }
+}
+@-o-keyframes typing { from { width: 0; } }
+@-o-keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: #36E0C6 }
+}
+@-ms-keyframes typing { from { width: 0; } }
+@-ms-keyframes blink-caret { 
+    from, to { border-color: transparent }
+    50% { border-color: #36E0C6 }
+}
+
+.jumbotron h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 20ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
+    
+  animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -moz-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -o-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -ms-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+}
+
+a {
+  color: #36E0C6;
+}
+a:hover {
+  color: #FF3D73;
+}
+
+.home-page {
+  
+}
+
+.top-hits {
+  color: #eee;
+}
+
+.panel-heading{
+  text-align:center;
+}
+
+.top-hits h4 {
+  font-weight:bold;
+  color: #FF3D73;
+  font-family: Consolas, monospace;
+}
+
+.top-hits span.glyphicon {
+    font-size: 2em;
+}
+
+blockquote {
+    border-left: none;
+}
+
+.navbar {
+  font-family: Consolas, monospace;
+}
+
+footer a {
+  font-weight:bold;
+  font-family: Consolas, monospace;
+}
+
+.modal-header {
+  color: #FF3D73;
+  font-family: Consolas, monospace;
+}
+
+footer p {
+  color: #474747;
+}
+
+blockquote {
+  padding-bottom: 0px;
+}
