@@ -6,6 +6,9 @@ group :development do
   gem 'rails_layout'
 end
 
+# ensure applications get the most out of the Heroku platform
+gem 'rails_12factor'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
