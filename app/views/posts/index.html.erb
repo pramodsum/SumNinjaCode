@@ -1,0 +1,36 @@
+<div class="new_post"><h1>Listing posts</h1></div>
+ 
+<table>
+  <% @posts.each do |post| %>
+    <tr><div class="panel panel-default">
+        <div class="panel-heading">
+          <div style="float: right; vertical-align: middle;"> 
+            <% if post.tag == "news" %>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-globe fa-stack fa-inverse"></i>
+              </span>
+            <% elsif post.tag == "interview" %>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-code fa-stack fa-inverse"></i>
+              </span>
+            <% else %>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-terminal fa-stack fa-inverse"></i>
+              </span>
+            <% end %>
+          </div>
+          <p><%= post.title %>
+          <%= post.tag %>
+          </p>
+          <small><%= post.created_at.to_s(:db) %></small>
+        </div>
+        <div class="panel-body">
+          <%= post.text %>
+        </div>
+      </div>
+    </tr>
+  <% end %>
+</table>

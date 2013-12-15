@@ -1,0 +1,47 @@
+<div class="text-center"><button type="button" class="navbar-nav btn" data-toggle="modal" href="#postModal">New Post</button></div>
+
+<!-- Modal -->
+<div class="modal fade span2" id="postModal" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">New Post</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for :post, :class => "form-horizontal", url: posts_path do |f| %>
+
+          <div class="form-group">
+            <%= f.label :title %><br>
+            <%= f.text_field :title, :class => "form-control" %>
+          </div>
+
+          <div class="form-group" data-toggle="buttons">
+            <%= f.label :tag %><br>
+            <label for="tag_news" tag class="btn btn-default btn-xs">
+              <%= radio_button_tag :tag, "news" %> News Article
+            </label>
+
+            <label for="tag_interview" class="btn btn-default btn-xs">
+              <%= radio_button_tag :tag, "interview" %> Interview Question
+            </label>
+
+            <label for="tag_algorithm" class="btn btn-default btn-xs">
+              <%= radio_button_tag :tag, "algorithm" %> Algorithm
+            </label>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :text %><br>
+            <%= f.text_area :text, :class => "form-control", :size =>"24x10" %>
+          </div>
+         
+          <p>
+            <%= f.submit 'Post', :class => "btn" %>
+          </p>
+
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
