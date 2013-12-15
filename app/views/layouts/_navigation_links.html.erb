@@ -1,3 +1,14 @@
 <%# add navigation links to this file %>
-<%= link_to 'About', root_path, class: 'navbar-brand' %>
-<%= link_to 'Resume', root_path, class: 'navbar-brand' %>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="nav-collapse collapse">
+	<ul class="nav">
+	  <li><a href="#" class="navbar-brand">Tech News <span class="badge">0</span></a></li>
+	  <li><a href="#" class="navbar-brand">Interview Questions <span class="badge">0</span></a></li>
+	  <li><a href="#" class="navbar-brand">Algorithms <span class="badge">0</span></a></li>
+	  <li><a href="#" class="navbar-brand">Quotes</a></li>
+	</ul>
+	<ul class="nav pull-right">
+	  <li><%= link_to 'About Me', root_path, class: 'navbar-brand' %></li>
+	  <li><%= link_to 'Resume', root_path, class: 'navbar-brand' %></li>
+	</ul>
+</div><!-- /.navbar-collapse -->

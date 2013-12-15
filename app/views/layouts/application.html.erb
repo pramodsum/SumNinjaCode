@@ -5,6 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Just Sum Ninja Code" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "SumNinjaCode" %>">
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
 
