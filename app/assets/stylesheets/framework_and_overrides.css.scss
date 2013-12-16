@@ -127,11 +127,18 @@ a:hover {
   font-family: Consolas, monospace;
 }
 
+.top-hits {
+  font-weight:bold;
+  color: #FF3D73;
+  font-family: Consolas, monospace;
+}
+
 .top-hits span.glyphicon {
     font-size: 2em;
 }
 
 .panel-body {
+  font-weight:normal;
   color: #000000;
 }
 
@@ -188,5 +195,68 @@ input[type=radio]:hover {
   -o-animation: typing 2s steps(14, end),
                      blink-caret 1s step-end infinite;
   -ms-animation: typing 2s steps(14, end),
+                     blink-caret 1s step-end infinite;
+}
+
+.algo_title h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 12ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
+    
+  animation: typing 2s steps(12, end),
+                     blink-caret 1s step-end infinite;
+  -moz-animation: typing 2s steps(12, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 2s steps(12, end),
+                     blink-caret 1s step-end infinite;
+  -o-animation: typing 2s steps(12, end),
+                     blink-caret 1s step-end infinite;
+  -ms-animation: typing 2s steps(12, end),
+                     blink-caret 1s step-end infinite;
+}
+
+.interview_title h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 20ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
+    
+  animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -moz-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -o-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+  -ms-animation: typing 2s steps(20, end),
+                     blink-caret 1s step-end infinite;
+}
+
+.news_title h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 5ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
+    
+  animation: typing 2s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -moz-animation: typing 2s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 2s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -o-animation: typing 2s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -ms-animation: typing 2s steps(5, end),
                      blink-caret 1s step-end infinite;
 }

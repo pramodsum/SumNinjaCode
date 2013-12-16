@@ -1,36 +1,121 @@
-<div class="new_post"><h1>Listing posts</h1></div>
- 
-<table>
-  <% @posts.each do |post| %>
-    <tr><div class="panel panel-default">
-        <div class="panel-heading">
-          <div style="float: right; vertical-align: middle;"> 
-            <% if post.tag == "news" %>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square fa-stack-2x"></i>
-                <i class="fa fa-globe fa-stack fa-inverse"></i>
-              </span>
-            <% elsif post.tag == "interview" %>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square fa-stack-2x"></i>
-                <i class="fa fa-code fa-stack fa-inverse"></i>
-              </span>
-            <% else %>
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-square fa-stack-2x"></i>
-                <i class="fa fa-terminal fa-stack fa-inverse"></i>
-              </span>
-            <% end %>
-          </div>
-          <p><%= post.title %>
-          <%= post.tag %>
-          </p>
-          <small><%= post.created_at.to_s(:db) %></small>
-        </div>
-        <div class="panel-body">
-          <%= post.text %>
-        </div>
-      </div>
-    </tr>
-  <% end %>
-</table>
+<% if params[:scope] == "news" %> 
+	<div class="news_title"><h1>News</h1></div><br>
+	<% if @posts.news.empty? %> 
+		<%= render "posts/empty" %>
+	<% else %> 
+		<table>
+		  <% @posts.news.each do |post| %>
+			<tr><div class="panel panel-default">
+			    <div class="panel-heading">
+			      <div style="float: right; vertical-align: middle;"> 
+			        <% if post.tag == "news" %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-globe fa-stack fa-inverse"></i>
+			          </span>
+			        <% elsif post.tag == "interview" %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-code fa-stack fa-inverse"></i>
+			          </span>
+			        <% else %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-terminal fa-stack fa-inverse"></i>
+			          </span>
+			        <% end %>
+			      </div>
+			      <p><%= post.title %>
+			      <%= post.tag %>
+			      </p>
+			      <small><%= post.created_at.to_s(:db) %></small>
+			    </div>
+			    <div class="panel-body">
+			      <%= post.text %>
+			    </div>
+			  </div>
+			</tr>
+			<% end %>
+		</table>
+	<% end %>
+<% elsif params[:scope] == "algorithm" %>
+	<div class="algo_title"><h1>Algorithms</h1></div><br>
+	<% if @posts.algorithm.empty? %> 
+		<%= render "posts/empty" %>
+	<% else %> 
+		<table>
+		  <% @posts.news.each do |post| %>
+			<tr><div class="panel panel-default">
+			    <div class="panel-heading">
+			      <div style="float: right; vertical-align: middle;"> 
+			        <% if post.tag == "news" %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-globe fa-stack fa-inverse"></i>
+			          </span>
+			        <% elsif post.tag == "interview" %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-code fa-stack fa-inverse"></i>
+			          </span>
+			        <% else %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-terminal fa-stack fa-inverse"></i>
+			          </span>
+			        <% end %>
+			      </div>
+			      <p><%= post.title %>
+			      <%= post.tag %>
+			      </p>
+			      <small><%= post.created_at.to_s(:db) %></small>
+			    </div>
+			    <div class="panel-body">
+			      <%= post.text %>
+			    </div>
+			  </div>
+			</tr>
+			<% end %>
+		</table>
+	<% end %>
+<% elsif params[:scope] == "interview" %>
+	<div class="interview_title"><h1>Interview Questions</h1></div><br>
+	<% if @posts.news.empty? %> 
+		<%= render "posts/empty" %>
+	<% else %> 
+		<table>
+		  <% @posts.interview.each do |post| %>
+			<tr><div class="panel panel-default">
+			    <div class="panel-heading">
+			      <div style="float: right; vertical-align: middle;"> 
+			        <% if post.tag == "news" %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-globe fa-stack fa-inverse"></i>
+			          </span>
+			        <% elsif post.tag == "interview" %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-code fa-stack fa-inverse"></i>
+			          </span>
+			        <% else %>
+			          <span class="fa-stack fa-lg">
+			            <i class="fa fa-square fa-stack-2x"></i>
+			            <i class="fa fa-terminal fa-stack fa-inverse"></i>
+			          </span>
+			        <% end %>
+			      </div>
+			      <p><%= post.title %>
+			      <%= post.tag %>
+			      </p>
+			      <small><%= post.created_at.to_s(:db) %></small>
+			    </div>
+			    <div class="panel-body">
+			      <%= post.text %>
+			    </div>
+			  </div>
+			</tr>
+			<% end %>
+		</table>
+	<% end %>
+<% end %>
