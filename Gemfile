@@ -6,6 +6,8 @@ group :development do
   gem 'rails_layout'
 end
 
+gem 'devise'
+
 # ensure applications get the most out of the Heroku platform
 gem 'rails_12factor'
 

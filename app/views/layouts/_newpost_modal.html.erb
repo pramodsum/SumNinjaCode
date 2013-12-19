@@ -1,5 +1,3 @@
-<div class="text-center"><button type="button" class="navbar-nav btn" data-toggle="modal" href="#postModal">New Post</button></div>
-
 <!-- Modal -->
 <div class="modal fade span2" id="postModal" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
@@ -9,7 +7,7 @@
         <h4 class="modal-title">New Post</h4>
       </div>
       <div class="modal-body">
-        <%= form_for :post, :class => "form-horizontal", url: posts_path do |f| %>
+        <%= form_for :post, :class => "form-horizontal" do |f| %>
 
           <div class="form-group">
             <%= f.label :title %><br>
@@ -19,15 +17,15 @@
           <div class="form-group" data-toggle="buttons">
             <%= f.label :tag %><br>
             <label for="tag_news" tag class="btn btn-default btn-xs">
-              <%= radio_button_tag :tag, "news" %> News Article
+              <%= f.radio_button :tag, "news" %> News Article
             </label>
 
             <label for="tag_interview" class="btn btn-default btn-xs">
-              <%= radio_button_tag :tag, "interview" %> Interview Question
+              <%= f.radio_button :tag, "interview" %> Interview Question
             </label>
 
             <label for="tag_algorithm" class="btn btn-default btn-xs">
-              <%= radio_button_tag :tag, "algorithm" %> Algorithm
+              <%= f.radio_button :tag, "algorithm" %> Algorithm
             </label>
           </div>
 

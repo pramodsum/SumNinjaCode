@@ -5,9 +5,40 @@ class PostsController < ApplicationController
 
 	def create
 	  @post = Post.new(post_params)
-	  if @post.save
-	  	redirect_to action: "index"
-	  else render 'posts/new'
+
+	  respond_to do |format|
+	    if @post.save
+	      format.html { 
+	      	redirect_to @post, notice: 'Posted successfully.' 
+	      }
+	      format.json { 
+	      	render json: @post, status: :created, location: @post 
+	      }
+	    else
+	      format.html { render action: "new" }
+	      format.json { 
+	      	render json: @post.errors, status: :unprocessable_entity 
+	      }
+	    end
+	  end
+	end
+
+	def destroy
+	   @post = Post.find(params[:id])
+	   tag = @post.tag
+	   @post.destroy
+
+	   respond_to do |format|
+	     format.html { 
+	     	if tag == "news"
+	     		redirect_to posts_path(:tag => "news") 
+	     	elsif tag == "interview"
+	     		redirect_to posts_path(:tag => "interview") 
+	     	elsif tag == "algorithm"
+	     		redirect_to posts_path(:tag => "algorithm") 
+	     	end
+	     }
+	     format.json { head :no_content }
 	  end
 	end
 
@@ -16,8 +47,8 @@ class PostsController < ApplicationController
 	end
 
 	def index
-		tag = params[:tag]
-		@posts = Post.where(:tag => tag).order("created_at DESC")
+	  tag = params[:tag]
+	  @posts = Post.where(:tag => tag).order("created_at DESC")
 	end
  
   private

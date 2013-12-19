@@ -2,13 +2,23 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="collapse">
 	<ul class="nav navbar-nav ">
-	  <li><a href="#">Tech News <span class="badge">0</span></a></li>
-	  <li><a href="#">Interview Questions <span class="badge">0</span></a></li>
-	  <li><a href="#">Algorithms <span class="badge">0</span></a></li>
-	  <li><a href="#">Quotes</a></li>
+	  <li>
+	  	<%= link_to 'Tech News'.html_safe, posts_path(:scope => "news") %> 
+	  	<span class="badge"><%= @news_count %></span>
+	  </li>
+	  <li>
+	  	<%= link_to 'Interview Questions'.html_safe, posts_path(:scope => "interview") %> 
+	  	<span class="badge"><%= @interview_count %></span>
+	  </li>
+	  <li>
+	  	<%= link_to 'Algorithms'.html_safe, posts_path(:scope => "algorithm") %> 
+	  	<span class="badge"><%= @algo_count %></span>
+	  </li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
+	  <!-- <li><a data-toggle="modal" href="#postModal">New Post</a></li> -->
 	  <li><%= link_to 'About Me', root_path %></li>
-	  <li><%= link_to 'Resume', root_path %></li>
 	</ul>
 </div>
+
+<%= render 'layouts/newpost_modal' %>
