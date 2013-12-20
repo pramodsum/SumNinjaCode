@@ -1,116 +1,32 @@
-<% if params[:scope] == :news %> 
+<% if @tag == "news" %> 
 	<div class="news_title"><h1>News</h1></div><br>
-	<% if @posts.news.empty? %> 
-		<%= render "posts/empty" %>
-	<% else %> 
-		<table>
-		  <% @posts.news.each do |post| %>
-			<tr><div class="panel panel-default">
-			    <div class="panel-heading">
-			      <p><%= post.title %></p>
-			    </div>
-			    <div class="panel-body">
-			      <small><%= time_ago_in_words(post.created_at) %> ago</small>
-			      <br>
-			      <%= post.text %>
-
-			      <!--<div class="pull-right"> <%= link_to 'Edit', edit_post_path(post) %>
-				  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %></div> -->
-			    </div>
-			  </div>
-			</tr>
-			<% end %>
-		</table>
-	<% end %>
-<% elsif params[:scope] == :algorithm %>
+<% elsif @tag == "algorithm" %>
 	<div class="algo_title"><h1>Algorithms</h1></div><br>
-	<% if @posts.algorithm.empty? %> 
-		<%= render "posts/empty" %>
-	<% else %> 
-		<table>
-		  <% @posts.news.each do |post| %>
-			<tr><div class="panel panel-default">
-			    <div class="panel-heading">
-			      <p><%= post.title %></p>
-			    </div>
-			    <div class="panel-body">
-			      <small><%= time_ago_in_words(post.created_at) %> ago</small>
-			      <br>
-			      <%= post.text %>
-
-			      <!--<div class="pull-right"> <%= link_to 'Edit', edit_post_path(post) %>
-				  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %></div> -->
-			    </div>
-			  </div>
-			</tr>
-			<% end %>
-		</table>
-	<% end %>
-<% elsif params[:scope] == :interview %>
+<% elsif @tag == "interview" %>
 	<div class="interview_title"><h1>Interview Questions</h1></div><br>
-	<% if @posts.news.empty? %> 
-		<%= render "posts/empty" %>
-	<% else %> 
-		<table>
-		  <% @posts.interview.each do |post| %>
-			<tr><div class="panel panel-default">
-			    <div class="panel-heading">
-			      <p><%= post.title %></p>
-			    </div>
-			    <div class="panel-body">
-			      <small><%= time_ago_in_words(post.created_at) %> ago</small>
-			      <br>
-			      <%= post.text %>
-
-			      <!--<div class="pull-right"> <%= link_to 'Edit', edit_post_path(post) %>
-				  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %></div> -->
-			    </div>
-			  </div>
-			</tr>
-			<% end %>
-		</table>
-	<% end %>
 <% else %>
 	<div class="algo_title"><h1>All Posts</h1></div><br>
-	<% if @posts.empty? %> 
-		<%= render "posts/empty" %>
-	<% else %> 
-		<table>
-		  <% @posts.each do |post| %>
-			<tr><div class="panel panel-default">
-			    <div class="panel-heading">
-			      <div style="float: right; vertical-align: middle;"> 
-			        <% if post.tag == "news" %>
-			          <span class="fa-stack fa-lg">
-			            <i class="fa fa-square fa-stack-2x"></i>
-			            <i class="fa fa-globe fa-stack fa-inverse"></i>
-			          </span>
-			        <% elsif post.tag == "interview" %>
-			          <span class="fa-stack fa-lg">
-			            <i class="fa fa-square fa-stack-2x"></i>
-			            <i class="fa fa-code fa-stack fa-inverse"></i>
-			          </span>
-			        <% else %>
-			          <span class="fa-stack fa-lg">
-			            <i class="fa fa-square fa-stack-2x"></i>
-			            <i class="fa fa-terminal fa-stack fa-inverse"></i>
-			          </span>
-			        <% end %>
-			      </div>
-			      <p>
-			      	<%= post.title %>
-			    </div>
-			    <div class="panel-body">
-			      <small><%= time_ago_in_words(post.created_at) %> ago</small>
-			      <br>
-			      <%= post.text %>
+<% end %>
 
-			      <!--<div class="pull-right"> <%= link_to 'Edit', edit_post_path(post) %>
-				  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %></div> -->
-			    </div>
-			  </div>
-			</tr>
-			<% end %>
-		</table>
-	<% end %>
+<% if @posts.empty? %> 
+	<%= render "posts/empty" %>
+<% else %> 
+	<table>
+	  <% @posts.news.each do |post| %>
+		<tr><div class="panel panel-default">
+		    <div class="panel-heading">
+		      <p><%= post.title %></p>
+		    </div>
+		    <div class="panel-body">
+		      <small><%= time_ago_in_words(post.created_at) %> ago</small>
+		      <br>
+		      <%= post.text %>
+
+		      <!--<div class="pull-right"> <%= link_to 'Edit', edit_post_path(post) %>
+			  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %></div> -->
+		    </div>
+		  </div>
+		</tr>
+		<% end %>
+	</table>
 <% end %>

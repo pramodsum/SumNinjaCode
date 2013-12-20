@@ -6,7 +6,7 @@
 			  <i class="fa fa-square fa-stack-2x"></i>
 			  <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
 			</span>
-	  		<%= link_to '<h4>Tech News</h4>'.html_safe, posts_path(:scope => "news") %>
+	  		<%= link_to '<h4>Tech News</h4>'.html_safe, posts_path(:scope => :news) %>
 	  </div>
 	  <div class="panel-body">
 	    Most recent tech news article snippet.
@@ -20,7 +20,7 @@
 			  <i class="fa fa-square fa-stack-2x"></i>
 			  <i class="fa fa-code fa-stack-1x fa-inverse"></i>
 			</span>
-	  		<%= link_to '<h4>Interview Questions</h4>'.html_safe, posts_path(:scope => "interview") %>
+	  		<%= link_to '<h4>Interview Questions</h4>'.html_safe, posts_path(:scope => :interview) %>
 	  </div>
 	  <div class="panel-body">
 	    Most recent interview question post snippet.
@@ -34,7 +34,7 @@
 			  <i class="fa fa-square fa-stack-2x"></i>
 			  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
 			</span>
-	  		<%= link_to '<h4>Algorithms</h4>'.html_safe, posts_path(:scope => "algorithm") %>
+	  		<%= link_to '<h4>Algorithms</h4>'.html_safe, posts_path(:scope => :algorithm) %>
 	  </div>
 	  <div class="panel-body">
 	    Most recent algorithm post snippet.

@@ -47,8 +47,17 @@ class PostsController < ApplicationController
 	end
 
 	def index
-	  @tag = params[:tag]
-	  @posts = Post.order("created_at DESC")
+	  @tag = params[:scope]
+	  if @tag == "news"
+	  	@posts = Post.news.order("created_at DESC")
+	  elsif @tag == "algorithm"
+	  	@posts = Post.algorithm.order("created_at DESC")
+	  elsif @tag == "interview"
+	  	@posts = Post.interview.order("created_at DESC")
+	  else
+	  	@tag = "all"
+	  	@posts = Post.order("created_at DESC")
+	  end
 	end
  
   private
