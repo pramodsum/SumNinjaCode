@@ -47,8 +47,8 @@ class PostsController < ApplicationController
 	end
 
 	def index
-	  tag = params[:tag]
-	  @posts = Post.where(:tag => tag).order("created_at DESC")
+	  @tag = params[:tag]
+	  @posts = Post.order("created_at DESC")
 	end
  
   private

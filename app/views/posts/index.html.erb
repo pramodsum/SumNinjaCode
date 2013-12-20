@@ -1,4 +1,4 @@
-<% if params[:scope] == "news" %> 
+<% if params[:scope] == :news %> 
 	<div class="news_title"><h1>News</h1></div><br>
 	<% if @posts.news.empty? %> 
 		<%= render "posts/empty" %>
@@ -22,7 +22,7 @@
 			<% end %>
 		</table>
 	<% end %>
-<% elsif params[:scope] == "algorithm" %>
+<% elsif params[:scope] == :algorithm %>
 	<div class="algo_title"><h1>Algorithms</h1></div><br>
 	<% if @posts.algorithm.empty? %> 
 		<%= render "posts/empty" %>
@@ -46,7 +46,7 @@
 			<% end %>
 		</table>
 	<% end %>
-<% elsif params[:scope] == "interview" %>
+<% elsif params[:scope] == :interview %>
 	<div class="interview_title"><h1>Interview Questions</h1></div><br>
 	<% if @posts.news.empty? %> 
 		<%= render "posts/empty" %>
