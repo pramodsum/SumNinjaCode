@@ -1,23 +1,25 @@
 <%# add navigation links to this file %>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="collapse">
-	<ul class="nav navbar-nav ">
+	<ul class="nav navbar-nav">
 	  <li>
-	  	<%= link_to 'Tech News'.html_safe, posts_path(:scope => "news") %> 
-	  	<span class="badge"><%= @news_count %></span>
+	  	<%= link_to posts_path(:scope => "news") do %> 
+	  		Tech News <span class="badge"><%= Post.news.count %></span>
+	  	<% end %>
 	  </li>
 	  <li>
-	  	<%= link_to 'Interview Questions'.html_safe, posts_path(:scope => "interview") %> 
-	  	<span class="badge"><%= @interview_count %></span>
+	  	<%= link_to posts_path(:scope => "interview") do %> 
+	  		Interview Questions <span class="badge"><%= Post.interview.count %></span>
+	  	<% end %> 
 	  </li>
 	  <li>
-	  	<%= link_to 'Algorithms'.html_safe, posts_path(:scope => "algorithm") %> 
-	  	<span class="badge"><%= @algo_count %></span>
+	  	<%= link_to posts_path(:scope => "algorithm") do %> 
+	  		Algorithms <span class="badge"><%= Post.algorithm.count %></span>
+	  	<% end %>
 	  </li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
-	  <!-- <li><a data-toggle="modal" href="#postModal">New Post</a></li> -->
-	  <li><%= link_to 'About Me', root_path %></li>
+	  <li><a href="/welcome/about_me">About Me</a></li>
 	</ul>
 </div>
 

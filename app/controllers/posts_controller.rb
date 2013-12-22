@@ -31,11 +31,11 @@ class PostsController < ApplicationController
 	   respond_to do |format|
 	     format.html { 
 	     	if tag == "news"
-	     		redirect_to posts_path(:tag => "news") 
+	     		redirect_to posts_path(:scope => "news") 
 	     	elsif tag == "interview"
-	     		redirect_to posts_path(:tag => "interview") 
+	     		redirect_to posts_path(:scope => "interview") 
 	     	elsif tag == "algorithm"
-	     		redirect_to posts_path(:tag => "algorithm") 
+	     		redirect_to posts_path(:scope => "algorithm") 
 	     	end
 	     }
 	     format.json { head :no_content }
