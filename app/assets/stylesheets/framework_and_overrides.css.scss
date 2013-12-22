@@ -82,7 +82,7 @@ body {
 }
 
 .jumbotron-about h1 {
-  @extend jumbotron;
+  @extend .jumbotron;
   font-family: Consolas, monospace;
   color: #36E0C6;
   width: 9ch; /* # of chars */
@@ -104,7 +104,7 @@ body {
 }
 
 .jumbotron-home h1 {
-  @extend jumbotron;
+  @extend .jumbotron;
   font-family: Consolas, monospace;
   color: #36E0C6;
   width: 20ch; /* # of chars */
