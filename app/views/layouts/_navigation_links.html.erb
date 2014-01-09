@@ -3,13 +3,13 @@
 <div class="collapse navbar-collapse" id="collapse">
 	<ul class="nav navbar-nav">
 	  <li>
-	  		Tech News 
+	  	<%= link_to 'Tech News'.html_safe, posts_path(:scope => :news) %>
 	  </li>
 	  <li>
-	  		Interview Questions 
+	  	<%= link_to 'Interview Questions'.html_safe, posts_path(:scope => :interview) %>
 	  </li>
 	  <li>
-	  		Algorithms 
+	  	<%= link_to 'Algorithms'.html_safe, posts_path(:scope => :algorithm) %>
 	  </li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
