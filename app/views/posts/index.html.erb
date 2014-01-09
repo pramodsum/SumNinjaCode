@@ -1,14 +1,14 @@
 <!-- <li><a data-toggle="modal" href="#postModal">New Post</a></li> -->
 <!-- <button class="btn btn-default" data-toggle="modal" href="#postModal">New Post</button> -->
-<!-- 
-<% if @tag == "news" %> 
+
+<!-- <% if @posts.first. == "news" %> 
 	<div class="news_title"><h1>News</h1></div><br>
 <% elsif @tag == "algorithm" %>
 	<div class="algo_title"><h1>Algorithms</h1></div><br>
 <% elsif @tag == "interview" %>
 	<div class="interview_title"><h1>Interview Questions</h1></div><br>
 <% else %> -->
-	<div class="algo_title"><h1>All Posts</h1></div><br>
+	<div class="posts_title"><h1>All Posts</h1></div><br>
 <!-- <% end %> -->
 
 <% if @posts.empty? %> 
@@ -26,10 +26,10 @@
 		      <%= post.text %>
 		      <p>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 
-		      <div class="pull-right"> 
-			      <!-- <%= link_to 'Edit', edit_post_path(post) %> -->
+		      <!-- <div class="pull-right"> 
+			      <%= link_to 'Edit', edit_post_path(post) %>
 				  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %>
-			  </div> 
+			  </div>  -->
 		    </div>
 		  </div>
 		</tr>

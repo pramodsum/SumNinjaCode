@@ -107,21 +107,21 @@ body {
   @extend .jumbotron;
   font-family: Consolas, monospace;
   color: #36E0C6;
-  width: 20ch; /* # of chars */
+  width: 22ch; /* # of chars */
   white-space: nowrap;
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(20, end),
+  animation: typing 2s steps(22, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(20, end),
+  -moz-animation: typing 2s steps(22, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(20, end),
+  -webkit-animation: typing 2s steps(22, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(20, end),
+  -o-animation: typing 2s steps(22, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(20, end),
+  -ms-animation: typing 2s steps(22, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -263,23 +263,23 @@ input[type=radio]:hover {
                      blink-caret 1s step-end infinite;
 }
 
-.news_title h1 {
+.posts_title h1 {
   font-family: Consolas, monospace;
   color: #36E0C6;
-  width: 5ch; /* # of chars */
+  width: 10ch; /* # of chars */
   white-space: nowrap;
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(5, end),
+  animation: typing 2s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(5, end),
+  -moz-animation: typing 2s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(5, end),
+  -webkit-animation: typing 2s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(5, end),
+  -o-animation: typing 2s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(5, end),
+  -ms-animation: typing 2s steps(10, end),
                      blink-caret 1s step-end infinite;
 }
