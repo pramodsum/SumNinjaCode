@@ -1,9 +1,7 @@
 class Post < ActiveRecord::Base
+  attr_accessible :tag_list
+  acts_as_taggable
+
   validates :title, presence: true
   validates :text, presence: true
-  validates :tag, presence: true
-
-  scope :algorithm, where(:tag => "algorithm")
-  scope :interview, where(:tag => "interview")
-  scope :news, where(:tag => "news")
 end

@@ -6,6 +6,8 @@ group :development do
   gem 'rails_layout'
 end
 
+gem 'protected_attributes'
+gem 'acts-as-taggable-on'
 gem 'devise'
 
 # ensure applications get the most out of the Heroku platform

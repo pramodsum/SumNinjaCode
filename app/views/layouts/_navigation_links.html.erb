@@ -3,19 +3,13 @@
 <div class="collapse navbar-collapse" id="collapse">
 	<ul class="nav navbar-nav">
 	  <li>
-	  	<%= link_to posts_path(:scope => "news") do %> 
-	  		Tech News <span class="badge"><%= Post.news.count %></span>
-	  	<% end %>
+	  		Tech News 
 	  </li>
 	  <li>
-	  	<%= link_to posts_path(:scope => "interview") do %> 
-	  		Interview Questions <span class="badge"><%= Post.interview.count %></span>
-	  	<% end %> 
+	  		Interview Questions 
 	  </li>
 	  <li>
-	  	<%= link_to posts_path(:scope => "algorithm") do %> 
-	  		Algorithms <span class="badge"><%= Post.algorithm.count %></span>
-	  	<% end %>
+	  		Algorithms 
 	  </li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
