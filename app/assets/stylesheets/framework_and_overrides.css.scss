@@ -55,11 +55,6 @@ body {
   background-color: #fafafa;
 }
 
-@keyframes typing { from { width: 0; } }
-@keyframes blink-caret { 
-    from, to { border-color: transparent }
-    50% { border-color: #36E0C6 }
-}
 @-moz-keyframes typing { from { width: 0; } }
 @-moz-keyframes blink-caret { 
     from, to { border-color: transparent }
@@ -70,36 +65,20 @@ body {
     from, to { border-color: transparent }
     50% { border-color: #36E0C6 }
 }
-@-o-keyframes typing { from { width: 0; } }
-@-o-keyframes blink-caret { 
-    from, to { border-color: transparent }
-    50% { border-color: #36E0C6 }
-}
-@-ms-keyframes typing { from { width: 0; } }
-@-ms-keyframes blink-caret { 
-    from, to { border-color: transparent }
-    50% { border-color: #36E0C6 }
-}
 
 .jumbotron-about h1 {
   @extend .jumbotron;
   font-family: Consolas, monospace;
   color: #36E0C6;
-  width: 9ch; /* # of chars */
+  width: 11ch; /* # of chars */
   white-space: nowrap;
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(9, end),
+  -moz-animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(9, end),
-                     blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(9, end),
-                     blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(9, end),
-                     blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(9, end),
+  -webkit-animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -112,17 +91,11 @@ body {
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
-    
-  animation: typing 2s steps(22, end),
-                     blink-caret 1s step-end infinite;
+
   -moz-animation: typing 2s steps(22, end),
                      blink-caret 1s step-end infinite;
   -webkit-animation: typing 2s steps(22, end),
-                     blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(22, end),
-                     blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(22, end),
-                     blink-caret 1s step-end infinite;
+                     blink-caret 1s step-end infinite
 }
 
 a {
@@ -208,16 +181,25 @@ input[type=radio]:hover {
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
+
+  -moz-animation: typing 1s steps(14, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 1s steps(14, end),
+                     blink-caret 1s step-end infinite;
+}
+
+.news_title h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 5ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(14, end),
+  -moz-animation: typing 0.5s steps(5, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(14, end),
-                     blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(14, end),
-                     blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(14, end),
-                     blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(14, end),
+  -webkit-animation: typing 0.5s steps(5, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -230,15 +212,9 @@ input[type=radio]:hover {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(12, end),
+  -moz-animation: typing 1s steps(12, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(12, end),
-                     blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(12, end),
-                     blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(12, end),
-                     blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(12, end),
+  -webkit-animation: typing 1s steps(12, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -251,15 +227,9 @@ input[type=radio]:hover {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(20, end),
-                     blink-caret 1s step-end infinite;
   -moz-animation: typing 2s steps(20, end),
                      blink-caret 1s step-end infinite;
   -webkit-animation: typing 2s steps(20, end),
-                     blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(20, end),
-                     blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(20, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -272,14 +242,8 @@ input[type=radio]:hover {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(10, end),
+  -moz-animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(10, end),
-                     blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(10, end),
-                     blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(10, end),
-                     blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(10, end),
+  -webkit-animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
 }

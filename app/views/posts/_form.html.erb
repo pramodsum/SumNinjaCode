@@ -1,0 +1,34 @@
+<%= form_for @post, :class => "form-horizontal" do |f| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <strong><%= pluralize(@post.errors.count, "error") %> prohibited
+        this post from being saved: </strong>
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tags, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list, :class => "form-control " %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :text %><br>
+    <%= f.text_area :text, :class => "form-control", :size =>"24x10" %>
+  </div>
+ 
+  <p>
+    <%= f.submit :class => "btn" %>
+  </p>
+
+<% end %>

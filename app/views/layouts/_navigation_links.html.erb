@@ -3,18 +3,16 @@
 <div class="collapse navbar-collapse" id="collapse">
 	<ul class="nav navbar-nav">
 	  <li>
-	  	<%= link_to 'Tech News'.html_safe, posts_path(:scope => :news) %>
+	  	<%= link_to 'Tech News'.html_safe, posts_path(:tag => :news) %>
 	  </li>
 	  <li>
-	  	<%= link_to 'Interview Questions'.html_safe, posts_path(:scope => :interview) %>
+	  	<%= link_to 'Interview Questions'.html_safe, posts_path(:tag => :interview) %>
 	  </li>
 	  <li>
-	  	<%= link_to 'Algorithms'.html_safe, posts_path(:scope => :algorithm) %>
+	  	<%= link_to 'Algorithms'.html_safe, posts_path(:tag => :algorithm) %>
 	  </li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
 	  <li><a href="/welcome/about_me">About Me</a></li>
 	</ul>
 </div>
-
-<%= render 'layouts/newpost_modal' %>

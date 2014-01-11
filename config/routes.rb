@@ -1,14 +1,17 @@
 Sumninjacode::Application.routes.draw do
   # devise_for :admins
-  get "welcome/index"
-  get "welcome/about_me"
+
+  resources :posts
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   get 'tags/:tag', to: 'posts#index', as: :tag
-  resources :posts
+
+  get "welcome/index"
+  get "welcome/about_me"
+
   root to: "welcome#index"
 
   # Example of regular route:

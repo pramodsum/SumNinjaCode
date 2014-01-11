@@ -1,19 +1,14 @@
 <div class="panel panel-default">
   <div class="panel-heading">
 	  <%= @post.title %>
-	  <div class="pull-right"> 
-	  	<% if @post.tag == "news" %>
-	  		<button class="btn btn-xs" disabled="disabled"><%= @post.tag %></button>
-	  	<% elsif @post.tag == "interview" %>
-	  		<button class="btn btn-xs" disabled="disabled"><%= @post.tag %></button>
-	  	<% else %>
-	  		<button class="btn btn-xs" disabled="disabled"><%= @post.tag %></button>
-	  	<% end %>
-	  </div>
   </div>
   <div class="panel-body">
   	<%= @post.text %>
   </div>
+  <% @post.tags.any? %>
+    <% @post.tags.each do |tag| %>
+    <%= link_to tag.name, tagged_url(:tag => tag.name) %>
+  <% end %>
 </div>
 
 <%= link_to 'Home', root_path, :class => "btn btn-default", :method => :get  %>

@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :tag_list
+  attr_accessible :tags
   acts_as_taggable
 
   validates :title, presence: true
