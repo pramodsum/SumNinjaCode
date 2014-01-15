@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
 	def new
-	  @post = Post.new
+	  @post = Post.new(post_params)
 	end
 
 	def create
-	  @post = Post.new(params[:post].permit(:title, :text, :tag))
+	  @post = Post.new(post_params)
 
 	  respond_to do |format|
 	    if @post.save
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
 	      	render json: @post, status: :created, location: @post 
 	      }
 	    else
-	      format.html { render action: :new}
+	      format.html { render action: "new" }
 	      format.json { 
 	      	render json: @post.errors, status: :unprocessable_entity 
 	      }
@@ -23,25 +23,23 @@ class PostsController < ApplicationController
 	  end
 	end
 
-	def edit
-	  @post = Post.find(params[:id])
-	end
-
-	def update
-	  @post = Post.find(params[:id])
-	 
-	  if @post.update(post_params)
-	    redirect_to @post
-	  else
-	    render 'edit'
-	  end
-	end
-
 	def destroy
-	  @post = Post.find(params[:id])
-	  @post.destroy
-	  
-	  redirect_to posts_path
+	   @post = Post.find(params[:id])
+	   tag = @post.tag
+	   @post.destroy
+
+	   respond_to do |format|
+	     format.html { 
+	     	if tag == "news"
+	     		redirect_to posts_path(:scope => "news") 
+	     	elsif tag == "interview"
+	     		redirect_to posts_path(:scope => "interview") 
+	     	elsif tag == "algorithm"
+	     		redirect_to posts_path(:scope => "algorithm") 
+	     	end
+	     }
+	     format.json { head :no_content }
+	  end
 	end
 
 	def show
@@ -50,7 +48,6 @@ class PostsController < ApplicationController
 
 	def index
 	  if params[:tag]
-	  	@tag = params[:tag]
 	    @posts = Post.tagged_with(params[:tag])
 	  else
 	    @posts = Post.all
@@ -58,7 +55,7 @@ class PostsController < ApplicationController
 	end
  
   private
-    def post_params
-      params.require(:post).permit(:title, :text, :tag)
-    end
+	def post_params
+	  params.require(:post).permit(:title, :text, :tag_list)
+	end
 end
