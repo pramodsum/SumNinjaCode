@@ -2,35 +2,34 @@
 <!-- <button class="btn btn-default" data-toggle="modal" href="#postModal">New Post</button> -->
 <%= button_to 'New Post', new_post_path, :class => 'btn btn-default' %>
 
-<!-- <% if @posts.first. == "news" %> 
-	<div class="news_title"><h1>News</h1></div><br>
+<% if @tag == "news" %> 
+ 	<div class="news_title"><h1>News</h1></div><br>
 <% elsif @tag == "algorithm" %>
 	<div class="algo_title"><h1>Algorithms</h1></div><br>
 <% elsif @tag == "interview" %>
 	<div class="interview_title"><h1>Interview Questions</h1></div><br>
-<% else %> -->
+<% else %>
 	<div class="posts_title"><h1>All Posts</h1></div><br>
-<!-- <% end %> -->
+<% end %>
 
 <% if @posts.empty? %> 
 	<%= render "posts/empty" %>
 <% else %> 
 	<table>
-	  <% @posts.news.each do |post| %>
+	  <% @posts.each do |post| %>
 		<tr><div class="panel panel-default">
 		    <div class="panel-heading">
 		      <h4><%= post.title %></h4>
 		    </div>
 		    <div class="panel-body">
-		      <small><%= time_ago_in_words(post.created_at) %> ago</small>
-		      <br>
-		      <%= post.text %>
+		      <p><small><%= time_ago_in_words(post.created_at) %> ago</small></p>
+		      <p><%= post.text.html_safe %></p>
 		      <p>Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 
-		      <!-- <div class="pull-right"> 
-			      <%= link_to 'Edit', edit_post_path(post) %>
+		      <div class="pull-right"> 
+			      <%= link_to 'Edit', edit_post_path(post) %> | 
 				  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %>
-			  </div>  -->
+			  </div> 
 		    </div>
 		  </div>
 		</tr>

@@ -91,15 +91,15 @@ body {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(9, end),
+  animation: typing 1s steps(9, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(9, end),
+  -moz-animation: typing 1s steps(9, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(9, end),
+  -webkit-animation: typing 1s steps(9, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(9, end),
+  -o-animation: typing 1s steps(9, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(9, end),
+  -ms-animation: typing 1s steps(9, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -209,15 +209,15 @@ input[type=radio]:hover {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(14, end),
+  animation: typing 1s steps(14, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(14, end),
+  -moz-animation: typing 1s steps(14, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(14, end),
+  -webkit-animation: typing 1s steps(14, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(14, end),
+  -o-animation: typing 1s steps(14, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(14, end),
+  -ms-animation: typing 1s steps(14, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -230,15 +230,36 @@ input[type=radio]:hover {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(12, end),
+  animation: typing 1s steps(12, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(12, end),
+  -moz-animation: typing 1s steps(12, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(12, end),
+  -webkit-animation: typing 1s steps(12, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(12, end),
+  -o-animation: typing 1s steps(12, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(12, end),
+  -ms-animation: typing 1s steps(12, end),
+                     blink-caret 1s step-end infinite;
+}
+
+.news_title h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 5ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
+    
+  animation: typing 1s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -moz-animation: typing 1s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 1s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -o-animation: typing 1s steps(5, end),
+                     blink-caret 1s step-end infinite;
+  -ms-animation: typing 1s steps(5, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -272,14 +293,14 @@ input[type=radio]:hover {
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 2s steps(10, end),
+  animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 2s steps(10, end),
+  -moz-animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 2s steps(10, end),
+  -webkit-animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 2s steps(10, end),
+  -o-animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 2s steps(10, end),
+  -ms-animation: typing 1s steps(10, end),
                      blink-caret 1s step-end infinite;
 }
