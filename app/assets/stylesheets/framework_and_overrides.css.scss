@@ -165,7 +165,8 @@ a:hover {
   color: #000000;
 }
 
-blockquote {
+.blockquote-footer {
+    @extend blockquote;
     font-family: Consolas, monospace;
     border-left: none;
 }
