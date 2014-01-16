@@ -12,7 +12,7 @@
 	  	<% if !Post.tagged_with('news').empty? %>
 	      <% @last_news = Post.tagged_with('news').last %>
 		  <div class="well">
-			  <h5><%= link_to @last_news.title, posts_path(@last_news) %></h5>
+			  <h5><%= link_to @last_news.title, @last_news %></h5>
 			  <p><small><%= time_ago_in_words(@last_news.created_at) %> ago</small></p>
 		  </div>
 		<% end %>
@@ -32,7 +32,7 @@
 	  	<% if !Post.tagged_with('interview').empty? %>
 	      <% @last_interview = Post.tagged_with('interview').last %>
 		  <div class="well">
-			  <h5><%= link_to @last_interview.title, posts_path(@last_interview) %></h5>
+			  <h5><%= link_to @last_interview.title, @last_interview %></h5>
 			  <p><small><%= time_ago_in_words(@last_interview.created_at) %> ago</small></p>
 		  </div>
 		<% end %>
@@ -52,7 +52,7 @@
 	  	<% if !Post.tagged_with('algorithm').empty? %>
 	      <% @last_algo = Post.tagged_with('algorithm').last %>
 		  <div class="well">
-			  <h5><%= link_to @last_algo.title, posts_path(@last_algo) %></h5>
+			  <h5><%= link_to @last_algo.title, @last_algo %></h5>
 			  <p><small><%= time_ago_in_words(@last_algo.created_at) %> ago</small></p>
 		  </div>
 		<% end %>

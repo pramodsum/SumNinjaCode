@@ -1,6 +1,6 @@
 <!-- <li><a data-toggle="modal" href="#postModal">New Post</a></li> -->
 <!-- <button class="btn btn-default" data-toggle="modal" href="#postModal">New Post</button> -->
-<%= button_to 'New Post', new_post_path, :class => 'btn btn-default' %>
+<!-- <%= button_to 'New Post', new_post_path, :class => 'btn btn-default' %> -->
 
 <% if @tag == "news" %> 
  	<div class="news_title"><h1>News</h1></div><br>
@@ -19,7 +19,7 @@
 	  <% @posts.each do |post| %>
 		<tr><div class="panel panel-default">
 		    <div class="panel-heading">
-		      <h4><%= post.title %></h4>
+		      <h4><%= link_to post.title, post, :class => 'post_title' %></h4>
 		    </div>
 		    <div class="panel-body">
 		      <p><small><%= time_ago_in_words(post.created_at) %> ago</small></p>
