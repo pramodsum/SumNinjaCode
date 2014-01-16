@@ -50,6 +50,8 @@ class PostsController < ApplicationController
 	     		redirect_to posts_path(:tag => "interview") 
 	     	elsif tag == "algorithm"
 	     		redirect_to posts_path(:tag => "algorithm") 
+	     	elsif tag == "fun"
+	     		redirect_to posts_path(:tag => "fun") 
 	     	end
 	     }
 	     format.json { head :no_content }

@@ -8,6 +8,8 @@
 	<div class="algo_title"><h1>Algorithms</h1></div><br>
 <% elsif @tag == "interview" %>
 	<div class="interview_title"><h1>Interview Questions</h1></div><br>
+<% elsif @tag == "fun" %>
+	<div class="fun_title"><h1>Just For Fun</h1></div><br>
 <% else %>
 	<div class="posts_title"><h1>All Posts</h1></div><br>
 <% end %>
@@ -19,7 +21,7 @@
 	  <% @posts.each do |post| %>
 		<tr><div class="panel panel-default">
 		    <div class="panel-heading">
-		      <h4><%= link_to post.title, post, :class => 'post_title' %></h4>
+		      <h4><%= link_to post.title, post, :class => 'post_title pink_links' %></h4>
 		    </div>
 		    <div class="panel-body">
 		      <p><small><%= time_ago_in_words(post.created_at) %> ago</small></p>

@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Twitter Bootstrap gems
 gem 'bootstrap-sass'
+gem 'sinatra'
+gem 'instagram'
 group :development do
   gem 'rails_layout'
 end

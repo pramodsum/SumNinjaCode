@@ -11,6 +11,9 @@
 	  <li>
 	  	<a href="/posts?tag=algorithm">Interview Questions <span class="badge"><%= Post.tagged_with('algorithm').count %></span></a>
 	  </li>
+	  <li>
+	  	<a href="/posts?tag=fun">Just For Fun <span class="badge"><%= Post.tagged_with('fun').count %></span></a>
+	  </li>
 	</ul>
 	<ul class="nav navbar-nav navbar-right">
 	  <li><a href="/welcome/about_me">About Me</a></li>

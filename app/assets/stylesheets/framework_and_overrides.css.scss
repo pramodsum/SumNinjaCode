@@ -285,6 +285,27 @@ input[type=radio]:hover {
                      blink-caret 1s step-end infinite;
 }
 
+.fun_title h1 {
+  font-family: Consolas, monospace;
+  color: #36E0C6;
+  width: 13ch; /* # of chars */
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: .1em;
+  border-right: .1em solid #36E0C6;
+    
+  animation: typing 2s steps(13, end),
+                     blink-caret 1s step-end infinite;
+  -moz-animation: typing 2s steps(13, end),
+                     blink-caret 1s step-end infinite;
+  -webkit-animation: typing 2s steps(13, end),
+                     blink-caret 1s step-end infinite;
+  -o-animation: typing 2s steps(13, end),
+                     blink-caret 1s step-end infinite;
+  -ms-animation: typing 2s steps(13, end),
+                     blink-caret 1s step-end infinite;
+}
+
 .posts_title h1 {
   font-family: Consolas, monospace;
   color: #36E0C6;
@@ -308,4 +329,16 @@ input[type=radio]:hover {
 
 .img-circle {
   height: 140px;
+}
+
+.no_space [class*="col-xs-3"] {
+  padding: 1px;
+  margin: 0;
+}
+
+.pink_links {
+  color: #FF3D73;
+}
+.pink_links:hover {
+  color: #36E0C6;
 }
