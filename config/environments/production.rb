@@ -1,8 +1,6 @@
 Sumninjacode::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.assets.precompile = %w( berkley.jpg, dublin.jpg, dublin2.jpg, dublin3.jpg,
-                                 fhills.jpg, goldengate.jpg, prof.jpg, santacruz.jpg,
-                                 sc.jpg =m seattle.jpg, sf.jpg, sf2.jpg, greatwall.JPG )
+  config.assets.precompile = ['*.js', '*.js.coffee', '*.css', '*.css.scss', '*.jpg', '*.JPG']
 
   # Code is not reloaded between requests.
   config.cache_classes = true
