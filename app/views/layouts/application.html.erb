@@ -26,6 +26,11 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
+       <div class="alert alert-warning alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Note:</strong> This site is still under construction! If you notice anything out of place please <a href="mailto:sumedha.pramod@gmail.com">email me!</a><br>
+        <p class="text-right">- Sumedha Pramod</p>
+        </div>
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
