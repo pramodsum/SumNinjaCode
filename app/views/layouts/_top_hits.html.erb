@@ -10,7 +10,7 @@
 	  </div>
 	  <div class="panel-body">
 	  	<% if !Post.tagged_with('news').empty? %>
-	      <% @last_news = Post.tagged_with('news').last %>
+	      <% @last_news = Post.tagged_with('news').first %>
 		  <div class="well">
 			  <h5><%= link_to @last_news.title, @last_news %></h5>
 			  <p><small><%= time_ago_in_words(@last_news.created_at) %> ago</small></p>
@@ -30,7 +30,7 @@
 	  </div>
 	  <div class="panel-body">
 	  	<% if !Post.tagged_with('interview').empty? %>
-	      <% @last_interview = Post.tagged_with('interview').last %>
+	      <% @last_interview = Post.tagged_with('interview').first %>
 		  <div class="well">
 			  <h5><%= link_to @last_interview.title, @last_interview %></h5>
 			  <p><small><%= time_ago_in_words(@last_interview.created_at) %> ago</small></p>
@@ -50,7 +50,7 @@
 	  </div>
 	  <div class="panel-body">
 	  	<% if !Post.tagged_with('algorithm').empty? %>
-	      <% @last_algo = Post.tagged_with('algorithm').last %>
+	      <% @last_algo = Post.tagged_with('algorithm').first %>
 		  <div class="well">
 			  <h5><%= link_to @last_algo.title, @last_algo %></h5>
 			  <p><small><%= time_ago_in_words(@last_algo.created_at) %> ago</small></p>
