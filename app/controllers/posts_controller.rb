@@ -69,6 +69,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+	  @tags = Post.tag_counts_on(:tags)
 	  @post = Post.find(params[:id])
 	end
 
