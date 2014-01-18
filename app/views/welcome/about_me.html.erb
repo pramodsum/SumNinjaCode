@@ -4,6 +4,21 @@
   </center>
 </div>
 
+<script type="text/javascript">
+	$( document ).ready(function() {
+	    $("[rel='tooltip']").tooltip();    
+	 
+	    $('.thumbnail').hover(
+	        function(){
+	            $(this).find('.caption').show(); //.fadeIn(250)
+	        },
+	        function(){
+	            $(this).find('.caption').hide(); //.fadeOut(205)
+	        }
+	    ); 
+	});
+</script>
+
 <div class="row">
 	<div class="col-lg-6">
 	  <div class="well">
@@ -29,27 +44,43 @@
 
 		<h5>What Have I Done?</h5>
 		<div class="well scrolling1">
-			<p>
-				<strong>Workday, Inc. Pleasanton, CA</strong> (May 2013 - August 2013)<br>
-				<small>Associate Developer Generation Workday Beta Data Science Intern </small>
+			<div class="row">
+			  <div class="col-lg-4">
+				<strong>Workday, Inc. Pleasanton, CA</strong> <br><small><em>(May 2013 - August 2013)</em><br>Associate Developer Generation Workday Beta Data Science Intern </small>
+			  </div>
+			  <div class="col-lg-8">
 				<li>Designed, built, and tested a web application using Ruby on Rails that visualizes statistical data and job allocation using agile development practices and object oriented programming styles.</li>
 				<li>Simulated the production environment for running integration jobs including mimicking tenant allocation using data from the stats warehouse.</li>
-			</p>
-			<p>
-				<strong>Navistar, Multidisciplinary Design Program University of Michigan Ann Arbor</strong> (January 2013 - December 2013)<br>
-				<small>Industry Sponsored Student Group Project Android Developer</small>
+			  </div>
+			</div>
+			<hr>
+			<div class="row">
+			  <div class="col-lg-4">
+				<strong>Navistar, Multidisciplinary Design Program University of Michigan Ann Arbor</strong> <br><small><em>(January 2013 - December 2013)</em><br>Industry Sponsored Student Group Project Android Developer</small>
+			  </div>
+			  <div class="col-lg-8">
 				<li>Developed an android application using the Android and Google Maps API’s in a group that uses GPS input to determine current location of the vehicle in order to optimize fuel efficiency and fuel economy and/or minimize de-rate mode in large diesel powertrains.</li>
-			</p>
-			<p>
-				<strong>MBA Social Venture Fund, Ross School of Business University of Michigan Ann Arbor</strong> (October 2012 – September 2013)<br>
-				<small>Website Developer</small>
+			  </div>
+			</div>
+			<hr>
+			<div class="row">
+			  <div class="col-lg-4">
+				<strong>MBA Social Venture Fund, Ross School of Business University of Michigan Ann Arbor</strong> <br><small><em>(October 2012 – September 2013)</em><br>
+				Website Developer</small>
+			  </div>
+			  <div class="col-lg-8">
 				<li>Developed and maintained components for the MBA Social Venture Fund website using a combination of HTML and CSS (http://www.umsocialventure.com).</li>
-			</p>
-			<p>
-				<strong>Department of Emergency Medicine, Wayne State University Detroit, Michigan</strong> (June 2012– October 2012)<br>
-				<small>Clinical Research Database Intern</small>
+			  </div>
+			</div>
+			<hr>
+			<div class="row">
+			  <div class="col-lg-4">
+				<strong>Department of Emergency Medicine, Wayne State University Detroit, Michigan</strong> <br><small><em>(June 2012– October 2012)</em><br>Clinical Research Database Intern</small>
+			  </div>
+			  <div class="col-lg-8">
 				<li>Designed a series of forms using VBA to collect data for a Cerebral Oximetry study from hospital machinery, create a separate patient data workbook with all information from forms and to standardize input from patient data/charts for studies</li>
-			</p>
+			  </div>
+			</div>
 		</div>
 
 		<h5>Side Involvements</h5>
@@ -73,25 +104,61 @@
 	</div>
 
 	<div class="col-lg-6">
-	  <div class="well">
-	  	<center><p class="lead">My Travels</p></center>
+	  <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix well">
+	  	<center><h3>Adventures</h3></center>
 		<div class="row no_space">
-		  <div class="col-xs-3"><%= image_tag('berkley.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('dublin.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('dublin2.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('goldengate.jpg', :class => 'img-rounded img-responsive') %></div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Berkley, CA</div>
+			<%= image_tag('berkley.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">San Ramon, CA</div>
+		  	<%= image_tag('dublin.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Dublin, CA</div>
+		  	<%= image_tag('dublin2.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Golden Gate Bridge, San Francisco</div>
+		  	<%= image_tag('goldengate.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
 		</div>
 		<div class="row no_space">
-		  <div class="col-xs-3"><%= image_tag('seattle.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('sf.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('sc.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('fhills.jpg', :class => 'img-rounded img-responsive') %></div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Space Needle<br>Seattle, WA</div>
+		  	<%= image_tag('seattle.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">San Francisco, CA</div>
+		  	<%= image_tag('sf.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">The Gaffney Peach, SC</div>
+		  	<%= image_tag('sc.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Farmington Hills, MI</div>
+		  	<%= image_tag('fhills.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
 		</div>
 		<div class="row no_space">
-		  <div class="col-xs-3"><%= image_tag('dublin3.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('greatwall.JPG', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('santacruz.jpg', :class => 'img-rounded img-responsive') %></div>
-		  <div class="col-xs-3"><%= image_tag('sf2.jpg', :class => 'img-rounded img-responsive') %></div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Pleasanton, CA</div>
+		  	<%= image_tag('dublin3.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Great Wall of China @ Mutianyu</div>
+		  	<%= image_tag('greatwall.JPG', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">Santa Cruz Beach, CA</div>
+		  	<%= image_tag('santacruz.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
+		  <div class="col-xs-3 thumbnail">
+		  	<div class="caption lead">San Francisco, SC</div>
+		  	<%= image_tag('sf2.jpg', :class => 'img-rounded img-responsive') %>
+		  </div>
 		</div>
 	  </div>
 	</div>

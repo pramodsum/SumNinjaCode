@@ -1,18 +1,19 @@
 <!-- <li><a data-toggle="modal" href="#postModal">New Post</a></li> -->
 <!-- <button class="btn btn-default" data-toggle="modal" href="#postModal">New Post</button> -->
 <!-- <%= button_to 'New Post', new_post_path, :class => 'btn btn-default' %> -->
-
-<% if @tag == "news" %> 
- 	<div class="news_title"><h1>News</h1></div><br>
-<% elsif @tag == "algorithm" %>
-	<div class="algo_title"><h1>Algorithms</h1></div><br>
-<% elsif @tag == "interview" %>
-	<div class="interview_title"><h1>Interview Questions</h1></div><br>
-<% elsif @tag == "fun" %>
-	<div class="fun_title"><h1>Just For Fun</h1></div><br>
-<% else %>
-	<div class="posts_title"><h1>Posts</h1></div><br>
-<% end %>
+<center>
+	<% if @tag == "news" %> 
+	 	<center><div class="news_title"><h1>News</h1></div><br>
+	<% elsif @tag == "algorithm" %>
+		<div class="algo_title"><h1>Algorithms</h1></div><br>
+	<% elsif @tag == "interview" %>
+		<div class="interview_title"><h1>Interview Questions</h1></div><br>
+	<% elsif @tag == "fun" %>
+		<div class="fun_title"><h1>Just For Fun</h1></div><br>
+	<% else %>
+		<div class="posts_title"><h1>Posts</h1></div><br>
+	<% end %>
+</center>
 
 <div class="col-md-2 well">
 	<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
@@ -27,7 +28,6 @@
 	  <div id="masonry-container" class="transitions-enabled infinite-scroll">
 		  <% @posts.each do |post| %>
 			<div class="col-md-4">
-				<!-- <div class="item-content"> -->
 				  <div class="panel panel-default">
 				    <div class="panel-heading">
 				      <h4><%= link_to post.title, post, :class => 'post_title pink_links' %></h4>
@@ -43,7 +43,6 @@
 					  </div>  -->
 				    </div>
 				  </div>
-				 <!-- </div> -->
 			</div>
 		  <% end %>
 		</table>
