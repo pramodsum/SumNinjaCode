@@ -345,11 +345,11 @@ input[type=radio]:hover {
 
 .scrolling1 {
   overflow:scroll;
-  height: 250px;
+  max-height: 235px;
 }
 .scrolling2 {
   overflow:scroll;
-  height: 140px;
+  max-height: 140px;
 }
 
 .css1 { font-size: 70%; color: #e6da83; }
