@@ -343,8 +343,13 @@ input[type=radio]:hover {
   color: #36E0C6;
 }
 
-.scrolling {
+.scrolling1 {
   @extend .pre-scrollable;
+  height: 250px;
+}
+.scrolling2 {
+  @extend .pre-scrollable;
+  height: 140px;
 }
 
 .css1 { font-size: 70%; color: #e6da83; }
