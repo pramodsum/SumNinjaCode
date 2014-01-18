@@ -344,11 +344,11 @@ input[type=radio]:hover {
 }
 
 .scrolling1 {
-  @extend .pre-scrollable;
+  overflow:scroll;
   height: 250px;
 }
 .scrolling2 {
-  @extend .pre-scrollable;
+  overflow:scroll;
   height: 140px;
 }
 
