@@ -29,11 +29,21 @@ class PostsController < ApplicationController
 
 	def update
 	  @post = Post.find(params[:id])
-	 
-	  if @post.update(params[:post].permit(:title, :text, :tag_list))
-	    redirect_to @post
-	  else
-	    render 'edit'
+
+	  respond_to do |format|
+	    if @post.update(params[:post].permit(:title, :text, :tag_list))
+	      format.html { 
+	      	redirect_to @post, notice: 'Post was updated successfully.' 
+	      }
+	      format.json { 
+	      	render json: @post, status: :created, location: @post 
+	      }
+	    else
+	      format.html { render action: "edit" }
+	      format.json { 
+	      	render json: @post.errors, status: :unprocessable_entity 
+	      }
+	    end
 	  end
 	end
 
@@ -63,9 +73,10 @@ class PostsController < ApplicationController
 	end
 
 	def index
+	  @tags = Post.tag_counts_on(:tags)
 	  if params[:tag]
 	  	@tag = params[:tag]
-	    @posts = Post.tagged_with(params[:tag])
+	    @posts = Post.tagged_with(params[:tag]).order('created_at DESC')
 	  else
 	    @posts = Post.all
 	  end

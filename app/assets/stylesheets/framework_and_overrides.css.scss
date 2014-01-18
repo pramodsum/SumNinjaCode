@@ -85,21 +85,21 @@ body {
   @extend .jumbotron;
   font-family: Consolas, monospace;
   color: #36E0C6;
-  width: 9ch; /* # of chars */
+  width: 11ch; /* # of chars */
   white-space: nowrap;
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 1s steps(9, end),
+  animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 1s steps(9, end),
+  -moz-animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 1s steps(9, end),
+  -webkit-animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 1s steps(9, end),
+  -o-animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 1s steps(9, end),
+  -ms-animation: typing 1s steps(11, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -309,21 +309,21 @@ input[type=radio]:hover {
 .posts_title h1 {
   font-family: Consolas, monospace;
   color: #36E0C6;
-  width: 10ch; /* # of chars */
+  width: 6ch; /* # of chars */
   white-space: nowrap;
   overflow: hidden;
   margin-right: .1em;
   border-right: .1em solid #36E0C6;
     
-  animation: typing 1s steps(10, end),
+  animation: typing 1s steps(6, end),
                      blink-caret 1s step-end infinite;
-  -moz-animation: typing 1s steps(10, end),
+  -moz-animation: typing 1s steps(6, end),
                      blink-caret 1s step-end infinite;
-  -webkit-animation: typing 1s steps(10, end),
+  -webkit-animation: typing 1s steps(6, end),
                      blink-caret 1s step-end infinite;
-  -o-animation: typing 1s steps(10, end),
+  -o-animation: typing 1s steps(6, end),
                      blink-caret 1s step-end infinite;
-  -ms-animation: typing 1s steps(10, end),
+  -ms-animation: typing 1s steps(6, end),
                      blink-caret 1s step-end infinite;
 }
 
@@ -342,3 +342,8 @@ input[type=radio]:hover {
 .pink_links:hover {
   color: #36E0C6;
 }
+
+.css1 { font-size: 70%; color: #e6da83; }
+.css2 { font-size: 80%; color: #a6e70a; }
+.css3 { font-size: 90%; color: #72d9e7; font-weight: bold; }
+.css4 { font-size: 100%; color: #a775ff; font-weight: bold; }

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 gem 'sinatra'
 gem 'instagram'
+gem 'masonry-rails'
 group :development do
   gem 'rails_layout'
 end
