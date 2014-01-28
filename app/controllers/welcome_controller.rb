@@ -1,9 +1,8 @@
 class WelcomeController < ApplicationController
   def index
-	bot_id = e6eb5f1ad32abbd7016a29f4ae
 	require 'net/http'
 	url = URI.parse('https://api.groupme.com/v3/bots/post')
-	post_args = {bot_id => params[:bot_id], 'derp' => params[:text]}
+	post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "derp"}.to_json
 	if params[:text] = 'hello'
 		resp, data = Net::HTTP.post_form(url, post_args)
 	end
