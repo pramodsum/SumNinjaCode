@@ -5,6 +5,7 @@ gem 'bootstrap-sass'
 gem 'sinatra'
 gem 'instagram'
 gem 'masonry-rails'
+gem 'simple_form'
 group :development do
   gem 'rails_layout'
 end

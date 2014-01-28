@@ -25,10 +25,10 @@
 	<% if @posts.empty? %> 
 		<%= render "posts/empty" %>
 	<% else %> 
-	  <div id="masonry-container" class="transitions-enabled infinite-scroll">
+	  <div id="masonry-container" class="transitions-enabled infinite-scroll clearfix">
 		  <% @posts.each do |post| %>
 			<div class="col-md-4">
-				  <div class="panel panel-default">
+			    <div class="panel panel-default">
 				    <div class="panel-heading">
 				      <h4><%= link_to post.title, post, :class => 'post_title pink_links' %></h4>
 				    </div>
@@ -42,10 +42,11 @@
 						  <%= link_to 'Delete', {:controller=>:posts,:action=>:destroy, :id=>post}, :method=>:delete %>
 					  </div>  -->
 				    </div>
-				  </div>
+				</div>
 			</div>
 		  <% end %>
-		</table>
 	  </div>
 	<% end %>
 </div>
+
+<script src="index.js"></script>
