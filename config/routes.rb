@@ -3,8 +3,8 @@ Sumninjacode::Application.routes.draw do
   get "welcome/index"
   get "welcome/about_me"
 
-  match 'manual' => 'manual#index', :via=>:get
-  match 'manual' => 'manual#post', :via=>:post
+  # match 'manual' => 'manual#index', :via=>:get
+  # match 'manual' => 'manual#post', :via=>:post
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
