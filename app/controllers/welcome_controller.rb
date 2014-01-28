@@ -1,17 +1,21 @@
 class WelcomeController < ApplicationController
   def index
 	require 'net/http'
+	require 'json'
+	require 'rexml/document'
+	text = params[:text].downcase
 	url = URI.parse('https://api.groupme.com/v3/bots/post')
-	post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "Well hello there Vijay ;)"}.to_json
+	post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "MEEP MEEP"}.to_json
 	a = ActiveSupport::JSON.decode(post_args)
-	if params[:text] = 'hello' and params[:name] != 'Kanye'
+	if params[:name] != 'ThatBrown'
+		if text["hot tub"] != nil
 		resp, data = Net::HTTP.post_form(url, a)
 	end
 	# require 'net/http'
 	# require 'json'
 	# require 'rexml/document'
 	# text = params[:text].downcase
-	# if params[:name] != 'Kanye'
+	# if params[:name] != 'ThatBrown'
 	# 	if text["hot tub"] != nil
 	# 		if text.split(" ").include?('hot') and text.split(" ").include?('tub')
 	# 			url = URI.parse('https://api.groupme.com/v3/bots/post')
@@ -19,7 +23,7 @@ class WelcomeController < ApplicationController
 	# 			a = ActiveSupport::JSON.decode(post_args)
 	# 			resp, data = Net::HTTP.post_form(url, a)
 	# 		end
-	# 	if text == 'kanye weather'
+	# 	if text == 'thatbrown weather'
 	# 		url = URI.parse('https://api.forecast.io/forecast/e9ae28050324270567556f2425a62c3f/37.6933,-121.9241?exclude=[minutely,hourly,daily,alerts,flags]')
 	# 		resp_unparsed = Net::HTTP.get_response(url)
 	# 		resp = JSON.parse resp_unparsed.body
@@ -34,17 +38,17 @@ class WelcomeController < ApplicationController
 	# 		end
 	# 		summary = current_weather["summary"]
 	# 		summary.downcase!
-	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "#{temp} degrees outside - #{summary}. In Kanye's words, #{message}"}.to_json
+	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "#{temp} degrees outside - #{summary}. In ThatBrown's words, #{message}"}.to_json
 	# 		url = URI.parse('https://api.groupme.com/v3/bots/post')
 	# 		a = ActiveSupport::JSON.decode(post_args)
 	# 		resp, data = Net::HTTP.post_form(url, a)
-	# 	elsif text == 'kanye awards ceremony' and params[:name] == 'Sumedha Pramod'
+	# 	elsif text == 'thatbrown awards ceremony' and params[:name] == 'Sumedha Pramod'
 	# 		system "rake tabulate &"
 	# 		url = URI.parse('https://api.groupme.com/v3/bots/post')
 	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "Tabulating results..."}.to_json
 	# 		a = ActiveSupport::JSON.decode(post_args)
 	# 		resp, data = Net::HTTP.post_form(url, a)
-	# 	elsif text.split(" ").length >= 3 and text.split(" ").first == "kanye" and text.split(" ")[1] == "review" and params[:name] == "Sumedha Pramod"
+	# 	elsif text.split(" ").length >= 3 and text.split(" ").first == "thatbrown" and text.split(" ")[1] == "review" and params[:name] == "Sumedha Pramod"
 	# 		total_len = text.split(" ").length
 	# 		movie_title = params[:text].split(" ")[2, total_len]
 	# 		real_movie_title = ""
@@ -88,7 +92,7 @@ class WelcomeController < ApplicationController
 	# 		end
 	# 		a = ActiveSupport::JSON.decode(post_args)
 	# 		resp, data = Net::HTTP.post_form(url, a)
-	# 	elsif text == 'kanye next train to sf'
+	# 	elsif text == 'thatbrown next train to sf'
 	# 		#insert stuff here
 	# 		times = ""
 	# 		url = URI.parse("http://api.bart.gov/api/etd.aspx?cmd=etd&orig=wdub&key=MW9S-E7SL-26DU-VV8V&dir=s")
@@ -115,16 +119,16 @@ class WelcomeController < ApplicationController
 	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "Trains leaving West Dublin station for San Francisco in #{times} minutes."}.to_json
 	# 		a = ActiveSupport::JSON.decode(post_args)
 	# 		resp, data = Net::HTTP.post_form(url, a)
-	# 	elsif text == 'kanye odds of sonata emailing us about noise complaints' and params[:name] == 'Sumedha Pramod'
+	# 	elsif text == 'thatbrown odds of sonata emailing us about noise complaints' and params[:name] == 'Sumedha Pramod'
 	# 		url = URI.parse('https://api.groupme.com/v3/bots/post')
 	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "100%. Count it."}.to_json
 	# 		a = ActiveSupport::JSON.decode(post_args)
 	# 		resp, data = Net::HTTP.post_form(url, a)
-	# 	elsif /\Akanye did the (a's|giants) win\z/.match(text) != nil
+	# 	elsif /\Athatbrown did the (a's|giants) win\z/.match(text) != nil
 	# 		team = ""
-	# 		if /\Akanye did the a's win\z/.match(text) != nil
+	# 		if /\Athatbrown did the a's win\z/.match(text) != nil
 	# 			team = "oak"
-	# 		elsif /\Akanye did the giants win\z/.match(text) != nil
+	# 		elsif /\Athatbrown did the giants win\z/.match(text) != nil
 	# 			team = "sf"
 	# 		end
 	# 		url = URI.parse("http://partner.mlb.com/partnerxml/gen/news/rss/#{team}.xml")
@@ -146,11 +150,11 @@ class WelcomeController < ApplicationController
 	# 			end
 	# 		end
 	# 	end
-	# 	elsif text["thanks kanye"] != nil
+	# 	elsif text["thanks thatbrown"] != nil
 	# 		first_name_temp = params[:name]
 	# 		first_name = first_name_temp.split(" ").first
 	# 		url = URI.parse('https://api.groupme.com/v3/bots/post')
-	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "Kanye always got your back, #{first_name}."}.to_json
+	# 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "ThatBrown always got your back, #{first_name}."}.to_json
 	# 		a = ActiveSupport::JSON.decode(post_args)
 	# 		resp, data = Net::HTTP.post_form(url, a)
 	# 	end

@@ -5,7 +5,7 @@ class ManualController < ApplicationController
 	def post
 		require 'net/http'
 		require 'json'
-		message = params[:kanye][:text]
+		message = params[:thatbrown][:text]
 		url = URI.parse('https://api.groupme.com/v3/bots/post')
 		post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "#{message}"}.to_json
 		a = ActiveSupport::JSON.decode(post_args)
