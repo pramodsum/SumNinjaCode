@@ -1,4 +1,4 @@
-<%= simple_form_for :kanye do |k| %>
-	<%= k.input :text, :required => false %>
-	<%= k.button :submit %>
+<%= form_for :kanye do |k| %>
+	<%= k.text_field :text, :required => false %>
+	<%= k.button :submit, :class => "btn btn-default" %>
 <% end %>
