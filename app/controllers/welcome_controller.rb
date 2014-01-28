@@ -3,13 +3,13 @@ class WelcomeController < ApplicationController
 	require 'net/http'
 	require 'json'
 	require 'rexml/document'
-	text = params[:text].downcase
 	url = URI.parse('https://api.groupme.com/v3/bots/post')
 	post_args = {"bot_id" => 'e6eb5f1ad32abbd7016a29f4ae', "text" => "MEEP MEEP"}.to_json
 	a = ActiveSupport::JSON.decode(post_args)
 	if params[:name] != 'ThatBrown'
-		if text["hot tub"] != nil
-		resp, data = Net::HTTP.post_form(url, a)
+		if params[:text] == 'hello'
+			resp, data = Net::HTTP.post_form(url, a)
+		end
 	end
 	# require 'net/http'
 	# require 'json'
