@@ -2,12 +2,8 @@ Sumninjacode::Application.routes.draw do
   # devise_for :admins
   get "welcome/index"
   get "welcome/about_me"
-<<<<<<< HEAD
-
   # match 'manual' => 'manual#index', :via=>:get
   # match 'manual' => 'manual#post', :via=>:post
-=======
->>>>>>> parent of d8ca425... added bot to site
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
