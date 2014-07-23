@@ -1,4 +1,5 @@
 Sumninjacode::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   # devise_for :admins
   get "welcome/index"
   get "welcome/about_me"
@@ -12,6 +13,8 @@ Sumninjacode::Application.routes.draw do
   get 'tags/:tag', to: 'posts#index', as: :tag
   resources :posts
   root to: "welcome#index"
+
+  # mount Ckeditor::Engine => '/ckeditor'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -21,4 +21,5 @@
 //= require masonry/modernizr-transitions
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
+//= require ckeditor/init
 //= require_tree .

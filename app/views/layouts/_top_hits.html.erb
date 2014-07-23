@@ -4,16 +4,16 @@
 	  <div class="panel-heading">
 	  		<span class="fa-stack fa-lg">
 			  <i class="fa fa-square fa-stack-2x"></i>
-			  <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+			  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
 			</span>
-	  		<%= link_to '<h4>Tech News</h4>'.html_safe, posts_path(:tag => :news) %>
+	  		<%= link_to '<h4>Projects</h4>'.html_safe, posts_path(:tag => :projects) %>
 	  </div>
 	  <div class="panel-body">
-	  	<% if !Post.tagged_with('news').empty? %>
-	      <% @last_news = Post.tagged_with('news').order('created_at DESC').first %>
+	  	<% if !Post.tagged_with('projects').empty? %>
+	      <% @last_algo = Post.tagged_with('projects').order('created_at DESC').first %>
 		  <div class="well">
-			  <h5><%= link_to @last_news.title, @last_news %></h5>
-			  <p><small><%= time_ago_in_words(@last_news.created_at) %> ago</small></p>
+			  <h5><%= link_to @last_algo.title, @last_algo %></h5>
+			  <p><small><%= time_ago_in_words(@last_algo.created_at) %> ago</small></p>
 		  </div>
 		<% end %>
 	  </div>
@@ -44,16 +44,16 @@
 	  <div class="panel-heading">
 	  		<span class="fa-stack fa-lg">
 			  <i class="fa fa-square fa-stack-2x"></i>
-			  <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+			  <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
 			</span>
-	  		<%= link_to '<h4>Algorithms</h4>'.html_safe, posts_path(:tag => :algorithm) %>
+	  		<%= link_to '<h4>Tech News</h4>'.html_safe, posts_path(:tag => :news) %>
 	  </div>
 	  <div class="panel-body">
-	  	<% if !Post.tagged_with('algorithm').empty? %>
-	      <% @last_algo = Post.tagged_with('algorithm').order('created_at DESC').first %>
+	  	<% if !Post.tagged_with('news').empty? %>
+	      <% @last_news = Post.tagged_with('news').order('created_at DESC').first %>
 		  <div class="well">
-			  <h5><%= link_to @last_algo.title, @last_algo %></h5>
-			  <p><small><%= time_ago_in_words(@last_algo.created_at) %> ago</small></p>
+			  <h5><%= link_to @last_news.title, @last_news %></h5>
+			  <p><small><%= time_ago_in_words(@last_news.created_at) %> ago</small></p>
 		  </div>
 		<% end %>
 	  </div>

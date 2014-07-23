@@ -1,11 +1,15 @@
 <!-- <li><a data-toggle="modal" href="#postModal">New Post</a></li> -->
 <!-- <button class="btn btn-default" data-toggle="modal" href="#postModal">New Post</button> -->
-<!-- <%= button_to 'New Post', new_post_path, :class => 'btn btn-default' %> -->
+<%= button_to 'New Post', new_post_path, :class => 'btn btn-default' %>
 <center>
 	<% if @tag == "news" %> 
 	 	<center><div class="news_title"><h1>News</h1></div><br>
 	<% elsif @tag == "algorithm" %>
 		<div class="algo_title"><h1>Algorithms</h1></div><br>
+	<% elsif @tag == "drawings" %>
+		<div class="algo_title"><h1>Drawings</h1></div><br>
+	<% elsif @tag == "projects" %>
+		<div class="algo_title"><h1>Projects</h1></div><br>
 	<% elsif @tag == "interview" %>
 		<div class="interview_title"><h1>Interview Questions</h1></div><br>
 	<% elsif @tag == "fun" %>

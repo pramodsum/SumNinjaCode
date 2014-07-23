@@ -58,8 +58,10 @@ class PostsController < ApplicationController
 	     		redirect_to posts_path(:tag => "news") 
 	     	elsif tag == "interview"
 	     		redirect_to posts_path(:tag => "interview") 
-	     	elsif tag == "algorithm"
-	     		redirect_to posts_path(:tag => "algorithm") 
+	     	elsif tag == "drawings"
+	     		redirect_to posts_path(:tag => "drawings") 
+	     	elsif tag == "projects"
+	     		redirect_to posts_path(:tag => "projects") 
 	     	elsif tag == "fun"
 	     		redirect_to posts_path(:tag => "fun") 
 	     	end

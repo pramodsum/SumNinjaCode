@@ -3,13 +3,16 @@
 <div class="collapse navbar-collapse" id="collapse">
 	<ul class="nav navbar-nav">
 	  <li>
+	  	<a href="/posts?tag=projects">Projects <span class="badge"><%= Post.tagged_with('project').count %></span></a>
+	  </li>
+	  <li>
 	  	<a href="/posts?tag=news">Tech News <span class="badge"><%= Post.tagged_with('news').count %></span></a>
 	  </li>
 	  <li>
 	  	<a href="/posts?tag=interview">Interview Questions <span class="badge"><%= Post.tagged_with('interview').count %></span></a>
 	  </li>
 	  <li>
-	  	<a href="/posts?tag=algorithm">Algorithms <span class="badge"><%= Post.tagged_with('algorithm').count %></span></a>
+	  	<a href="/posts?tag=drawings">Drawings <span class="badge"><%= Post.tagged_with('drawings').count %></span></a>
 	  </li>
 	  <li>
 	  	<a href="/posts?tag=fun">Just For Fun <span class="badge"><%= Post.tagged_with('fun').count %></span></a>
