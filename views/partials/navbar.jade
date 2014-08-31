@@ -1,0 +1,18 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
+        i.fa.fa-bars
+      a.navbar-brand.page-scroll(href='/#page-top')
+        i.ion-pound
+        span.light SumNinjaCode
+    // Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-right.navbar-main-collapse
+      ul.nav.navbar-nav
+        // Hidden li included to remove active class from about link when scrolled up past about section
+        li.hidden
+          a(href='/#page-top')
+        li
+          a.page-scroll(href='#posts') Posts
+        li
+          a.page-scroll(href='/contact') Contact
