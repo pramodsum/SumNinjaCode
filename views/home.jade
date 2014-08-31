@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    header.intro#page-top
+      .intro-body
+        .col-md-8.col-md-offset-2
+          img.profile.img-circle.img-responsive(src='img/profile.jpeg', alt='')
+          h1.brand-heading Just Sum Ninja Code
+          p.intro-text
+            ul.list-inline
+              li
+                a.btn-circle.btn-social(href='https://twitter.com/pramodsum')
+                  i.ion-social-twitter.animated
+              li
+                a.btn-circle.btn-social(href='https://linkedin.com/in/pramodsum')
+                  i.ion-social-linkedin.animated
+              li
+                a.btn-circle.btn-social(href='https://github.com/pramodsum')
+                  i.ion-social-github.animated
+              li
+                a.btn-circle.btn-social(href='https://facebook.com/sumedha.pramod')
+                  i.ion-social-facebook.animated
+
+          a.btn.btn-circle.page-scroll(href='#posts')
+            i.ion-chevron-down.animated(style="margin-left: -1px")
+    // Posts Section
+    .container#posts
+        .row 
+          - var posts = getPosts(0,5)
+          - var page  = 1
+          - each post in posts
+              div.post
+                h1.text-center
+                  |{
+                  a(href=post.url) 
+                    = post.title
+                  | }
+                .date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+                div.content
+                  != post.preview 
+                div.tags
+                  - each tag in post.tags
+                    a(href=tagUrl(tag))
+                      span.label.label-info #{tag}
+
+          .text-center 
+            include includes/pagination
