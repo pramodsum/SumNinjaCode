@@ -31,7 +31,7 @@
     "morgan": "^1.2.2",
     "nodemailer": "^1.1.1",
     "nodemon": "^1.2.1",
-    "poet": "git://github.com/jsantell/poet.git",
+    "poet": "git://github.com/pramodsum/poet.git",
     "request": "^2.40.0",
     "stripe": "^2.8.0",
     "twit": "^1.1.18",
