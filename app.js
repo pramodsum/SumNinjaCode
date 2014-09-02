@@ -24,7 +24,6 @@ var connectAssets = require('connect-assets');
  */
 
 var homeController = require('./controllers/home');
-var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
 
 /**
@@ -115,15 +114,6 @@ var poet = Poet(app, {
 
 poet.init().then(function () {
   // initialized
-});
-
-/**
- * OAuth sign-in routes.
- */
-
-app.get('/auth/twitter', passport.authenticate('twitter'));
-app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/login' }), function(req, res) {
-  res.redirect(req.session.returnTo || '/');
 });
 
 /**
