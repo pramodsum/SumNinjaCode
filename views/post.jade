@@ -10,7 +10,7 @@ block content
           | }
         .date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
         div.content
-          != post.preview 
+          != post.content 
         div.tags
           - each tag in post.tags
             a(href=tagUrl(tag))
