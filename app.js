@@ -15,7 +15,6 @@ var methodOverride = require('method-override');
 var _ = require('lodash');
 var flash = require('express-flash');
 var path = require('path');
-var passport = require('passport');
 var expressValidator = require('express-validator');
 var connectAssets = require('connect-assets');
 
@@ -27,11 +26,10 @@ var homeController = require('./controllers/home');
 var contactController = require('./controllers/contact');
 
 /**
- * API keys and Passport configuration.
+ * API keys
  */
 
 var secrets = require('./config/secrets');
-var passportConf = require('./config/passport');
 
 /**
  * Create Express server.
@@ -72,8 +70,6 @@ app.use(session({
   saveUninitialized: true,
   secret: secrets.sessionSecret,
 }));
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(flash());
 app.use(function(req, res, next) {
   // CSRF protection.
