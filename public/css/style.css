@@ -174,7 +174,7 @@ a:focus {
         line-height: 34px;
         font-size: 1.6em;
         text-align: center;
-         border-right: 0px solid rgba(0, 0, 0, 0.2); 
+         border-right: 0px solid rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -244,7 +244,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0 {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -261,7 +261,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0 {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -391,14 +391,14 @@ body {
 }
 
 .post {
-    padding-top: 5%;
-    
+    padding-top: 100px;
+
     h1 a {
         padding-right: 10px;
     }
-    
+
     .date {
-        margin: 0 auto;    
+        margin: 0 auto;
     }
 }
 
@@ -415,6 +415,6 @@ img.profile {
 
 .tags {
     a {
-        padding: 0 2px;    
+        padding: 0 2px;
     }
 }

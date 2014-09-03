@@ -6,16 +6,16 @@ block content
           div.post
             h1.text-center
               |{
-              a(href=post.url) 
+              a(href=post.url)
                 = post.title
               | }
             .date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
             div.content
-              != post.preview 
+              != post.preview
             div.tags
               - each tag in post.tags
                 a(href=tagUrl(tag))
                   span.label.label-info #{tag}
 
-      .text-center 
+      .text-center
         include includes/pagination
