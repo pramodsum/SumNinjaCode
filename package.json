@@ -20,6 +20,7 @@
     "cookie-parser": "git://github.com/expressjs/cookie-parser",
     "errorhandler": "git://github.com/expressjs/errorhandler",
     "escape": "git://github.com/jifeng/escape",
+    "express": "git://github.com/strongloop/express",
     "express-flash": "git://github.com/RGBboy/express-flash",
     "express-session": "git://github.com/expressjs/session",
     "express-validator": "git://github.com/ctavan/express-validator",
