@@ -23,6 +23,7 @@ var connectAssets = require('connect-assets');
  */
 
 var homeController = require('./controllers/home');
+var quotesController = require('./controllers/quotes');
 var contactController = require('./controllers/contact');
 
 /**
@@ -90,7 +91,7 @@ app.get('/', homeController.index);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
 
-/** 
+/**
  * Poet routes
  */
 
@@ -108,9 +109,12 @@ var poet = Poet(app, {
   }
 });
 app.get('/', homeController.index);
+app.get('/quotes', quotesController.index);
 
-poet.init().then(function () {
-  // initialized
+poet.watch(function () {
+    // watcher reloaded
+}).init().then(function () {
+    // Ready to go!
 });
 
 /**
