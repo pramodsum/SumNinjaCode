@@ -38,6 +38,7 @@
     "request": "git://github.com/mikeal/request",
     "uglify-js": "git://github.com/mishoo/UglifyJS2",
     "validator": "git://github.com/chriso/validator.js",
-    "yui": "^3.17.2"
+    "yui": "^3.17.2",
+    "twit": "^1.1.18"
   }
 }

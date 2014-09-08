@@ -24,6 +24,7 @@ var connectAssets = require('connect-assets');
 
 var homeController = require('./controllers/home');
 var quotesController = require('./controllers/quotes');
+var tweetsController = require('./controllers/tweets');
 var contactController = require('./controllers/contact');
 
 /**
@@ -110,6 +111,7 @@ var poet = Poet(app, {
 });
 app.get('/', homeController.index);
 app.get('/quotes', quotesController.index);
+app.get('/tweets', tweetsController.index);
 
 poet.watch(function () {
     // watcher reloaded
