@@ -101,12 +101,13 @@ var poet = Poet(app, {
   posts: './_posts',
   metaFormat: 'json',
   routes: {
-    '/posts/:post': 'post',
-    '/pagination/:page': 'page',
-    '/tags/:tag': 'tag',
-    '/categories/:category': 'category'
+    '/posts/:post': 'posts/post',
+    '/pagination/:page': 'posts/page',
+    '/tags/:tag': 'posts/tag',
+    '/categories/:category': 'posts/category'
   }
 });
+app.get('/', homeController.index);
 
 poet.init().then(function () {
   // initialized
@@ -122,7 +123,7 @@ app.use(errorHandler());
  * Sitemap.xml
  */
 
-app.get('/sitemap.xml', function (req, res) {
+app.get('/posts/sitemap.xml', function (req, res) {
   // Only get the latest posts
   var postCount = poet.helpers.getPostCount();
   var posts = poet.helpers.getPosts(0, postCount);
