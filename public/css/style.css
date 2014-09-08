@@ -396,13 +396,17 @@ body {
         padding-right: 10px;
     }
 
+    img {
+      max-height: 500px;
+    }
+
     .date {
         margin: 0 auto;
     }
 }
 
 #posts {
-    padding: 100px 0;
+    padding: 100px 50px;
 }
 
 img.profile {
@@ -416,4 +420,8 @@ img.profile {
     a {
         padding: 0 2px;
     }
+}
+
+.container {
+  padding: 0 15px;
 }
