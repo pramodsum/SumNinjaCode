@@ -1,17 +1,18 @@
 extends layout
 
 block content
-    .container
-      div.post
-        h1.text-center
-          |{
-          a(href=post.url)
-            = post.title
-          | }
-        .date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
-        div.content
-          != post.content
-        div.tags
-          - each tag in post.tags
-            a(href=tagUrl(tag))
-              span.label.label-info #{tag}
+  include header
+  .container#posts
+    div.post
+      h1.text-center
+        |{
+        a(href=post.url)
+          = post.title
+        | }
+      .date #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
+      div.content
+        != post.content
+      div.tags
+        - each tag in post.tags
+          a(href=tagUrl(tag))
+            span.label.label-info #{tag}

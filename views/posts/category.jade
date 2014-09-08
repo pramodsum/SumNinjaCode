@@ -1,8 +1,10 @@
 extends layout
 
 block content
-  .container
-    h3
-      a(href=categoryUrl(category)) posts in category * #{category}
+  include header
+  .container#posts
+    center
+      h1.text-center.page-title
+        a(href=categoryUrl(category)) #{category}
     - each post in posts
       include ../partials/post

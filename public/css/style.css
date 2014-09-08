@@ -77,3 +77,47 @@ p {
     line-height: 1.25;
   }
 }
+
+.page-title {
+  font-size: 4em;
+  color: rgb(94, 255, 212);
+  text-shadow: 2px 2px rgb(191, 98, 167);
+  border: 3px solid white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.35em;
+  font-weight: 100;
+  border-radius: 5px;
+  line-height: 1em;
+  font-weight: 100;
+  border-radius: 5px;
+}
+
+.page-title:hover {
+  color: rgb(191, 98, 167);
+  text-shadow: 2px 2px rgb(94, 255, 212);
+}
+
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+
+  footer {
+    background: none;
+    color: rgb(191, 98, 167);
+  }
+
+  p {
+    display: inline;
+  }
+}
+
+blockquote:before {
+  color: rgb(94, 255, 212);
+  content: open-quote;
+  font-size: 4em;
+  line-height: .1em;
+  margin-right: .25em;
+  vertical-align: -.4em;
+}
