@@ -1,6 +1,6 @@
 {
-  "name": "hackathon-starter",
-  "version": "2.3.2",
+  "name": "SumNinjaCode",
+  "version": "0.1.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/pramodsum/sumninjacode.git"
@@ -19,7 +19,7 @@
     "connect-assets": "git://github.com/adunkman/connect-assets",
     "cookie-parser": "git://github.com/expressjs/cookie-parser",
     "errorhandler": "git://github.com/expressjs/errorhandler",
-    "escape": "git://github.com/jifeng/escape",    
+    "escape": "git://github.com/jifeng/escape",
     "express": "^4.8.7",
     "express-flash": "git://github.com/RGBboy/express-flash",
     "express-session": "git://github.com/expressjs/session",
