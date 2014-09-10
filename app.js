@@ -26,6 +26,7 @@ var homeController = require('./controllers/home');
 var quotesController = require('./controllers/quotes');
 var tweetsController = require('./controllers/tweets');
 var contactController = require('./controllers/contact');
+var projectsController = require('./controllers/projects');
 
 /**
  * API keys
@@ -112,6 +113,8 @@ var poet = Poet(app, {
 app.get('/', homeController.index);
 app.get('/quotes', quotesController.index);
 app.get('/tweets', tweetsController.index);
+app.get('/projects', projectsController.index);
+app.get('/projects/Mission-Demolition', projectsController.getMD);
 
 poet.watch(function () {
     // watcher reloaded

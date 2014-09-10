@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  include posts/header
+  .container#posts
+    center
+      h1.text-center.page-title Projects
+      ul.list-inline
+        li
+          a(href="#games") #games
+        //li
+          a(href="#apps") #apps
+        li
+          a(href="#sites") #sites
+      br
+    center
+      h1.text-center#games #Games
+        ul.list-inline
+          li
+            a(href="projects/MissionDemolition") Mission Demolition
+    //center
+      h1.text-center#apps #Apps
+    center
+      h1.text-center#sites #Sites

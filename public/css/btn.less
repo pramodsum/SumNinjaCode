@@ -5,10 +5,44 @@ a {
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
-a:hover,
-a:focus {
-  text-decoration: none;
-  color: rgb(191, 98, 167);
+
+i.ion-pound {
+  color: aqua;
+  text-shadow: 2px 2px rgb(191, 98, 167);
+}
+
+.navbar {
+  a.navbar-brand:hover,
+  a.navbar-brand:focus {
+    color: black !important;
+    display: inline-block;
+    font-weight: bold;
+
+    i.ion-pound {
+      color: rgb(191, 98, 167);
+      text-shadow: 2px 2px aqua;
+    }
+  }
+
+  li {
+    a:hover,
+    a:focus {
+      color: #bf62a7 !important;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+}
+
+#posts li, .blog-post-title, {
+  a:hover,
+  a:focus {
+    color: #bf62a7 !important;
+    border: 3px solid rgb(94, 255, 212);
+    display: inline-block;
+    font-weight: bold;
+    border-radius-radius: 5px;
+  }
 }
 
 .btn {
