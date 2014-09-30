@@ -1,0 +1,88 @@
+extends layout
+
+block content
+  #me
+    include posts/header
+    .container#posts
+      center
+        h1.page-title Sumedha Pramod
+      section#life-story
+        .row
+          .col-lg-12.text-center
+            h2.section-heading About
+            h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row
+          .col-lg-12
+            ul.timeline
+              li
+                .timeline-image
+                  img.img-circle.img-responsive(src='img/about/1.jpg', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 2009-2011
+                    h4.subheading Our Humble Beginnings
+                  .timeline-body
+                    p.text-muted
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+              li.timeline-inverted
+                .timeline-image
+                  img.img-circle.img-responsive(src='img/about/2.jpg', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 March 2011
+                    h4.subheading An Agency is Born
+                  .timeline-body
+                    p.text-muted
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+              li
+                .timeline-image
+                  img.img-circle.img-responsive(src='img/about/3.jpg', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 December 2012
+                    h4.subheading Transition to Full Service
+                  .timeline-body
+                    p.text-muted
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+              li.timeline-inverted
+                .timeline-image
+                  img.img-circle.img-responsive(src='img/about/4.jpg', alt='')
+                .timeline-panel
+                  .timeline-heading
+                    h4 July 2014
+                    h4.subheading Phase Two Expansion
+                  .timeline-body
+                    p.text-muted
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+              li.timeline-inverted
+                .timeline-image
+                  h4
+                    | Be Part
+                    br
+                    | Of Our
+                    br
+                    | Story!
+
+//-      .page-header#contact
+//-        center
+//-          h3 Say Hello!
+//-
+//-      form.form-horizontal(role='form', method='POST')
+//-        input(type='hidden', name='_csrf', value=_csrf)
+//-        .form-group
+//-          label(class='col-sm-2 control-label', for='name') Name
+//-          .col-sm-8
+//-            input.form-control(type='text', name='name', id='name', autofocus=true)
+//-        .form-group
+//-          label(class='col-sm-2 control-label', for='email') Email
+//-          .col-sm-8
+//-            input.form-control(type='text', name='email', id='email')
+//-        .form-group
+//-          label(class='col-sm-2 control-label', for='message') Body
+//-          .col-sm-8
+//-            textarea.form-control(type='text', name='message', id='message', rows='7')
+//-        .form-group
+//-          .col-sm-offset-2.col-sm-8
+//-            button.btn.btn-primary(type='submit')
+//-              span.ion-paper-airplane
+//-              | Send

@@ -25,9 +25,8 @@ var connectAssets = require('connect-assets');
 var homeController = require('./controllers/home');
 var quotesController = require('./controllers/quotes');
 var tweetsController = require('./controllers/tweets');
-var contactController = require('./controllers/contact');
 var projectsController = require('./controllers/projects');
-
+var aboutController = require('./controllers/about');
 /**
  * API keys
  */
@@ -89,9 +88,13 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
  */
 
 app.get('/', homeController.index);
+app.get('/about', aboutController.index);
+app.post('/about', aboutController.postContact);
 
-app.get('/contact', contactController.getContact);
-app.post('/contact', contactController.postContact);
+app.get('/quotes', quotesController.index);
+//app.get('/tweets', tweetsController.index);
+app.get('/projects', projectsController.index);
+app.get('/projects/Mission-Demolition', projectsController.getMD);
 
 /**
  * Poet routes
@@ -110,11 +113,6 @@ var poet = Poet(app, {
     '/categories/:category': 'posts/category'
   }
 });
-app.get('/', homeController.index);
-app.get('/quotes', quotesController.index);
-app.get('/tweets', tweetsController.index);
-app.get('/projects', projectsController.index);
-app.get('/projects/Mission-Demolition', projectsController.getMD);
 
 poet.watch(function () {
     // watcher reloaded
