@@ -35,7 +35,7 @@
     "mime-types": "git://github.com/jshttp/mime-types",
     "morgan": "git://github.com/expressjs/morgan",
     "nodemailer": "git://github.com/andris9/Nodemailer",
-    "nodemon": "git://github.com/remy/nodemon",
+    "nodemon": "^1.2.1",
     "poet": "git://github.com/pramodsum/poet",
     "request": "git://github.com/mikeal/request",
     "twit": "^1.1.18",

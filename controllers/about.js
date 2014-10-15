@@ -9,13 +9,24 @@ var transporter = nodemailer.createTransport({
 });
 
 /**
- * GET /contact
- * Contact form page.
+ * GET /about
+ * About me page.
  */
 
 exports.index = function(req, res) {
   res.render('about', {
     title: 'About'
+  });
+};
+
+/**
+ * GET /contact
+ * Contact form page.
+ */
+
+exports.getContact = function(req, res) {
+  res.render('contact', {
+    title: 'Contact'
   });
 };
 
