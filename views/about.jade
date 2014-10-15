@@ -12,56 +12,18 @@ block content
             h2.section-heading About
             h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
         .row
-          .col-lg-12
-            ul.timeline
-              li
-                .timeline-image
-                  img.img-circle.img-responsive(src='img/about/1.jpg', alt='')
-                .timeline-panel
-                  .timeline-heading
-                    h4 2009-2011
-                    h4.subheading Our Humble Beginnings
-                  .timeline-body
-                    p.text-muted
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              li.timeline-inverted
-                .timeline-image
-                  img.img-circle.img-responsive(src='img/about/2.jpg', alt='')
-                .timeline-panel
-                  .timeline-heading
-                    h4 March 2011
-                    h4.subheading An Agency is Born
-                  .timeline-body
-                    p.text-muted
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              li
-                .timeline-image
-                  img.img-circle.img-responsive(src='img/about/3.jpg', alt='')
-                .timeline-panel
-                  .timeline-heading
-                    h4 December 2012
-                    h4.subheading Transition to Full Service
-                  .timeline-body
-                    p.text-muted
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              li.timeline-inverted
-                .timeline-image
-                  img.img-circle.img-responsive(src='img/about/4.jpg', alt='')
-                .timeline-panel
-                  .timeline-heading
-                    h4 July 2014
-                    h4.subheading Phase Two Expansion
-                  .timeline-body
-                    p.text-muted
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
-              li.timeline-inverted
-                .timeline-image
-                  h4
-                    | Be Part
-                    br
-                    | Of Our
-                    br
-                    | Story!
+          #progress(data-0='width:0%;background:hsl(200, 100%, 50%);', data-end='width:100%;background:hsl(920, 100%, 50%);')
+          #intro(data-0='opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;', data-500='opacity:0;top:-10%;transform:rotate(-90deg);')
+            h1
+              a(href='https://github.com/Prinzhorn/skrollr') skrollr
+            h2 parallax scrolling for the masses
+            p let's get scrollin' ;-)
+  script(type='text/javascript', src='http://prinzhorn.github.io/skrollr/dist/skrollr.min.js')
+  script(type='text/javascript')
+    var s = skrollr.init({ edgeStrategy: 'set' });
+
+
+
 
 //-      .page-header#contact
 //-        center

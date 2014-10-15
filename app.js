@@ -26,6 +26,7 @@ var homeController = require('./controllers/home');
 var quotesController = require('./controllers/quotes');
 var tweetsController = require('./controllers/tweets');
 var projectsController = require('./controllers/projects');
+var photosController = require('./controllers/photos');
 var aboutController = require('./controllers/about');
 /**
  * API keys
@@ -53,7 +54,7 @@ var csrfExclude = ['/url1', '/url2'];
  * Express configuration.
  */
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(compress());
@@ -92,9 +93,13 @@ app.get('/about', aboutController.index);
 app.post('/about', aboutController.postContact);
 
 app.get('/quotes', quotesController.index);
+app.get('/photos', photosController.index);
 //app.get('/tweets', tweetsController.index);
 app.get('/projects', projectsController.index);
 app.get('/projects/Mission-Demolition', projectsController.getMD);
+// app.get('/projects/Legend-of-Zelda', projectsController.getZelda);
+// app.get('/projects/Save-the-Dino', projectsController.getDino);
+app.get('/travels', projectsController.getTravels);
 
 /**
  * Poet routes
@@ -108,9 +113,8 @@ var poet = Poet(app, {
   metaFormat: 'json',
   routes: {
     '/posts/:post': 'posts/post',
-    '/pagination/:page': 'posts/page',
     '/tags/:tag': 'posts/tag',
-    '/categories/:category': 'posts/category'
+    '/:category': 'posts/category'
   }
 });
 

@@ -24,6 +24,8 @@
     "express-flash": "git://github.com/RGBboy/express-flash",
     "express-session": "git://github.com/expressjs/session",
     "express-validator": "git://github.com/ctavan/express-validator",
+    "flickr-client": "0.0.3",
+    "flickrapi": "^0.3.26",
     "grunt": "git://github.com/gruntjs/grunt",
     "jade": "git://github.com/visionmedia/jade",
     "less": "git://github.com/less/less.js",
@@ -36,9 +38,9 @@
     "nodemon": "git://github.com/remy/nodemon",
     "poet": "git://github.com/pramodsum/poet",
     "request": "git://github.com/mikeal/request",
+    "twit": "^1.1.18",
     "uglify-js": "git://github.com/mishoo/UglifyJS2",
     "validator": "git://github.com/chriso/validator.js",
-    "yui": "^3.17.2",
-    "twit": "^1.1.18"
+    "yui": "^3.17.2"
   }
 }

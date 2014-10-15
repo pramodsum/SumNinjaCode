@@ -1,221 +1,149 @@
-.timeline {
-    position: relative;
-    padding: 0;
-    list-style: none;
-}
+// #progress {
+//   height:2%;
+//   background:#444;
+//   bottom:0;
+//   z-index:200;
+// }
 
-.timeline:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1.5px;
-    background-color: #f1f1f1;
-}
+// #scrollbar {
+//   position:fixed;
+//   right:2px;
+//   height:50px;
+//   width:6px;
+//   background:#444;
+//   background:rgba(0,0,0,0.6);
+//   border:1px solid rgba(255,255,255,0.6);
+//   z-index:300;
+//   border-radius:3px;
+// }
 
-.timeline>li {
-    position: relative;
-    margin-bottom: 50px;
-    min-height: 50px;
-}
+// .skrollr-desktop #scrollbar {display:none;}
 
-.timeline>li:before,
-.timeline>li:after {
-    content: " ";
-    display: table;
-}
+// #bg1, #bg2, #bg3 {
+//   z-index:50;
+//   top:0;
+//   left:0;
+//   width:100%;
+//   height:100%;
+//   background:url(images/bubbles.png) repeat 0 0;
+// }
 
-.timeline>li:after {
-    clear: both;
-}
+// #bg2 {
+//   z-index:49;
+//   background-image:url(images/bubbles2.png);
+// }
 
-.timeline>li .timeline-panel {
-    float: right;
-    position: relative;
-    width: 100%;
-    padding: 0 20px 0 100px;
-    text-align: left;
-}
+// #bg3 {
+//   z-index:48;
+//   background-image:url(images/bubbles3.png);
+// }
 
-.timeline>li .timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
+// #intro {
+//   width:80%;
+//   left:50%;
+//   top:1em;
+//   margin-left:-40%;
+//   padding:2em;
+//   background:#fff;
+//   text-align:center;
+//   border-radius:1em;
 
-.timeline>li .timeline-panel:after {
-    right: auto;
-    left: -14px;
-    border-right-width: 14px;
-    border-left-width: 0;
-}
+//   -webkit-transform-origin:0 0;
+//   -moz-transform-origin:0 0;
+//   -ms-transform-origin:0 0;
+//   -o-transform-origin:0 0;
+//   transform-origin:0 0;
 
-.timeline>li .timeline-image {
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    margin-left: 0;
-    border: 7px solid #f1f1f1;
-    border-radius: 100%;
-    text-align: center;
-    color: #fff;
-    background-color: #fed136;
-}
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
 
-.timeline>li .timeline-image h4 {
-    margin-top: 12px;
-    font-size: 10px;
-    line-height: 14px;
-}
+// #intro .arrows {
+//   font-size:2em;
+//   color:#09f;
+// }
 
-.timeline>li.timeline-inverted>.timeline-panel {
-    float: right;
-    padding: 0 20px 0 100px;
-    text-align: left;
-}
+// #transform {
+//   width:70%;
+//   left:50%;
+//   top:20%;
+//   margin-left:-35%;
+//   text-align:center;
+//   font-size:150%;
 
-.timeline>li.timeline-inverted>.timeline-panel:before {
-    right: auto;
-    left: -15px;
-    border-right-width: 15px;
-    border-left-width: 0;
-}
+//   transform-origin(50%, 50%);
+// }
 
-.timeline>li.timeline-inverted>.timeline-panel:after {
-    right: auto;
-    left: -14px;
-    border-right-width: 14px;
-    border-left-width: 0;
-}
+// #properties {
+//   width:100%;
+//   height:100%;
+//   padding-top:10%;
+//   text-align:center;
 
-.timeline>li:last-child {
-    margin-bottom: 0;
-}
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
 
-.timeline .timeline-heading h4 {
-    margin-top: 0;
-    color: inherit;
-}
+// #easing_wrapper {
+//   width:100%;
+//   height:100%;
+// }
 
-.timeline .timeline-heading h4.subheading {
-    text-transform: none;
-}
+// #easing {
+//   top:10%;
+//   width:50%;
+//   z-index:101;
+// }
 
-.timeline .timeline-body>p,
-.timeline .timeline-body>ul {
-    margin-bottom: 0;
-}
+// .drop {
+//   background:#09f;
+//   font-weight:bold;
+//   padding:1em;
+// }
 
-@media(min-width:768px) {
-    .timeline:before {
-        left: 50%;
-    }
+// #download {
+//   width:80%;
+//   left:10%;
+//   height:80%;
+//   padding:3em;
+//   border:0 solid #222;
 
-    .timeline>li {
-        margin-bottom: 100px;
-        min-height: 100px;
-    }
+//   -webkit-box-sizing: border-box;
+//   -moz-box-sizing: border-box;
+//   box-sizing: border-box;
+// }
 
-    .timeline>li .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: right;
-    }
+// .skrollable {
+//   /*
+//    * First-level skrollables are positioned relative to window
+//    */
+//   position:fixed;
 
-    .timeline>li .timeline-image {
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
-    }
+//   /*
+//    * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+//    */
+//   z-index:100;
+// }
 
-    .timeline>li .timeline-image h4 {
-        margin-top: 16px;
-        font-size: 13px;
-        line-height: 18px;
-    }
+// .skrollr-mobile .skrollable {
+//   /*
+//     May cause issues on Android default browser (see #331 on GitHub).
+//   */
+//   position:absolute;
+// }
 
-    .timeline>li.timeline-inverted>.timeline-panel {
-        float: right;
-        padding: 0 30px 20px 20px;
-        text-align: left;
-    }
-}
+// .skrollable .skrollable {
+//   /*
+//    * Second-level skrollables are positioned relative their parent skrollable
+//    */
+//   position:absolute;
+// }
 
-@media(min-width:992px) {
-    .timeline>li {
-        min-height: 150px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 30px;
-        font-size: 18px;
-        line-height: 26px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 20px 20px;
-    }
-}
-
-@media(min-width:1200px) {
-    .timeline>li {
-        min-height: 170px;
-    }
-
-    .timeline>li .timeline-panel {
-        padding: 0 20px 20px 100px;
-    }
-
-    .timeline>li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
-    }
-
-    .timeline>li .timeline-image h4 {
-        margin-top: 40px;
-    }
-
-    .timeline>li.timeline-inverted>.timeline-panel {
-        padding: 0 100px 20px 20px;
-    }
-}
-
-::-moz-selection {
-    text-shadow: none;
-    background: #fed136;
-}
-
-::selection {
-    text-shadow: none;
-    background: #fed136;
-}
-
-img::selection {
-    background: 0 0;
-}
-
-img::-moz-selection {
-    background: 0 0;
-}
-
-body {
-    webkit-tap-highlight-color: #fed136;
-}
+// .skrollable .skrollable .skrollable {
+//   /*
+//    * Third-level (and below) skrollables are positioned static
+//    */
+//   position:static;
+// }

@@ -11,6 +11,7 @@
 @import "post";
 /*@import "footer";*/
 @import "header";
+@import "timeline";
 
 
 // Scaffolding
@@ -93,8 +94,8 @@ p {
   border-radius: 5px;
 }
 
-.page-title:hover {
-  color: rgb(191, 98, 167);
+.page-title a:hover {
+  color: rgb(191, 98, 167) !important;
   text-shadow: 2px 2px rgb(94, 255, 212);
 }
 
