@@ -1,6 +1,6 @@
 {
   "name": "SumNinjaCode",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/pramodsum/sumninjacode.git"
@@ -34,10 +34,13 @@
     "method-override": "git://github.com/expressjs/method-override",
     "mime-types": "git://github.com/jshttp/mime-types",
     "morgan": "git://github.com/expressjs/morgan",
+    "newrelic": "^1.12.1",
     "nodemailer": "git://github.com/andris9/Nodemailer",
     "nodemon": "^1.2.1",
     "poet": "git://github.com/pramodsum/poet",
     "request": "git://github.com/mikeal/request",
+    "skrollr": "^0.6.26",
+    "skrollr-css": "^0.1.1",
     "twit": "^1.1.18",
     "uglify-js": "git://github.com/mishoo/UglifyJS2",
     "validator": "git://github.com/chriso/validator.js",
