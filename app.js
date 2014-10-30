@@ -136,9 +136,10 @@ var errorHandler = require('express-error-handler'),
   handler = errorHandler({
     static: {
       '404': '404.jade'
+      '500': '500.jade'
     }
   });
-  
+
 // After all your routes...
 // Pass a 404 into next(err)
 app.use( errorHandler.httpError(404) );
