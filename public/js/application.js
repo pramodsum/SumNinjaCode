@@ -14,7 +14,5 @@
  */
 
 //= require lib/jquery-2.1.1.min
-//= require lib/jquery.easing.min
 //= require lib/bootstrap.min
-//= require lib/grayscale
 //= require main

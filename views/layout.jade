@@ -7,24 +7,15 @@ html
     meta(name='description', content='')
     meta(name='csrf-token', content=_csrf)
     meta(name='author', content='')
-    title #{title} | SumNinjaCode
+    title #{title} | Hackathon Starter
     != css('styles')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic')
-    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Montserrat:400,700')
-    link(rel='icon', type='image/png', href='img/favicon.ico')
-  body(id="page-top", data-spy="scroll", data-target=".navbar-fixed-top")
-
-    script(src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-resource.min.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular-sanitize.min.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js')
-
+  body
     include partials/navbar
 
-    include partials/flash
-    block content
+    .container
+      include partials/flash
+      block content
 
-    //    include partials/footer
+    include partials/footer
 
     != js('application')

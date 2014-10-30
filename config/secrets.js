@@ -18,16 +18,9 @@
 
 module.exports = {
 
-//   export FLICKR_USER_ID="69688191%40N03"
-// export FLICKR_ACCESS_TOKEN="72157648627476385-ad6363388615d2c7"
-// export FLICKR_ACCESS_TOKEN_SECRET="309dd5fbe8748018"
+  db: process.env.MONGODB|| 'mongodb://localhost:27017/test',
 
-  sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here', 
-  
-  flickr: { 
-    api_key: 'aefb0ddaab2717018c4d893cf2553ebc',
-    secret: 'db74331a85bf5808'
-  },
+  sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
 
   mailgun: {
     user: process.env.MAILGUN_USER || 'postmaster@sandbox697fcddc09814c6b83718b9fd5d4e5dc.mailgun.org',
