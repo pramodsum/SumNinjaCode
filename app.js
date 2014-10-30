@@ -135,7 +135,7 @@ poet.watch(function () {
 var errorHandler = require('express-error-handler'),
   handler = errorHandler({
     static: {
-      '404': '404.jade'
+      '404': '404.jade',
       '500': '500.jade'
     }
   });
