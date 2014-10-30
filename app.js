@@ -132,16 +132,19 @@ poet.watch(function () {
 // app.use(errorHandler());
 
 // Handle 404
-app.use(function(req, res) {
-    res.status(400);
-   res.render('404.jade', {title: '404: File Not Found'});
-});
+var errorHandler = require('express-error-handler'),
+  handler = errorHandler({
+    static: {
+      '404': '404.jade'
+    }
+  });
+  
+// After all your routes...
+// Pass a 404 into next(err)
+app.use( errorHandler.httpError(404) );
 
-// Handle 500
-app.use(function(error, req, res, next) {
-    res.status(500);
-   res.render('500.jade', {title:'500: Internal Server Error', error: error});
-});
+// Handle all unhandled errors:
+app.use( handler );
 
 /**
  * Sitemap.xml
