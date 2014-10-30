@@ -34,7 +34,6 @@
     "method-override": "git://github.com/expressjs/method-override",
     "mime-types": "git://github.com/jshttp/mime-types",
     "morgan": "git://github.com/expressjs/morgan",
-    "newrelic": "^1.12.1",
     "nodemailer": "git://github.com/andris9/Nodemailer",
     "nodemon": "^1.2.1",
     "poet": "git://github.com/pramodsum/poet",
