@@ -21,6 +21,7 @@
     "errorhandler": "git://github.com/expressjs/errorhandler",
     "escape": "git://github.com/jifeng/escape",
     "express": "^4.8.7",
+    "express-error-handler": "^0.6.0",
     "express-flash": "git://github.com/RGBboy/express-flash",
     "express-session": "git://github.com/expressjs/session",
     "express-validator": "git://github.com/ctavan/express-validator",
