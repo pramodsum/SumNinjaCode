@@ -11,7 +11,7 @@ block content
         |&nbsp;}
       p.blog-post-meta #{post.date.getMonth()+1}.#{post.date.getDate()}.#{post.date.getFullYear()}
       p
-        != post.preview
+        != post.content
       .tags
         ul
           - each tag in post.tags
