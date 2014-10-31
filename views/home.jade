@@ -4,10 +4,9 @@ block content
   include partials/header
     // Posts Section
   .container#posts
-    .row
-      - var posts = getPosts(0,5)
-      - var page  = 1
-      - each post in posts
-        include partials/post
-      .text-center
-        include includes/pagination
+    - var posts = getPosts(0,5)
+    - var page  = 1
+    - each post in posts
+      include partials/post
+    .text-center
+      include includes/pagination
