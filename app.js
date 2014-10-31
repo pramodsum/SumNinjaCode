@@ -24,6 +24,11 @@ var connectAssets = require('connect-assets');
  */
 
 var homeController = require('./controllers/home');
+var quotesController = require('./controllers/quotes');
+var tweetsController = require('./controllers/tweets');
+var projectsController = require('./controllers/projects');
+var photosController = require('./controllers/photos');
+var aboutController = require('./controllers/about');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
 
@@ -102,6 +107,41 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
 app.get('/', homeController.index);
 app.get('/contact', contactController.getContact);
 app.post('/contact', contactController.postContact);
+app.get('/about', aboutController.index);
+app.post('/contact', aboutController.getContact);
+app.post('/contact', aboutController.postContact);
+
+app.get('/quotes', quotesController.index);
+app.get('/photos', photosController.index);
+//app.get('/tweets', tweetsController.index);
+app.get('/projects', projectsController.index);
+app.get('/projects/Mission-Demolition', projectsController.getMD);
+// app.get('/projects/Legend-of-Zelda', projectsController.getZelda);
+// app.get('/projects/Save-the-Dino', projectsController.getDino);
+app.get('/travels', projectsController.getTravels);
+
+/**
+ * Poet routes
+ */
+
+var Poet = require('poet');
+
+var poet = Poet(app, {
+  postsPerPage: 3,
+  posts: './_posts',
+  metaFormat: 'json',
+  routes: {
+    '/posts/:post': 'posts/post',
+    '/tags/:tag': 'posts/tag',
+    '/:category': 'posts/category'
+  }
+});
+
+poet.watch(function () {
+    // watcher reloaded
+}).init().then(function () {
+    // Ready to go!
+});
 
 /**
  * API examples routes.
@@ -140,6 +180,18 @@ app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedi
  */
 
 app.use(errorHandler());
+
+/**
+ * Sitemap.xml
+ */
+
+app.get('/posts/sitemap.xml', function (req, res) {
+  // Only get the latest posts
+  var postCount = poet.helpers.getPostCount();
+  var posts = poet.helpers.getPosts(0, postCount);
+  res.setHeader('Content-Type', 'application/xml');
+  res.render('sitemap', { posts: posts });
+});
 
 /**
  * Start Express server.

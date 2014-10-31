@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  include header
+  .container#posts
+    center
+      h1.text-center.page-title
+    ul
+      - each tag in getTags()
+        li
+          a(href=tagUrl(tag)) #{tag}
