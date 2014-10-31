@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  include header
+  .container#posts
+      center
+        h1.text-center.page-title
+          a(href=tagUrl(tag)) #{tag}
+      - each post in posts
+        include includes/postSnippet

@@ -15,6 +15,7 @@ var methodOverride = require('method-override');
 var _ = require('lodash');
 var flash = require('express-flash');
 var path = require('path');
+var passport = require('passport');
 var expressValidator = require('express-validator');
 var connectAssets = require('connect-assets');
 
@@ -28,11 +29,15 @@ var tweetsController = require('./controllers/tweets');
 var projectsController = require('./controllers/projects');
 var photosController = require('./controllers/photos');
 var aboutController = require('./controllers/about');
+var apiController = require('./controllers/api');
+var contactController = require('./controllers/contact');
+
 /**
- * API keys
+ * API keys and Passport configuration.
  */
 
 var secrets = require('./config/secrets');
+var passportConf = require('./config/passport');
 
 /**
  * Create Express server.
@@ -54,7 +59,7 @@ var csrfExclude = ['/url1', '/url2'];
  * Express configuration.
  */
 
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(compress());
@@ -71,8 +76,10 @@ app.use(cookieParser());
 app.use(session({
   resave: true,
   saveUninitialized: true,
-  secret: secrets.sessionSecret,
+  secret: secrets.sessionSecret
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 app.use(function(req, res, next) {
   // CSRF protection.
@@ -82,6 +89,15 @@ app.use(function(req, res, next) {
 app.use(function(req, res, next) {
   next();
 });
+app.use(function(req, res, next) {
+  // Remember original destination before login.
+  var path = req.path.split('/')[1];
+  if (/auth|login|logout|signup|fonts|favicon/i.test(path)) {
+    return next();
+  }
+  req.session.returnTo = req.path;
+  next();
+});
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
 
 /**
@@ -89,6 +105,8 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
  */
 
 app.get('/', homeController.index);
+app.get('/contact', contactController.getContact);
+app.post('/contact', contactController.postContact);
 app.get('/about', aboutController.index);
 app.post('/contact', aboutController.getContact);
 app.post('/contact', aboutController.postContact);
@@ -126,26 +144,42 @@ poet.watch(function () {
 });
 
 /**
- * Error Handler.
+ * API examples routes.
  */
 
-// app.use(errorHandler());
+app.get('/api', apiController.getApi);
+app.get('/api/aviary', apiController.getAviary);
+app.get('/api/github', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getGithub);
+app.get('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getTwitter);
+app.post('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.postTwitter);
+app.get('/api/instagram', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getInstagram);
 
-// Handle 404
-var errorHandler = require('express-error-handler'),
-  handler = errorHandler({
-    static: {
-      '404': '404.jade',
-      '500': '500.jade'
-    }
-  });
+/**
+ * OAuth sign-in routes.
+ */
 
-// After all your routes...
-// Pass a 404 into next(err)
-app.use( errorHandler.httpError(404) );
+app.get('/auth/instagram', passport.authenticate('instagram'));
+app.get('/auth/instagram/callback', passport.authenticate('instagram', { failureRedirect: '/login' }), function(req, res) {
+  res.redirect(req.session.returnTo || '/');
+});
+app.get('/auth/github', passport.authenticate('github'));
+app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }), function(req, res) {
+  res.redirect(req.session.returnTo || '/');
+});
+app.get('/auth/google', passport.authenticate('google', { scope: 'profile email' }));
+app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), function(req, res) {
+  res.redirect(req.session.returnTo || '/');
+});
+app.get('/auth/twitter', passport.authenticate('twitter'));
+app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/login' }), function(req, res) {
+  res.redirect(req.session.returnTo || '/');
+});
 
-// Handle all unhandled errors:
-app.use( handler );
+/**
+ * 500 Error Handler.
+ */
+
+app.use(errorHandler());
 
 /**
  * Sitemap.xml
