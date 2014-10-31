@@ -5,4 +5,4 @@
     "date"     : "9-3-2014"
 }}}
 
-<img src="../img/posts/mario.png" class="img-responsive"/>
+<img src="../img/posts/mario.png"/>
