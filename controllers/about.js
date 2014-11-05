@@ -37,25 +37,25 @@ exports.index = function(req, res) {
 
   var txtFileURL, codeFileURL;
 
-  client.documents.uploadURL(textURL, opt, function(err, data, r) {
-    console.log('%j', data);
+  // client.documents.uploadURL(textURL, opt, function(err, data, r) {
+  //   console.log('%j', data);
 
-    txtFileURL = getSession(data["id"]);
-    console.log("TXT: " + txtFileURL);
+  //   txtFileURL = getSession(data["id"]);
+  //   console.log("TXT: " + txtFileURL);
 
-    client.documents.uploadURL(codeURL, opt, function(err, data, r) {
-      console.log('%j', data);
+  //   client.documents.uploadURL(codeURL, opt, function(err, data, r) {
+  //     console.log('%j', data);
 
-      codeFileURL = getSession(data["id"]);
-      console.log("CODE: " + codeFileURL);
+  //     codeFileURL = getSession(data["id"]);
+  //     console.log("CODE: " + codeFileURL);
 
       res.render('about', {
         title: 'About',
         txtfile: txtFileURL,
         codefile: codeFileURL
       });
-    });
-  })
+  //   });
+  // });
 };
 
 /**
