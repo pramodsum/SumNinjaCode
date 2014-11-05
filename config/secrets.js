@@ -18,6 +18,10 @@
 
 module.exports = {
 
+  boxView: {
+    key: 'sw1wtyknrdj40ymnnhmg31s1rip7v1ea'
+  },
+
   sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
 
   mailgun: {

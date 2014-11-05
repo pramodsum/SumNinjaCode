@@ -9,15 +9,53 @@ var transporter = nodemailer.createTransport({
   }
 });
 
+var viewAPIKey = secrets.boxView.key;
+var client = require('box-view').createClient(viewAPIKey);
+
+function getSession(id) {
+  client.sessions.create(id, function(err, data, res) {
+    console.log('%j', data);
+    if(res.statusCode == 200) {
+      txtFileURL = data["urls"]["view"];
+      console.log(txtFileURL);
+      return txtFileURL;
+    } else if(res.statusCode == 202) {
+      return getSession(id);
+    }
+  });
+}
+
 /**
  * GET /about
  * About me page.
  */
 
 exports.index = function(req, res) {
-  res.render('about', {
-    title: 'About'
-  });
+  var textURL = "https://wordpress.org/plugins/about/readme.txt";
+  var codeURL = "http://pygtk.org/pygtk2tutorial/examples/helloworld.py";
+  var opt = { params: { duration: 9999999 } };
+
+  var txtFileURL, codeFileURL;
+
+  client.documents.uploadURL(textURL, opt, function(err, data, r) {
+    console.log('%j', data);
+
+    txtFileURL = getSession(data["id"]);
+    console.log("TXT: " + txtFileURL);
+
+    client.documents.uploadURL(codeURL, opt, function(err, data, r) {
+      console.log('%j', data);
+
+      codeFileURL = getSession(data["id"]);
+      console.log("CODE: " + codeFileURL);
+
+      res.render('about', {
+        title: 'About',
+        txtfile: txtFileURL,
+        codefile: codeFileURL
+      });
+    });
+  })
 };
 
 /**

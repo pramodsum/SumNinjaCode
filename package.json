@@ -13,6 +13,7 @@
     "async": "^0.9.0",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.4.3",
+    "box-view": "^1.1.0",
     "cheerio": "^0.17.0",
     "compression": "^1.0.8",
     "connect-assets": "^3.0.2",
