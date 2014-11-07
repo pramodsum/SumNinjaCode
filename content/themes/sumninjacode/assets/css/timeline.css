@@ -1,0 +1,39 @@
+#resume a:focus, 
+#resume a:hover,  {
+  color: rgb(191, 98, 167);
+  text-shadow: 2px 2px rgb(94, 255, 212);
+}
+#resume ul li:focus, 
+#resume ul li:hover {
+  a {
+    color: rgb(191, 98, 167);
+    text-shadow: 2px 2px rgb(94, 255, 212);
+  }
+}
+
+#resume i.ion-pound {
+  color: rgb(191, 98, 167);
+  text-shadow: 2px 2px rgb(94, 255, 212);
+}
+
+#resume i.ion-pound:hover,
+#resume i.ion-pound:focus,
+#resume a:hover i.ion-pound,
+#resume a:focus i.ion-pound, {
+  color: rgb(94, 255, 212);
+  text-shadow: 2px 2px rgb(191, 98, 167);
+}
+
+#resume h2 {
+  color: rgb(191, 98, 167);
+}
+
+#resume h2 a:focus, 
+#resume h2 a:hover {
+  color: rgb(94, 255, 212);
+  text-shadow: 2px 2px rgb(191, 98, 167);
+}
+
+div.small {
+  color: white;
+}

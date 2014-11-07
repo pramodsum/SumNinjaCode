@@ -1,2 +1,0 @@
-SumNinjaCode.io - Personal Blog
-===
