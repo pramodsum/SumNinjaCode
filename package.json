@@ -23,7 +23,7 @@
   ],
   "main": "./core/index",
   "scripts": {
-    "start": "nodemon index",
+    "start": "node index",
     "test": "./node_modules/.bin/grunt validate --verbose"
   },
   "engines": {
@@ -56,6 +56,7 @@
     "passport": "0.2.0",
     "passport-http-bearer": "1.0.1",
     "passport-oauth2-client-password": "0.1.1",
+    "pg": "^3.6.2",
     "rss": "0.2.1",
     "semver": "2.2.1",
     "showdown": "https://github.com/ErisDS/showdown/archive/v0.3.2-ghost.tar.gz",
