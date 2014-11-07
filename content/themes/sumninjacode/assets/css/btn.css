@@ -12,6 +12,10 @@ a:focus {
   text-shadow: 2px 2px rgb(94, 255, 212);
 }
 
+a.btn-circle.btn-social {
+  text-shadow: none;
+}
+
 i.ion-pound {
   color: rgb(94, 255, 212);
   text-shadow: 2px 2px rgb(191, 98, 167);

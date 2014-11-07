@@ -34,17 +34,21 @@ time.post-date {
 }
 
 .tags a {
-  padding: 0 2px;
-}
-
-.tags a.label-tag {
-  background: rgb(191, 98, 167);
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
   color: rgb(94, 255, 212);
-  text-shadow: none;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background: rgb(191, 98, 167);
 }
 
-.tags a.label-tag:hover, 
-.tags a.label-tag:focus {
+.tags a:hover, 
+.tags a:focus {
   background: rgb(94, 255, 212) !important;
   border: none !important;
   color: rgb(191, 98, 167) !important;
@@ -59,3 +63,4 @@ time.post-date {
 .tags ul li {
   display: inline-block;
 }
+*/
