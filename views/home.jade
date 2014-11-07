@@ -5,12 +5,12 @@ block content
     // Posts Section
   .container#posts
     .row
-      .col-sm-10
-        - var posts = getPosts(0,5)
-        - var page  = 1
-        - each post in posts
-          include partials/post
-      .col-sm-2
+      //- .col-sm-10
+      - var posts = getPosts(0,5)
+      - var page  = 1
+      - each post in posts
+        include partials/post
+      //- .col-sm-2
         .sidebar-nav
           ul.nav.nav-list
             li.nav-header categories
