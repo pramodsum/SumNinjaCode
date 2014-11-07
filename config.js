@@ -9,30 +9,19 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
-    // 
-    // postgres://kdbmmyrrgygtdg:NjgVLhOZwSZGXm2eq4k9yJz7sg@ec2-54-83-204-244.compute-1.amazonaws.com:5432/d6pqnrv3i13r0n
+    // ### Production
     production: {
-        database: {  
-            client: 'postgres',
-            connection: {
-                host: process.env.POSTGRES_HOST,
-                user: process.env.POSTGRES_USER,
-                password: process.env.POSTGRES_PASS,
-                database: process.env.POSTGRES_DB,
-                port: process.env.POSTGRES_PORT
-            }
+        url: 'http://sumninjacode.io',
+        database: {
+          client: 'postgres',
+          connection: process.env.DATABASE_URL,
+          debug: false
         },
-        aws: {  
-            accessKeyId: process.env.AWS_ACCESS_ID,
-            secretAccessKey: process.env.AWS_ACCESS_KEY,
-            bucket: process.env.AWS_BUCKET_NAME,
-            region: process.env_AWS_BUCKET_REGION
-        },
-        server: {  
-            host: '0.0.0.0',
-            port: process.env.PORT
+        server: {
+          host: '0.0.0.0',
+          port: process.env.PORT
         }
-    },
+    }
 
     // ### Development **(default)**
     development: {
@@ -56,7 +45,7 @@ config = {
         // ```
 
         database: {
-            client: 'postgres',
+            client: 'sqlite3',
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost-dev.db')
             },
@@ -81,7 +70,7 @@ config = {
     testing: {
         url: 'http://127.0.0.1:2369',
         database: {
-            client: 'postgres',
+            client: 'sqlite3',
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost-test.db')
             }
@@ -92,6 +81,48 @@ config = {
         },
         logging: false
     },
+
+    // ### Testing MySQL
+    // Used by Travis - Automated testing run through GitHub
+    'testing-mysql': {
+        url: 'http://127.0.0.1:2369',
+        database: {
+            client: 'mysql',
+            connection: {
+                host     : '127.0.0.1',
+                user     : 'root',
+                password : '',
+                database : 'ghost_testing',
+                charset  : 'utf8'
+            }
+        },
+        server: {
+            host: '127.0.0.1',
+            port: '2369'
+        },
+        logging: false
+    },
+
+    // ### Testing pg
+    // Used by Travis - Automated testing run through GitHub
+    'testing-pg': {
+        url: 'http://127.0.0.1:2369',
+        database: {
+            client: 'pg',
+            connection: {
+                host     : '127.0.0.1',
+                user     : 'postgres',
+                password : '',
+                database : 'ghost_testing',
+                charset  : 'utf8'
+            }
+        },
+        server: {
+            host: '127.0.0.1',
+            port: '2369'
+        },
+        logging: false
+    }
 };
 
 // Export config
