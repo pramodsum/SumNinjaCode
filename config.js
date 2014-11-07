@@ -9,29 +9,28 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
+    // 
+    // postgres://kdbmmyrrgygtdg:NjgVLhOZwSZGXm2eq4k9yJz7sg@ec2-54-83-204-244.compute-1.amazonaws.com:5432/d6pqnrv3i13r0n
     production: {
-        url: 'http://sumninjacode.io',
-        mail: {},
-        database: {
+        database: {  
             client: 'postgres',
             connection: {
-              host: 'ec2-54-83-204-244.compute-1.amazonaws.com',
-              user: 'kdbmmyrrgygtdg',
-              password: 'NjgVLhOZwSZGXm2eq4k9yJz7sg',
-              database: 'd6pqnrv3i13r0n',
-              port: '5432'
-            },
-            debug: false
+                host: process.env.POSTGRES_HOST,
+                user: process.env.POSTGRES_USER,
+                password: process.env.POSTGRES_PASS,
+                database: process.env.POSTGRES_DB,
+                port: process.env.POSTGRES_PORT
+            }
         },
-
-        server: {
-            // Host to be passed to node's `net.Server#listen()`
+        aws: {  
+            accessKeyId: process.env.AWS_ACCESS_ID,
+            secretAccessKey: process.env.AWS_ACCESS_KEY,
+            bucket: process.env.AWS_BUCKET_NAME,
+            region: process.env_AWS_BUCKET_REGION
+        },
+        server: {  
             host: '0.0.0.0',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT
-        },
-        paths: {
-            contentPath: path.join(__dirname, '/content/')
         }
     },
 
