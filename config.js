@@ -15,11 +15,7 @@ config = {
         database: {
             client: 'postgres',
             connection: {
-                  host: process.env.POSTGRES_HOST,
-                  user: process.env.POSTGRES_USER,
-                  password: process.env.POSTGRES_PASSWORD,
-                  database: '',
-                  port: '5432'
+                  host: process.env.DATABASE_URL
             },
             debug: false
         },
