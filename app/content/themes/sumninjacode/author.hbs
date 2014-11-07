@@ -1,0 +1,87 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+<div class="container">
+    <center>
+      <h1 class="page-title">Sumedha Pramod</h1>
+    </center>
+    <section id="resume">
+      <center>
+        <ul class="list-inline">
+          <li><a href="{{@blog.url}}/tag/projects"> <i class="ion-pound"></i>projects</a></li>
+          <li><a href="#experience"><i class="ion-pound"></i>experience</a></li>
+          <li><a href="#leadership"><i class="ion-pound"></i>leadership</a></li>
+          <li><a href="#courses"><i class="ion-pound"></i>courses</a></li>
+        </ul>
+      </center><br/>
+      <div id="experience">
+        <h1 class="text-center"><i class="ion-pound"></i>Experience</h1>
+        <p>
+          <h2>Box
+            <div class="small"><a href="https://developers.box.com/view-api/">View API</a> Software Engineering Intern</div>
+            <div class="small">Summer 2014 | Los Altos, CA</div>
+          </h2>
+          <p>Refactored View API, which currently only supports PDF, Word, and PowerPoint files, to support various new document types using python and Django, and JavaScript. Added support for text files, code files with syntax highlighting and basic markdown processing</p>
+        </p>
+        <p>
+          <h2>LinkedIn Hackathon
+            <div class="small">July 2014 | 3rd Place Winning Webapp</div>
+          </h2>
+          <p>Built a web application, <a href="www.skillfill.herokuapp.com">SkillFill</a>, using node.js, that analyzes a user’s skills in tangent with the current job market to provide the most valuable and profitable skills for the user to learn, which is then used to suggest online courses to gain those skills. </p>
+        </p>
+        <p>
+          <h2>Workday, Inc.
+            <div class="small">Associate Developer Generation Workday Beta Data Science Intern</div>
+            <div class="small">Summer 2013 | Pleasanton, CA</div>
+          </h2>
+          <p>Designed and built a Ruby on Rails application that visualizes statistical data and job allocation. Simulated the production environment for running integration jobs including mimicking tenant allocation using data from the stats warehouse. </p>
+        </p>
+        <p>
+          <h2>Navistar, Multidisciplinary Design Program
+            <div class="small">Industry Sponsored Project Android Developer</div>
+            <div class="small">2013 | University of Michigan, Ann Arbor</div>
+          </h2>
+          <p>Developed an Android application using the Google Maps API’s that uses GPS input to optimize fuel efficiency and fuel economy and/or minimize de-rate mode in large diesel powertrains.</p>
+        </p>
+        <p>
+          <h2>MBA Social Venture Fund, Ross School of Business 
+            <div class="small">Website Developer</div>
+            <div class="small">October 2012 – September 2013 | University of Michigan, Ann Arbor</div>
+          </h2>
+          <p>Developed and maintained components for the <a href="www.umsocialventure.com">website </a></p>
+        </p>
+      </div>
+      <div id="leadership">
+        <h1 class="text-center"><i class="ion-pound"></i>leadership</h1>
+        <p>
+          <h2>Student Society for Stem Cell Research, 
+            <div class="small">President</div>
+            <div class="small">2010-2014 | University of Michigan Chapter</div>
+          </h2>
+          <p>Hosted the first annual Michigan Stem Cell Summit in January 2013 bringing researchers from all over together for discussions on the progress of stem cell research, while providing students at the university the opportunity to interact and network with top researchers and advocates. Founded the umStem Research Program which gives students the resources and connections needed to successfully gain research positions within 13 associated labs</p>
+        </p>
+        <p>
+          <h2>That Brown Show Committee, Michigan Sahānā Classical Music
+            <div class="small">Treasury Chair</div>
+            <div class="small">2012 - 2014 | University of Michigan Ann Arbor</div>
+          </h2>
+          <p>Secured full funding for the show and all expenses involved with receipt reimbursement</p>
+        </p>
+      </div>
+      <div id="courses">
+        <h1 class="text-center"><i class="ion-pound"></i>Courses</h1>
+        <ul>
+          <li>Intelligent Interactive Systems Independent Study</li>
+          <li>Database Management</li>
+          <li>Computer Game Design</li>
+          <li>Introduction to Computer Security</li>
+          <li>Mobile Development & Entrepreneurship</li>
+          <li>Intelligent Interactive System</li>
+          <li>Introduction to Java</li>
+          <li>Linear Algebra </li>
+        </ul>
+      </div>
+    </section>
+    <br><br>
+</div>
