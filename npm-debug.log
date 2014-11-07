@@ -1,34 +1,107 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'basket', '--save' ]
 2 info using npm@2.0.2
 3 info using node@v0.10.32
 4 verbose node symlink /usr/local/bin/node
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart hackathon-starter@2.3.0
-7 info start hackathon-starter@2.3.0
-8 verbose unsafe-perm in lifecycle true
-9 info hackathon-starter@2.3.0 Failed to exec start script
-10 verbose stack Error: hackathon-starter@2.3.0 start: `node app.js`
-10 verbose stack Exit status 8
-10 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
-10 verbose stack     at ChildProcess.emit (events.js:98:17)
-10 verbose stack     at maybeClose (child_process.js:756:16)
-10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
-11 verbose pkgid hackathon-starter@2.3.0
-12 verbose cwd /Users/pramods/Documents/Box Documents/SumNinjaCode
-13 error Darwin 14.0.0
-14 error argv "node" "/usr/local/bin/npm" "start"
-15 error node v0.10.32
-16 error npm  v2.0.2
-17 error code ELIFECYCLE
-18 error hackathon-starter@2.3.0 start: `node app.js`
-18 error Exit status 8
-19 error Failed at the hackathon-starter@2.3.0 start script.
-19 error This is most likely a problem with the hackathon-starter package,
-19 error not with npm itself.
-19 error Tell the author that this fails on your system:
-19 error     node app.js
-19 error You can get their info via:
-19 error     npm owner ls hackathon-starter
-19 error There is likely additional logging output above.
-20 verbose exit [ 1, true ]
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'basket', null ]
+7 verbose cache add spec="basket" args=["basket",null]
+8 verbose parsed spec { raw: 'basket',
+8 verbose parsed spec   scope: null,
+8 verbose parsed spec   name: 'basket',
+8 verbose parsed spec   rawSpec: '',
+8 verbose parsed spec   spec: '*',
+8 verbose parsed spec   type: 'range' }
+9 verbose parsed spec { raw: 'basket',
+9 verbose parsed spec   scope: null,
+9 verbose parsed spec   name: 'basket',
+9 verbose parsed spec   rawSpec: '',
+9 verbose parsed spec   spec: '*',
+9 verbose parsed spec   type: 'range' }
+10 verbose addNamed [ 'basket', '*' ]
+11 verbose addNamed [ null, '*' ]
+12 silly lockFile 34a65acf-basket basket@*
+13 verbose lock basket@* /Users/pramods/.npm/34a65acf-basket.lock
+14 silly addNameRange { name: 'basket', range: '*', hasData: false }
+15 verbose mapToRegistry name basket
+16 verbose mapToRegistry uri https://registry.npmjs.org/basket
+17 verbose request on initialization, where is /basket
+18 verbose request after pass 1, where is /basket
+19 verbose request url raw /basket
+20 verbose request resolving registry [ 'https://registry.npmjs.org/', './basket' ]
+21 verbose request after pass 2, where is https://registry.npmjs.org/basket
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 09:21:46
+24 verbose request id 1e2b978b93cb23ec
+25 http request GET https://registry.npmjs.org/basket
+26 http 200 https://registry.npmjs.org/basket
+27 silly registry.get cb [ 200,
+27 silly registry.get   { date: 'Fri, 07 Nov 2014 14:21:47 GMT',
+27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"ESUO1SZYWOF34DMIE9ENYWSV6"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '4788',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     'x-served-by': 'cache-sjc3131-SJC',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1415370107.589063,VS0,VE86',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 silly addNameRange number 2 { name: 'basket', range: '*', hasData: true }
+29 silly addNameRange versions [ 'basket', [ '0.0.1', '0.1.0', '0.1.1' ] ]
+30 verbose addNamed [ 'basket', '0.1.1' ]
+31 verbose addNamed [ '0.1.1', '0.1.1' ]
+32 silly lockFile 1aab6249-basket-0-1-1 basket@0.1.1
+33 verbose lock basket@0.1.1 /Users/pramods/.npm/1aab6249-basket-0-1-1.lock
+34 silly lockFile 9d0d913a-pmjs-org-basket-basket-0-1-1-tgz https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+35 verbose lock https://registry.npmjs.org/basket/-/basket-0.1.1.tgz /Users/pramods/.npm/9d0d913a-pmjs-org-basket-basket-0-1-1-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/basket/-/basket-0.1.1.tgz',
+36 verbose addRemoteTarball   'ff7f15390ed6248f71742d2871769d5228ddb3e1' ]
+37 info retry fetch attempt 1 at 09:21:47
+38 info attempt registry request try #1 at 09:21:47
+39 http fetch GET https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+40 http fetch 404 https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+41 error fetch failed https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+42 info retry will retry, error on last attempt: Error: fetch failed with status code 404
+43 info retry fetch attempt 2 at 09:21:58
+44 info attempt registry request try #1 at 09:21:58
+45 http fetch GET https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+46 http fetch 404 https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+47 error fetch failed https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+48 info retry will retry, error on last attempt: Error: fetch failed with status code 404
+49 info retry fetch attempt 3 at 09:22:59
+50 info attempt registry request try #1 at 09:22:59
+51 http fetch GET https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+52 http fetch 404 https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+53 error fetch failed https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+54 silly lockFile 9d0d913a-pmjs-org-basket-basket-0-1-1-tgz https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+55 silly lockFile 9d0d913a-pmjs-org-basket-basket-0-1-1-tgz https://registry.npmjs.org/basket/-/basket-0.1.1.tgz
+56 silly lockFile 1aab6249-basket-0-1-1 basket@0.1.1
+57 silly lockFile 1aab6249-basket-0-1-1 basket@0.1.1
+58 silly lockFile 34a65acf-basket basket@*
+59 silly lockFile 34a65acf-basket basket@*
+60 verbose stack Error: fetch failed with status code 404
+60 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/fetch.js:53:14)
+60 verbose stack     at Request.emit (events.js:95:17)
+60 verbose stack     at Request.onResponse (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1086:10)
+60 verbose stack     at ClientRequest.g (events.js:180:16)
+60 verbose stack     at ClientRequest.emit (events.js:95:17)
+60 verbose stack     at HTTPParser.parserOnIncomingClient (http.js:1692:21)
+60 verbose stack     at HTTPParser.parserOnHeadersComplete [as onHeadersComplete] (http.js:121:23)
+60 verbose stack     at CleartextStream.socketOnData (http.js:1587:20)
+60 verbose stack     at CleartextStream.read [as _read] (tls.js:513:12)
+60 verbose stack     at CleartextStream.Readable.read (_stream_readable.js:340:10)
+61 verbose cwd /Users/pramods/Documents/Box Documents/SumNinjaCode
+62 error Darwin 14.0.0
+63 error argv "node" "/usr/local/bin/npm" "install" "basket" "--save"
+64 error node v0.10.32
+65 error npm  v2.0.2
+66 error fetch failed with status code 404
+67 error If you need help, you may report this error at:
+67 error     <http://github.com/npm/npm/issues>
+68 verbose exit [ 1, true ]

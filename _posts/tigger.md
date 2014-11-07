@@ -1,5 +1,5 @@
 {{{
-    "title"    : "T-I-Double G-ER",
+    "title"    : "T-I-Double guh-ER",
     "tags"     : [ "drawings", "tigger", pooh", "tiger" ],
     "category" : "drawings",
     "date"     : "11-1-2014"

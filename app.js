@@ -185,7 +185,7 @@ app.use(errorHandler());
  * Sitemap.xml
  */
 
-app.get('/posts/sitemap.xml', function (req, res) {
+app.get('/sitemap.xml', function (req, res) {
   // Only get the latest posts
   var postCount = poet.helpers.getPostCount();
   var posts = poet.helpers.getPosts(0, postCount);
