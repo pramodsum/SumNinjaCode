@@ -9,9 +9,19 @@ config = {
     // ### Production
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
-    // ### Production
     production: {
         url: 'http://sumninjacode.io',
+        mail: {
+          transport: 'SMTP',
+          host: 'smtp.mandrillapp.com',
+          options: {
+            service: 'Mandrill',
+            auth: {
+              user: process.env.MANDRILL_USERNAME,
+              pass: process.env.MANDRILL_APIKEY
+            }
+          }
+        },
         database: {
           client: 'postgres',
           connection: process.env.DATABASE_URL,
