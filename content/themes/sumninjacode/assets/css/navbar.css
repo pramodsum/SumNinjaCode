@@ -21,3 +21,8 @@ input#mc-embedded-subscribe.button {
   background-color:rgb(94, 255, 212); 
   margin: 0;
 }
+
+#mc_embed_signup div.mce_inline_error {
+  background-color: #6B0505;
+  border-radius: 5px;
+}
