@@ -18,15 +18,16 @@
     <article class="post {{post_class}}">
         <header class="text-center">
             <h1 class="blog-post-title">
+
+            {{#if image }} 
+                <img src={{image}} />
+            {{/if}}
+            
             <div class="title">{ <span class="title">{{title}}</span> }</div>
             <small><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time></small>
             <h1>
             
         </header>
-
-        {{#if image }} 
-            <img src={{image}} />
-        {{/if}}
 
         <section class="post-content">
             {{content}}
