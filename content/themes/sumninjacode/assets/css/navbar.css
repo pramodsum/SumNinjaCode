@@ -2,9 +2,22 @@
   width: 30px;
   height: 30px;
   margin: -15px 15px -15px;
-
 }
 
 ul.nav.navbar-nav {
   margin-right: 20px;
+}
+
+/* MailChimp Form Embed Code - Slim - 08/17/2011 */
+#mc_embed_signup, .mailchimp {
+  color: black;
+}
+
+h2.mailchimp {
+  margin: auto 0;
+}
+
+input#mc-embedded-subscribe.button {
+  background-color:rgb(94, 255, 212); 
+  margin: 0;
 }
