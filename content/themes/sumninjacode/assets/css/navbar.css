@@ -10,10 +10,12 @@ ul.nav.navbar-nav {
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup, .mailchimp, .modal-content {
-  color: black;
+  /*color: black;*/
+  background-color: black;
 }
 
-h2.mailchimp {
+/*h2.mailchimp.text-center {
+  color: black;
   margin: auto 0;
 }
 
@@ -32,4 +34,4 @@ input#mc-embedded-subscribe.button:focus {
 #mc_embed_signup div.mce_inline_error {
   background-color: #6B0505;
   border-radius: 5px;
-}
+}*/
