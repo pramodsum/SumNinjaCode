@@ -44,9 +44,13 @@
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
-    <form style="text-align:center" class="form-inline" role="form">
-        <input id="search-field" class="form-control"/>
-        <input class="btn" type="submit" value="search">
+    <form class="text-center form-inline" role="form">
+      <div class="form-group">
+        <center><div class="input-group" >
+          <div class="input-group-addon"><i class="ion-ios7-search-strong"></i></div>
+          <input class="form-control" id="search-field" placeholder="Search">
+        </div></center>
+      </div>
     </form>
     <script>
         $("#search-field").ghostHunter({
@@ -54,7 +58,7 @@
             onKeyUp         : true
         });
     </script>
-    
+
     <section id="results" style="text-align:center"></section>
 
     {{{body}}}
