@@ -172,3 +172,7 @@ img {
   color: white;
   text-shadow: 2px 2px black;
 }
+
+.search-container {
+  padding: 0px 4em;
+}
