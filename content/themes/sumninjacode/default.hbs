@@ -44,14 +44,16 @@
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
-    <form class="text-center form-inline" role="form">
-      <div class="form-group">
-        <center><div class="input-group" >
-          <div class="input-group-addon"><i class="ion-ios7-search-strong"></i></div>
-          <input class="form-control" id="search-field" placeholder="Search">
-        </div></center>
-      </div>
-    </form>
+    <div class="container">
+      <form class="text-center form-inline" role="form">
+        <div class="form-group">
+          <center><div class="input-group" >
+            <div class="input-group-addon"><i class="ion-ios7-search-strong"></i></div>
+            <input class="form-control" id="search-field" placeholder="Search">
+          </div></center>
+        </div>
+      </form>
+    </container>
     <script>
         $("#search-field").ghostHunter({
             results         : "#results",
