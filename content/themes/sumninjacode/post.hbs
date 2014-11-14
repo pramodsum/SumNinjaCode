@@ -25,7 +25,12 @@
             {{/if}}
 
             <div class="title">{ <span class="title">{{title}}</span> }</div>
-            <small><time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time></small>
+            <small>
+              <p class="date">
+                <span class="ion-calendar"></span>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time>
+              </p>
+            </small>
             <h1>
             
         </header>

@@ -6,7 +6,8 @@ div span.title {
     text-shadow: 2px 2px rgb(94, 255, 212);
 }
 time.post-date {
-  color: rgb(94, 255, 212);
+  color: rgb(191, 98, 167);
+  text-shadow: 1px 1px rgb(94, 255, 212);
 }
 
 .blog-post, .post {
@@ -63,4 +64,8 @@ time.post-date {
 .tags ul li {
   display: inline-block;
 }
-*/
+
+.ion-calendar {
+    color: rgb(191, 98, 167);
+    text-shadow: 2px 2px rgb(94, 255, 212);
+}
