@@ -176,3 +176,8 @@ img {
 .search-container {
   padding: 0px 4em;
 }
+
+pre code ::selection {
+  color: rgb(191,98,167);;
+  text-shadow: 2px 2px rgb(94, 255, 212);
+}
