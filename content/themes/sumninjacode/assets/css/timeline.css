@@ -37,3 +37,8 @@
 div.small {
   color: white;
 }
+
+#resume ul li {
+  font-size: 20px;
+  line-height: 1.25;
+}
