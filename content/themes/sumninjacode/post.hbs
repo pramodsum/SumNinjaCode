@@ -45,7 +45,7 @@
                         {{#if image }} 
                             <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}&media={{image}}&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
                         {{else}}
-                            <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}&media=https://s3-us-west-2.amazonaws.com/sumninjacode/img/pinterestpost.png&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
+                            <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}{{#if image}}&media={{image}}{{else}}&media=https://s3-us-west-2.amazonaws.com/sumninjacode/img/pinterestpost.png{{/if}}&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
                         {{/if}}
                     </small>
                 </h4>
