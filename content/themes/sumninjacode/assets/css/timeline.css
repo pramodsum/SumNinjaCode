@@ -1,3 +1,379 @@
+/*/* ------------------------------------
+
+  #resume .Theme Name: Heroic
+   Theme URI: http://www.pluginhero.com/ghost/theme/heroic/
+   Description: Heroic. From PluginHero.
+   Author: PluginHero
+   Author URI: http://pluginhero.com/
+   Version: 1.0.7
+
+  #resume .#### Table of Contents ####
+
+  Animate.css
+  2. General layout
+  3. Main styles
+  4. Single Post
+  5. Third Party embeds
+  6. Pagination
+  7. Main Footer
+  8. Box Sizing & Static Page Menu
+  9. Forms
+  10. Responsive Layer
+  11. Retina / Hi-DPI
+
+------------------------------------ */
+
+/* ------------------------------------
+
+  Animations
+
+------------------------------------ */
+
+#resume .animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}.animated.hinge{-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}  100% {opacity: 1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#resume .fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#resume .fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  -moz-animation-name: fadeInDownBig;
+  -o-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+@-o-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#resume .fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  -moz-animation-name: fadeInLeftBig;
+  -o-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  #resume .00% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#resume .fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  -moz-animation-name: fadeInRightBig;
+  -o-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+#resume .fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  -moz-animation-name: fadeInRightBig;
+  -o-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+#resume .post.odd {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+#resume .post.even {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+#resume .content-home .post.result {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  text-align: center;
+  float: none;
+  width: 90%;
+  margin-bottom: 0;
+}
+#resume .content-home .post.result .inner {
+  max-width: 100%;
+}
+
+/* ------------------------------------
+
+  General layout
+
+------------------------------------ */
+
+#resume .blog-title {
+  font-size: 36px;
+}
+
+#resume .blog-title a {
+  color: #ffffff;
+}
+
+#resume .main-logo:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#resume .blog-title a, .blog-title a:hover {
+  text-decoration: none;
+}
+
+#resume .blog-tagline {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #ffffff;
+  position: relative;
+}
+
+#resume .home-template .blog-tagline:after, .archive-template .blog-tagline:after {
+  content: '';
+  display: block;
+  margin: 30px auto -40px auto;
+  width: 200px;
+  height: 1px;
+  background: #ffffff;
+  border-radius:10px;
+  bottom: -40px;
+  left: 0;
+}
+
+::-moz-selection {
+    background: #ffffff4d8;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffffff4d8;
+    text-shadow: none;
+}
+
+#resume .fader {
+  opacity: .25;
+  filter: alpha(opacity=25);
+}
+
+#resume .inner {
+    position: relative;
+    margin: 0 auto;
+}
+
+#resume .vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ /*------------------------------------
+
+  Main styles
+
+------------------------------------ */
+
+#resume .site-head {
+  text-align: center;
+  padding: 30px 0 10px 0;
+}
+
+/* ------------------------------------
+
+  Homepage / Archive
+
+------------------------------------ */
+
+#resume .content-home h1 {
+  font-size: 34px;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+#resume .content-home h2 {
+  margin-bottom: 10px;
+}
+
+time {
+  color: #ccc;
+  font-size: 14px;
+  display: block;
+}
+
+#resume .content-home .post .inner {
+  padding: 0px;
+  max-width: 80%;
+}
+
+/* ------------------------------------
+
+  Retina / Hi-DPI
+
+------------------------------------ */
+
+@media only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 1.5/1),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  #resume .main-logo img {
+    max-width: 85px;
+  }
+
+}
+
 #resume a:focus, 
 #resume a:hover,  {
   color: rgb(191, 98, 167);
@@ -41,4 +417,4 @@ div.small {
 #resume ul li {
   font-size: 20px;
   line-height: 1.25;
-}
+}*/
