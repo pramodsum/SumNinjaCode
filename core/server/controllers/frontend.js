@@ -299,21 +299,6 @@ frontendControllers = {
             editFormat,
             usingStaticPermalink = false;
 
-        var client = require('box-view').createClient('sw1wtyknrdj40ymnnhmg31s1rip7v1ea');
-        client.documents.uploadURL(url, function (err, doc) {
-        var options = {
-          params: {
-                is_text_selectable: false,
-                duration: 30
-              },
-              retry: true
-            };
-
-            client.sessions.create(doc.id, options, function (err, session, response) {
-              callback(session.urls.view);
-            });
-        });
-
         api.settings.read('permalinks').then(function (response) {
             var permalink = response.settings[0],
                 postLookup;
@@ -391,6 +376,15 @@ frontendControllers = {
                     return render();
                 }
 
+                return next();
+            }
+
+            // If there is an author parameter in the slug, check that the
+            // post is actually written by the given author\
+            if (params.author) {
+                if (post.author.slug === params.author) {
+                    return render();
+                }
                 return next();
             }
 
@@ -551,7 +545,7 @@ frontendControllers = {
                         feed.item(item);
                     });
                 }).then(function () {
-                    res.set('Content-Type', 'text/xml; charset=UTF-8');
+                    res.set('Content-Type', 'application/rss+xml; charset=UTF-8');
                     res.send(feed.xml());
                 });
             });
