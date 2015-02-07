@@ -182,3 +182,17 @@ pre code ::selection {
   color: rgb(191,98,167);;
   text-shadow: 2px 2px rgb(94, 255, 212);
 }
+
+#map {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.tag-title {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  text-transform: capitalize;
+}

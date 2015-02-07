@@ -10,7 +10,10 @@
 
   {{! The main content area on the homepage }}
   <main class="content" role="main">
-  
+      <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+      <div id="map" style="width: 100%; height: 400px;"></div>
+      <script src="{{asset "js/maps.js"}}" type="text/javascript"></script>
+      <br>
       {{! The tag below includes the post loop - partials/loop.hbs }}
       {{> "loop"}}
 
