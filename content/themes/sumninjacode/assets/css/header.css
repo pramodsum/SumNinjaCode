@@ -4,7 +4,7 @@
   height: auto;
   padding: 50px 0;
   text-align: center;
-  background: -webkit-gradient(linear, center center, center bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url(https://s3-us-west-2.amazonaws.com/sumninjacode/img/bg.jpg) no-repeat bottom center scroll;
+  background: -webkit-gradient(linear, center center, center bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 1))), url(../images/bg.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
