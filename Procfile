@@ -1,1 +1,1 @@
-web: node index.js --production
+web: nodemon index.js --production

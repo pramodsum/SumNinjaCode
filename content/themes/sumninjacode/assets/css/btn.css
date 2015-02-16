@@ -10,6 +10,15 @@ a:focus {
   text-decoration: none;
   color: rgb(191, 98, 167);
   text-shadow: 2px 2px rgb(94, 255, 212);
+  
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
 }
 
 a.btn-circle.btn-social {

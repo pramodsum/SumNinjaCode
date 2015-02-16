@@ -1,14 +1,16 @@
 @import "bootstrap.css";
 @import "font-awesome.min.css";
-@import "ionicons.min.css";
+@import "ionicons.css";
 @import "bootstrap-social.css";
 @import "modern.css";
+@import "animate.css";
 @import "btn.css";
 @import "post.css";
 @import "header.css";
 @import "timeline.css";
 @import "navbar.css";
 @import "fullcalendar.min.css";
+@import "fonts.css";
 
 
 // Scaffolding
