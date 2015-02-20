@@ -41,15 +41,22 @@
                         <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" class="btn-circle btn-social"><i class="ion-social-twitter animated"></i></a>
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" class="btn-circle btn-social"><i class="ion-social-facebook animated"></i></a>
                         <a href="https://plus.google.com/share?url={{url absolute="true"}}" class="btn-circle btn-social"><i class="ion-social-googleplus animated"></i></a>
-
+{{!-- 
                         {{#if image }} 
                             <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}&media={{image}}&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
                         {{else}}
                             <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}{{#if image}}&media={{image}}{{else}}&media=https://s3-us-west-2.amazonaws.com/sumninjacode/img/pinterestpost.png{{/if}}&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
-                        {{/if}}
+                        {{/if}} --}}
                     </small>
                 </h4>
             </section>
+
+            {{!-- related posts container --}}
+            <ul id="related-posts-container" class="hidden">
+                {{#foreach posts}}
+                <li><a href="{{url}}" title="{{title}}">{{title}} &rarr;</a></li>
+                {{/foreach}}
+            </ul>
 
             <section class="comments">
                 <div id="disqus_thread"></div>
