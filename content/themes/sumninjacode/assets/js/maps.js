@@ -1,10 +1,11 @@
 var locations = [
-  // ['Bengaluru', "", 12.9667, 77.5667],
-  ['Hampi', "http://sumninjacode.io/hampi-express", 15.3350, 76.4620]
-  // ['Pondicherry', "", 11.9310, 79.7852],
-  // ['Golden Temple, Sripuram', "", 12.8733, 79.0884],
-  // ['Goa', "", 15.4989, 73.8278],
-  // ['SVYASA Prashanti Kutiram', "", 12.4600, 77.3800]
+  ['Bengaluru', "", 12.9667, 77.5667],
+  ['Hampi', "http://sumninjacode.io/hampi-express", 15.3350, 76.4620],
+  ['Pondicherry', "", 11.9310, 79.7852],
+  ['Golden Temple, Sripuram', "", 12.8733, 79.0884],
+  ['Goa', "", 15.4989, 73.8278],
+  ['SVYASA Prashanti Kutiram', "", 12.4600, 77.3800],
+  ['Cancun, Mexico', "", 21.1606, -86.8475]
 ];
 
 var map = new google.maps.Map(document.getElementById('map'), {
