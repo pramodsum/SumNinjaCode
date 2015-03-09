@@ -5,6 +5,7 @@ var locations = [
   ['Golden Temple, Sripuram', "", 12.8733, 79.0884],
   ['Goa', "", 15.4989, 73.8278],
   ['SVYASA Prashanti Kutiram', "", 12.4600, 77.3800],
+  ['Puerto Rico', "", 18.4500, -66.1000]
   ['Cancun, Mexico', "", 21.1606, -86.8475]
 ];
 
