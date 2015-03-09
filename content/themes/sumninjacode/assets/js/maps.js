@@ -1,10 +1,10 @@
 var locations = [
-  ['Bengaluru', "", 12.9667, 77.5667],
-  ['Hampi', "", 15.3350, 76.4620],
-  ['Pondicherry', "", 11.9310, 79.7852],
-  ['Golden Temple, Sripuram', "", 12.8733, 79.0884],
-  ['Goa', "", 15.4989, 73.8278],
-  ['SVYASA Prashanti Kutiram', "", 12.4600, 77.3800]
+  // ['Bengaluru', "", 12.9667, 77.5667],
+  ['Hampi', "http://sumninjacode.io/hampi-express", 15.3350, 76.4620]
+  // ['Pondicherry', "", 11.9310, 79.7852],
+  // ['Golden Temple, Sripuram', "", 12.8733, 79.0884],
+  // ['Goa', "", 15.4989, 73.8278],
+  // ['SVYASA Prashanti Kutiram', "", 12.4600, 77.3800]
 ];
 
 var map = new google.maps.Map(document.getElementById('map'), {
@@ -19,7 +19,7 @@ var marker, i;
 var geocoder = geocoder = new google.maps.Geocoder();;
 var bounds = new google.maps.LatLngBounds();
 
-for (i = 0; i < locations.length; i++) {  
+for (i = 0; i < locations.length; i++) {
   marker = new google.maps.Marker({
     position: new google.maps.LatLng(locations[i][2], locations[i][3]),
     map: map,
