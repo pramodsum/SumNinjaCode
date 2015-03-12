@@ -1,42 +1,279 @@
 @import "external.css";
+@import "hover.css";
 
-.navbar-nav img {
-    width:  30px;
-    height: 30px;
-    margin: -15px 15px -15px
+/*FONTS*/
+::-moz-selection{
+  background: rgba(191,95,255, 0.25);
 }
 
-ul.nav.navbar-nav{
-    margin-right: 20px
+::selection{
+  background: rgba(191,95,200, 0.25);
 }
 
+@font-face {
+  font-family: 'aaarghnormal';
+  src: url('../fonts/Aaargh-webfont.eot');
+  src: url('../fonts/Aaargh-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Aaargh-webfont.woff2') format('woff2'),
+  url('../fonts/Aaargh-webfont.woff') format('woff'),
+  url('../fonts/Aaargh-webfont.ttf') format('truetype'),
+  url('../fonts/Aaargh-webfont.svg#aaarghnormal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ralewaylight';
+  src: url('../fonts/Raleway-Light-webfont.eot');
+  src: url('../fonts/Raleway-Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Raleway-Light-webfont.woff2') format('woff2'),
+  url('../fonts/Raleway-Light-webfont.woff') format('woff'),
+  url('../fonts/Raleway-Light-webfont.ttf') format('truetype'),
+  url('../fonts/Raleway-Light-webfont.svg#ralewaylight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cutepunklight';
+  src: url('../fonts/Cutepunk_Light-webfont.eot');
+  src: url('../fonts/Cutepunk_Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Cutepunk_Light-webfont.woff2') format('woff2'),
+  url('../fonts/Cutepunk_Light-webfont.woff') format('woff'),
+  url('../fonts/Cutepunk_Light-webfont.ttf') format('truetype'),
+  url('../fonts/Cutepunk_Light-webfont.svg#cutepunklight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'coolhandluke';
+  src: url('../fonts/CoalhandLuke TRIAL-webfont.eot');
+  src: url('../fonts/CoalhandLuke TRIAL-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/CoalhandLuke TRIAL-webfont.woff2') format('woff2'),
+  url('../fonts/CoalhandLuke TRIAL-webfont.woff') format('woff'),
+  url('../fonts/CoalhandLuke TRIAL-webfont.ttf') format('truetype'),
+  url('../fonts/CoalhandLuke TRIAL-webfont.svg#coalhandlukecoalhandluketrial') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: aaarghnormal;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 100 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: coolhandluke;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+i.ion-pound {
+  color: #5effd4;
+  text-shadow: 2px 2px #bf62a7;
+  padding-right: 4px;
+  margin-top: -2px;
+}
+
+/*LINKS*/
+
+a {
+  color: aqua;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: aqua;
+  background: rgba(191,95,200, 0.5);
+  padding: 0 4px;
+  border-radius: 2px;
+}
+
+h1 a:hover, h1 a:focus,
+h2 a:hover, h2 a:focus,
+h3 a:hover, h3 a:focus,
+h4 a:hover, h4 a:focus,
+h5 a:hover, h5 a:focus,
+h6 a:hover, h6 a:focus {
+  text-shadow: 3px 3px rgba(191,95,200, 0.75);
+  background: transparent;
+  padding: 0;
+}
+
+a#about:hover, a#about:focus,
+header li a:hover, header li a:focus,
+footer a blockquote:hover, footer a blockquote:focus {
+  background: transparent;
+  padding: 0;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+  color: black;
+  text-shadow: 2px 2px #5effd4;
+  padding: 15px;
+}
+
+a.navbar-brand:hover i.ion-pound,
+a.navbar-brand:focus i.ion-pound{
+  color: #bf62a7;
+  text-shadow: 2px 2px #5effd4
+}
+
+.navbar-nav>li>a:hover,
+.navbar-nav>li>a:focus {
+  color: rgba(191,95,200, 1) !important;
+  font-weight: bold;
+}
+
+/*IMAGES*/
+img {
+  border-radius: 10px;
+  display: block;
+  max-width: 100%;
+  height: auto
+}
+
+img.profile{
+  margin: 0 auto;
+  height: 150px;
+  width: auto;
+  border: 3px solid #fff
+}
+
+/*GENERAL*/
+body {
+  background: black;
+}
+
+.content {
+  padding-top: 20px;
+}
+
+/*HEADER/SIDEBAR*/
+header {
+  margin: auto;
+  text-align: center;
+}
+
+/*POSTS*/
+.pre-post{
+  padding: 100px 0
+}
+
+div span.title{
+  color: #bf62a7;
+  text-shadow: 2px 2px #5effd4
+}
+
+time.post-date{
+  color: rgba(191,95,200, 1);
+  /*text-shadow: 1px 1px #5effd4*/
+}
+
+.blog-post,
+.post{
+  padding: 10px 0
+}
+
+.blog-post,
+.post .blog-post-meta{
+  margin: 0 auto;
+  color: #5effd4
+}
+
+.blog-post,
+.post img{
+  max-height: 500px
+}
+
+.blog-post,
+.post .blog-post-title a: hover,
+.blog-post,
+.post .blog-post-title a: focus,
+.blog-post,
+.post h1 a: focus,
+.blog-post,
+.post h1 a: hover{
+  color: #5effd4;
+  text-shadow: 2px 2px #bf62a7
+}
+
+#posts{
+  padding: 60px 100px 2em
+}
+
+.tags a{
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #5effd4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background: #bf62a7
+}
+
+.tags a: hover,
+.tags a: focus{
+  background: #5effd4!important;
+  border: none!important;
+  color: #bf62a7!important;
+  text-shadow: none!important
+}
+
+.tags ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+.tags ul li{
+  display: inline-block
+}
+
+.ion-calendar{
+  color: #bf62a7;
+  text-shadow: 2px 2px #5effd4
+}
+
+/*FOOTER*/
+
+/*MAILCHIMP*/
 #mc_embed_signup,
 .mailchimp,
 .modal-content{
-    color: #000
+  color: #000
 }
 
 h2.mailchimp.text-center{
-    margin: auto 0
+  margin: auto 0
 }
 
 input#mc-embedded-subscribe.button{
-    background-color: #5effd4;
-    margin: 0
+  background-color: #5effd4;
+  margin: 0
 }
 
 input#mc-embedded-subscribe.button: hover,
 input#mc-embedded-subscribe.button: focus{
-    background-color: #000;
-    color: #5effd4;
-    margin: 0
+  background-color: #000;
+  color: #5effd4;
+  margin: 0
 }
 
 #mc_embed_signup div.mce_inline_error{
-    background-color: #6B0505;
-    border-radius: 5px
+  background-color: #6B0505;
+  border-radius: 5px
 }
 
+/*
 .intro{
     display: table;
     width: 100%;
@@ -75,148 +312,10 @@ input#mc-embedded-subscribe.button: focus{
     text-decoration: none
 }
 
-::-moz-selection{
-    color: #fdfcf8;
-    text-shadow: 2px 2px #bf62a7
-}
-
-::selection{
-    color: #fdfcf8;
-    text-shadow: 2px 2px #bf62a7
-}
-
 @media(min-width: 767px){
     .intro .intro-body .brand-heading{
       font-size: 100px
   }
-}
-
-.btn-outline{
-    border: solid 2px #fff;
-    font-size: 20px;
-    color: #fff;
-    background: 0;
-    transition: all .3s ease-in-out
-}
-
-.btn-social{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    text-align: center
-}
-
-.btn-social : first-child{
-    left: 7px;
-    top: 6px;
-    bottom: 0;
-    line-height: 34px;
-    font-size: 34px;
-    text-align: center;
-    border-right: 0!important
-}
-
-.btn-circle{
-    padding: 7px 16px;
-    border: 2px solid #fff;
-    border-radius: 34px;
-    color: #fff;
-    background: 0;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out
-}
-
-.scroll{
-    .btn-circle{
-      width: 70px;
-      height: 70px;
-      font-size: 34px
-  }
-
-  .btn-circle i.animated{
-      margin: auto
-  }
-
-
-}
-
-.btn-circle: hover,
-.btn-circle: focus{
-    outline: 0;
-    color: #5effd4;
-    border-color: #bf62a7;
-    background: rgba(191, 98, 167, 0.1)
-}
-
-.btn-circle i.animated{
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 1s;
-    -moz-transition-property: -moz-transform;
-    -moz-transition-duration: 1s
-}
-
-.btn-circle: hover i.animated{
-    -webkit-animation-name: pulse;
-    -moz-animation-name: pulse;
-    -webkit-animation-duration: 1.5s;
-    -moz-animation-duration: 1.5s;
-    -webkit-animation-iteration-count: infinite;
-    -moz-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear
-}
-
-@-webkit-keyframes pulse{
-    0{
-      -webkit-transform: scale(1);
-      transform: scale(1)
-  }
-
-  50%{
-      -webkit-transform: scale(1.2);
-      transform: scale(1.2)
-  }
-
-  100%{
-      -webkit-transform: scale(1);
-      transform: scale(1)
-  }
-
-
-}
-
-@-moz-keyframes pulse{
-    0{
-      -moz-transform: scale(1);
-      transform: scale(1)
-  }
-
-  50%{
-      -moz-transform: scale(1.2);
-      transform: scale(1.2)
-  }
-
-  100%{
-      -moz-transform: scale(1);
-      transform: scale(1)
-  }
-
-
-}
-
-img.profile{
-    margin: 0 auto;
-    height: 150px;
-    width: auto;
-    border: 3px solid #fff
-}
-
-.navbar-default .navbar-toggle{
-    color: aqua;
-    border-color: purple
 }
 
 a{
@@ -240,10 +339,6 @@ a: hover, a: focus{
     animation-name: pulse
 }
 
-a.btn-circle.btn-social{
-    text-shadow: none
-}
-
 i.ion-pound{
     color: #5effd4;
     text-shadow: 2px 2px #bf62a7
@@ -255,26 +350,6 @@ a: hover i.ion-pound,
 a: focus i.ion-pound, {
     color: #bf62a7;
     text-shadow: 2px 2px #5effd4
-}
-
-.navbar a.navbar-brand: hover,
-.navbar a.navbar-brand: focus{
-    color: #000;
-    display: inline-block;
-    font-weight: bold
-}
-
-.navbar a.navbar-brand: hover i.ion-pound,
-.navbar a.navbar-brand: focus i.ion-pound{
-    color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
-}
-
-.navbar li a: hover,
-.navbar li a: focus{
-    color: #bf62a7!important;
-    display: inline-block;
-    font-weight: bold
 }
 
 .links a: hover,
@@ -371,144 +446,9 @@ ul.banner-social-buttons{
     border-top-right-radius: 0!important
 }
 
-.pre-post{
-    padding: 100px 0
-}
 
-div span.title{
-    color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
-}
 
-time.post-date{
-    color: #bf62a7;
-    text-shadow: 1px 1px #5effd4
-}
 
-.blog-post,
-.post{
-    padding: 10px 0
-}
-
-.blog-post,
-.post .blog-post-meta{
-    margin: 0 auto;
-    color: #5effd4
-}
-
-.blog-post,
-.post img{
-    max-height: 500px
-}
-
-.blog-post,
-.post .blog-post-title a: hover,
-.blog-post,
-.post .blog-post-title a: focus,
-.blog-post,
-.post h1 a: focus,
-.blog-post,
-.post h1 a: hover{
-    color: #5effd4;
-    text-shadow: 2px 2px #bf62a7
-}
-
-#posts{
-    padding: 60px 100px 2em
-}
-
-.tags a{
-    display: inline;
-    padding: .2em .6em .3em;
-    font-size: 75%;
-    font-weight: bold;
-    line-height: 1;
-    color: #5effd4;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-    background: #bf62a7
-}
-
-.tags a: hover,
-.tags a: focus{
-    background: #5effd4!important;
-    border: none!important;
-    color: #bf62a7!important;
-    text-shadow: none!important
-}
-
-.tags ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0
-}
-
-.tags ul li{
-    display: inline-block
-}
-
-.ion-calendar{
-    color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
-}
-
-@font-face{
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Lora'), local('Lora-Regular'), url(../fonts/Lora.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Lora';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Lora Bold'), local('Lora-Bold'), url(../fonts/Lora-Bold.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Lora Italic'), local('Lora-Italic'), url(../fonts/Lora-Italic.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Lora';
-    font-style: italic;
-    font-weight: 700;
-    src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(../fonts/Lora-BoldItalic.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Montserrat-Regular'), url(../fonts/Montserrat-Regular.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Montserrat-Bold'), url(../fonts/Montserrat-Bold.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Raleway Light'), local('Raleway-Light'), url(../fonts/Raleway-Light.ttf) format('truetype')
-}
-
-@font-face{
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Raleway'), url(../fonts/Raleway.ttf) format('truetype')
-}
 
 #resume .animated{
     -webkit-animation-fill-mode: both;
@@ -1055,13 +995,6 @@ footer{
     background: none
 }
 
-img{
-    border-radius: 10px;
-    display: block;
-    max-width: 100%;
-    height: auto
-}
-
 .view-api .col-sm-6{
     padding-left: 0
 }
@@ -1074,7 +1007,7 @@ img{
 .error-container{
     border-radius: 5px;
     padding: 30px;
-    background: rgba(191, 98, 167, 0.3)
+    background: rgba(191, 95, 200, 0.3)
 }
 
 .error-container h1 small{
@@ -1103,4 +1036,4 @@ pre code::selection{
     margin: auto;
     text-align: center;
     text-transform: capitalize
-}
+    }*/

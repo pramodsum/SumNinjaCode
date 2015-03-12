@@ -1,31 +1,14 @@
-{{>"navbar"}}
-<header id="page-top" class="intro">
-  <div class="intro-body">
-    
-    <div class="container">
-      <div class="alert alert-warning alert-dismissible animated infinite pulse" role="alert">
-        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <center>Have you subscribed to my blog yet? If not, you should <a class="alert-link" href="http://eepurl.com/7XFkD">do it here now</a> :)</center>
-      </div>
-    </div>
-
-    <div class="col-md-8 col-md-offset-2">
-      <a href={{@blog.url}}/about><img src="{{asset "images/profile.jpg"}}"class="profile img-circle img-responsive"/></a>
-      <h1 class="brand-heading"><a href={{@blog.url}}>Just Sum Ninja Code</a></h1>
-      <p class="intro-text">
-        <ul class="list-inline">
-          <li><a href="https://twitter.com/pramodsum" class="btn-circle btn-social"><i class="ion-social-twitter animated"></i></a></li>
-          <li><a href="https://linkedin.com/in/pramodsum" class="btn-circle btn-social"><i class="ion-social-linkedin animated"></i></a></li>
-          <li><a href="https://github.com/pramodsum" class="btn-circle btn-social"><i class="ion-social-github animated"></i></a></li>
-          <li><a href="https://facebook.com/sumedha.pramod" class="btn-circle btn-social"><i class="ion-social-facebook animated"></i></a></li>
-          <li><a href="http://www.pinterest.com/pramodsum/" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a></li>
-          <li><a href="http://pramod.ninja" class="btn-circle btn-social"><i class="ion-game-controller-b animated"></i></a></li>
-          <li><a href="mailto:me@sumninjacode.io" class="btn-circle btn-social"><i class="ion-email animated"></i></a></li>
-          <li><a href="http://eepurl.com/7XFkD" class="btn-circle btn-social"><i class="ion-social-rss animated"></i></a></li>
-        </ul>
-      </p>
-
-      <div class="scroll"><a href="#posts" class="btn btn-circle page-scroll"><i style="margin-left: -1px" class="ion-chevron-down animated"></i></a></div>
-    </div>
-  </div>
+<header>
+  <a id="about" href={{@blog.url}}/about><img src="{{asset "images/profile.jpg"}}"class="profile img-circle img-responsive"/></a>
+  <h1 class="brand-heading"><a href={{@blog.url}}>Just Sum Ninja Code</a></h1>
+{{!--   <ul class="list-inline">
+    <li class="col-xs-2"><a class="hvr-sink" href="http://facebook.com/pramodsum"><img src="{{asset "images/social/Facebook.png"}}"></a></li>
+    <li class="col-xs-2"><a class="hvr-sink" href="http://twitter.com/pramodsum"><img src="{{asset "images/social/Twitter2.png"}}"></a></li>
+    <li class="col-xs-2"><a class="hvr-sink" href="http://instagram.com/pramodsum"><img src="{{asset "images/social/Instagram.png"}}"></a></li>
+    <li class="col-xs-2"><a class="hvr-sink" href="http://pinterest.com/pramodsum"><img src="{{asset "images/social/Pinterest.png"}}"></a></li>
+    <li class="col-xs-2"><a class="hvr-sink" href="http://linkedin.com/in/pramodsum"><img src="{{asset "images/social/Linkedin.png"}}"></a></li>
+    <li class="col-xs-2"><a class="hvr-sink" href="http://eepurl.com/beWR25"><img src="{{asset "images/social/RSS.png"}}"></a></li>
+  </ul> --}}
 </header>
+
+{{>"navbar"}}
