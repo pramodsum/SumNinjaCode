@@ -313,14 +313,14 @@ a: focus i.ion-pound, {
     text-shadow: none;
     background: #5effd4;
     background: rgba(94, 255, 212,
-.2)
+        .2)
 }
 
 ::selection{
     text-shadow: none;
     background: #5effd4;
     background: rgba(94, 255, 212,
-.2)
+        .2)
 }
 
 img::selection{
@@ -938,7 +938,7 @@ body{
     color: #fff;
     background-color: #000;
     webkit-tap-highlight-color: rgba(255, 255, 255,
-.2)
+        .2)
 }
 
 .container{
