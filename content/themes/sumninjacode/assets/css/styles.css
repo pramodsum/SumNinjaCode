@@ -109,14 +109,14 @@ i.ion-pound {
     color: #bf62a7;
     text-shadow: 2px 2px aqua;
     font-weight: bolder;
-    padding: .25em .35em;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    padding: 0 .35em;
+    margin: 0 auto;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
     font-weight: 100;
-    border-radius: 5px
+    border-radius: 5px;
+    text-transform: capitalize;
 }
 
 /*LINKS*/
@@ -438,6 +438,7 @@ blockquote p {
   color: #777;
   font-size: 6rem;
 }
+
 .error-container p.error-text {
   color: #777;
   font-size: 1.75rem;
