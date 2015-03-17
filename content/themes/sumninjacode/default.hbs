@@ -12,7 +12,6 @@
     <link rel="shortcut icon" href="https://s3-us-west-2.amazonaws.com/sumninjacode/img/favicon.ico">
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
     <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
@@ -27,10 +26,10 @@
     {{! Everything else gets inserted here }}
     <div class="content container-fluid">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-xs-3">
                 {{> "header"}}
             </div>
-            <div class="col-sm-9">
+            <div class="col-xs-9">
                 {{!-- {{> "accordion"}} --}}
                 {{{body}}}
             </div>

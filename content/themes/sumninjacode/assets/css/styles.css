@@ -80,6 +80,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: cutepunkbold;
 }
 
+.inner h2 {
+  font-family: coolhandluke;
+}
+
+.wrapper h1 {
+  font-size:5rem;
+  margin-bottom: 0;
+}
+
+.wrapper h1 i {
+  font-size: 4rem;
+}
+
 strong {
   font-weight: bolder;
 }
@@ -89,6 +102,21 @@ i.ion-pound {
   text-shadow: 2px 2px #bf62a7;
   padding-right: 4px;
   margin-top: -2px;
+}
+
+.page-title{
+    font-size: 6rem;
+    color: #bf62a7;
+    text-shadow: 2px 2px aqua;
+    font-weight: bolder;
+    padding: .25em .35em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+    border-radius: 5px;
+    line-height: 1em;
+    font-weight: 100;
+    border-radius: 5px
 }
 
 /*LINKS*/
@@ -153,8 +181,14 @@ a.navbar-brand:focus i.ion-pound{
 .quote a:hover,
 .quote a:focus {
   color: black;
+  text-shadow: 1px 1px aqua;
   padding: 0;
   background: transparent;
+}
+.quote a:hover blockquote:before,
+.quote a:focus blockquote:before {
+  color: aqua;
+  text-shadow: 2px 2px #bf62a7;
 }
 
 /*IMAGES*/
@@ -168,9 +202,15 @@ img {
 img.profile{
   margin: 0 auto;
   height: 150px;
-  width: auto;
-  border: 3px solid rgba(191,95,200, 1)
+  width: 150px;
+  border: 3px solid rgba(191,95,200, 1);
+  /*background-image: url('../images/profile.jpg');*/
+  /*background-size: 150px auto;*/
 }
+
+/*img.profile:hover {
+    background-image: url('../images/profile.png');
+}*/
 
 /*GENERAL*/
 body {
@@ -179,8 +219,27 @@ body {
 
 .content {
   padding-top: 20px;
-  width: 80%;
+  width: 90%;
   background: white;
+}
+
+.col-xs-3{width:25%}
+.col-xs-9{width:75%}
+.brand-heading{font-size: 6rem;}
+body {padding: 50px 0;}
+
+@media screen and (max-width: 1280px) {
+  .brand-heading{font-size: 8rem;}
+}
+
+@media screen and (max-width: 604px) {
+  .col-xs-3{width:100%;}
+  .col-xs-9{width:100%}
+  .brand-heading{font-size: 5rem;}
+}
+
+@media screen and (max-width: 320px) {
+  body {padding: 20px 0;}
 }
 
 /*HEADER/SIDEBAR*/
@@ -191,7 +250,7 @@ header {
 
 .brand-heading {
   font-family: coolhandluke;
-  font-size: 8rem;
+  /*font-size: 8rem;*/
 }
 
 /*POSTS*/
@@ -346,6 +405,13 @@ input#mc-embedded-subscribe.button: focus{
   background-color: #6B0505;
   border-radius: 5px
 }
+
+/*QUOTES*/
+ul.list-inline.quote-tags {
+  margin-bottom: -10px;
+}
+
+/*ABOUT*/
 
 /*
 .intro{
@@ -997,51 +1063,6 @@ p{
       line-height: 1.25
   }
 }
-
-.page-title{
-    font-size: 4em;
-    color: #5effd4;
-    text-shadow: 2px 2px #bf62a7;
-    border: 3px solid #fff;
-    display: inline-block;
-    font-weight: bold;
-    padding: .25em .35em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
-    font-weight: 100;
-    border-radius: 5px
-}
-
-@media(max-width: 1199px){
-    .page-title{
-      font-size: 4em;
-      color: #5effd4;
-      text-shadow: 2px 2px #bf62a7;
-      border: 3px solid #fff;
-      display: inline-block;
-      font-weight: bold;
-      padding: .25em .35em;
-      font-weight: 100;
-      border-radius: 5px;
-      line-height: 1em;
-      font-weight: 100;
-      border-radius: 5px
-  }
-}
-
-@media(max-width: 767px){
-    .page-title{
-      font-size: 3em
-  }
-}
-
-.page-title a: hover{
-    color: #bf62a7!important;
-    text-shadow: 2px 2px #5effd4
-}
-
-
 
 footer{
     background: none
