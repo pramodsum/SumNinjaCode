@@ -264,6 +264,33 @@ header {
   /*font-size: 8rem;*/
 }
 
+#mc_embed_signup h1 {
+  margin-top: 0;
+}
+
+#mc_embed_signup .mc-field-group {
+  min-height: 40px;
+}
+
+input#mc-embedded-subscribe.button {
+  color: black;
+  font-family: aaarghnormal;
+  font-size: 1.25rem;
+}
+
+#mc_embed_signup .mc-field-group input {
+  padding: 8px;
+  padding-top: 10px;
+  font-size: 1.25rem;
+  font-family: aaarghnormal;
+}
+
+input#mc-embedded-subscribe.button:hover,
+input#mc-embedded-subscribe.button:focus {
+  color: #5effd4;
+  background: black
+}
+
 /*POSTS*/
 .pre-post{
   padding: 100px 0
