@@ -359,37 +359,6 @@ time.post-date{
 
 /*FOOTER*/
 
-blockquote footer{
-    background: none;
-    color: #bf62a7
-}
-
-blockquote {
-  /*background: #f9f9f9;*/
-  border-left: 0px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-}
-
-blockquote:before {
-  color: #ccc;
-  content: '\201C';
-  font-size: 8rem;
-  line-height: 0.1em;
-  /*margin-right: 0.25em;*/
-  vertical-align: -0.4em;
-  color: #bf62a7;
-  text-shadow: 2px 2px aqua;
-}
-blockquote p {
-  display: inline;
-}
-
-.blockquote-reverse {
-  border-right: 0px solid #eee;
-}
-
 /*MAILCHIMP*/
 #mc_embed_signup,
 .mailchimp,
@@ -421,6 +390,47 @@ input#mc-embedded-subscribe.button: focus{
 /*QUOTES*/
 ul.list-inline.quote-tags {
   margin-bottom: -10px;
+}
+
+
+
+blockquote footer{
+    background: none;
+    color: #bf62a7
+}
+
+blockquote {
+  /*background: #f9f9f9;*/
+  border-left: 0px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: '\201C';
+  font-size: 6rem;
+  line-height: 0.05em;
+  /*margin-right: 0.25em;*/
+  vertical-align: -0.4em;
+  color: #bf62a7;
+  text-shadow: 2px 2px aqua;
+}
+
+blockquote p {
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.quotes-page h1 {
+  margin-bottom: 0;
+}
+
+.blockquote-reverse {
+  border-right: 0px solid #eee;
+  margin-top: 0;
+  margin-bottom: 0.25em;
 }
 
 /*ABOUT*/
