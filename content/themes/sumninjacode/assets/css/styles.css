@@ -433,6 +433,16 @@ blockquote p {
   margin-bottom: 0.25em;
 }
 
+/*ERROR*/
+.error-container h1 {
+  color: #777;
+  font-size: 6rem;
+}
+.error-container p.error-text {
+  color: #777;
+  font-size: 1.75rem;
+}
+
 /*ABOUT*/
 
 /*
