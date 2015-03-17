@@ -334,8 +334,8 @@ time.post-date{
   background: #bf62a7
 }
 
-.tags a: hover,
-.tags a: focus{
+.tags a:hover,
+.tags a:focus{
   background: #5effd4!important;
   border: none!important;
   color: #bf62a7!important;
@@ -349,7 +349,8 @@ time.post-date{
 }
 
 .tags ul li{
-  display: inline-block
+  display: inline-block;
+  padding: 0;
 }
 
 .ion-calendar{
