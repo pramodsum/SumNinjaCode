@@ -47,6 +47,18 @@
 }
 
 @font-face {
+    font-family: 'cutepunkbold';
+    src: url('../fonts/Cutepunk_Bold-webfont.eot');
+    src: url('../fonts/Cutepunk_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cutepunk_Bold-webfont.woff2') format('woff2'),
+         url('../fonts/Cutepunk_Bold-webfont.woff') format('woff'),
+         url('../fonts/Cutepunk_Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Cutepunk_Bold-webfont.svg#cutepunkbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: 'coolhandluke';
   src: url('../fonts/CoalhandLuke TRIAL-webfont.eot');
   src: url('../fonts/CoalhandLuke TRIAL-webfont.eot?#iefix') format('embedded-opentype'),
@@ -60,12 +72,12 @@
 
 body {
   font-family: aaarghnormal;
-  color: rgba(255, 255, 255, 0.75);
+  /*color: rgba(255, 255, 255, 0.75);*/
   font-weight: 100 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: coolhandluke;
+  font-family: cutepunkbold;
 }
 
 strong {
@@ -82,15 +94,25 @@ i.ion-pound {
 /*LINKS*/
 
 a {
-  color: aqua;
+  color: black;
 }
 
 a:hover, a:focus {
   text-decoration: none;
   color: aqua;
+  text-shadow: none;
   background: rgba(191,95,200, 0.5);
-  padding: 0 4px;
+  padding: 2px 4px;
   border-radius: 2px;
+}
+
+h1 a, h1 a,
+h2 a, h2 a,
+h3 a, h3 a,
+h4 a, h4 a,
+h5 a, h5 a,
+h6 a, h6 a {
+  text-shadow: 2px 2px aqua;
 }
 
 h1 a:hover, h1 a:focus,
@@ -105,8 +127,7 @@ h6 a:hover, h6 a:focus {
 }
 
 a#about:hover, a#about:focus,
-header li a:hover, header li a:focus,
-footer a blockquote:hover, footer a blockquote:focus {
+header li a:hover, header li a:focus {
   background: transparent;
   padding: 0;
 }
@@ -129,6 +150,13 @@ a.navbar-brand:focus i.ion-pound{
   font-weight: bold;
 }
 
+.quote a:hover,
+.quote a:focus {
+  color: black;
+  padding: 0;
+  background: transparent;
+}
+
 /*IMAGES*/
 img {
   border-radius: 10px;
@@ -141,22 +169,29 @@ img.profile{
   margin: 0 auto;
   height: 150px;
   width: auto;
-  border: 3px solid #fff
+  border: 3px solid rgba(191,95,200, 1)
 }
 
 /*GENERAL*/
 body {
-  background: black;
+  /*background: black;*/
 }
 
 .content {
   padding-top: 20px;
+  width: 80%;
+  background: white;
 }
 
 /*HEADER/SIDEBAR*/
 header {
   margin: auto;
   text-align: center;
+}
+
+.brand-heading {
+  font-family: coolhandluke;
+  font-size: 8rem;
 }
 
 /*POSTS*/
@@ -188,6 +223,14 @@ time.post-date{
 .blog-post,
 .post img{
   max-height: 500px
+}
+
+.post-title {
+  font-size: 6rem;
+}
+
+.post-title small {
+  font-size: 2.5rem;
 }
 
 .blog-post,
@@ -244,6 +287,37 @@ time.post-date{
 }
 
 /*FOOTER*/
+
+blockquote footer{
+    background: none;
+    color: #bf62a7
+}
+
+blockquote {
+  /*background: #f9f9f9;*/
+  border-left: 0px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: '\201C';
+  font-size: 8rem;
+  line-height: 0.1em;
+  /*margin-right: 0.25em;*/
+  vertical-align: -0.4em;
+  color: #bf62a7;
+  text-shadow: 2px 2px aqua;
+}
+blockquote p {
+  display: inline;
+}
+
+.blockquote-reverse {
+  border-right: 0px solid #eee;
+}
 
 /*MAILCHIMP*/
 #mc_embed_signup,
@@ -967,29 +1041,7 @@ p{
     text-shadow: 2px 2px #5effd4
 }
 
-blockquote{
-    quotes: "\201C""\201D""\2018""\2019";
-    margin: 1.5em 10px;
-    padding: .5em 10px
-}
 
-blockquote footer{
-    background: none;
-    color: #bf62a7
-}
-
-blockquote p{
-    display: inline
-}
-
-blockquote: before{
-    color: #5effd4;
-    content: open-quote;
-    font-size: 4em;
-    line-height: .1em;
-    margin-right: .25em;
-    vertical-align: -.4em
-}
 
 footer{
     background: none
