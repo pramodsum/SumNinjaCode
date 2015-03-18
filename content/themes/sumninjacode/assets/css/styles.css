@@ -210,6 +210,75 @@ img.profile{
     background-image: url('../images/profile.png');
 }*/
 
+/* FIXED SOCIAL SIDEBAR */
+
+ul.social-fixed {
+  position: fixed;
+  top: 37%;
+  bottom: 37%;
+  right: 0;
+  z-index: 15000;
+  padding-right: 0;
+  list-style: none;
+}
+
+.social-fixed a.btn {
+  background: #ffec82;
+  color: #000;
+  border-radius: 0;
+  width: 39px;
+}
+
+.social-fixed a.btn:hover,
+.social-fixed a.btn:focus {
+  background: #fff;
+  color: #92b3d4;
+}
+
+.social-fixed a.btn.comments {
+  background: #92b3d4;
+  color: #fff;
+}
+
+.social-fixed a.btn.comments:hover,
+.social-fixed a.btn.comments:focus {
+  background: #fff;
+  color: #ffec82;
+}
+
+.social-fixed a.btn.twitter {
+  background: #55acee;
+  color: #fff;
+}
+
+.social-fixed a.btn.twitter:hover,
+.social-fixed a.btn.twitter:focus {
+  background: #fff;
+  color: #55acee;
+}
+
+.social-fixed a.btn.facebook {
+  background: #3b5998;
+  color: #fff;
+}
+
+.social-fixed a.btn.facebook:hover,
+.social-fixed a.btn.facebook:focus {
+  background: #fff;
+  color: #3b5998;
+}
+
+.social-fixed a.btn.gplus {
+  background: #dd4b39;
+  color: #fff;
+}
+
+.social-fixed a.btn.gplus:hover,
+.social-fixed a.btn.gplus:focus {
+  background: #fff;
+  color: #dd4b39;
+}
+
 /*GENERAL*/
 body {
   /*background: black;*/
@@ -328,13 +397,30 @@ a.blog-img:focus {
 }
 
 div span.title{
-  color: #bf62a7;
+  /*color: #bf62a7;*/
   text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 time.post-date{
   color: rgba(191,95,200, 1);
   /*text-shadow: 1px 1px rgba(94, 255, 212, 0.75)*/
+}
+
+.post-meta.date i {
+  font-size: 2rem;
+  color: #bf62a7;
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
+}
+
+.post-meta.date a {
+  color: #bf62a7;
+  text-shadow: none;
+}
+
+.post-meta.date a:hover,
+.post-meta.date a:focus {
+  color: rgba(94, 255, 212, 0.75);
+  text-shadow: 2px 2px #bf62a7;
 }
 
 .blog-post,
@@ -409,11 +495,6 @@ time.post-date{
 .tags ul li{
   display: inline-block;
   padding: 0;
-}
-
-.ion-calendar{
-  color: #bf62a7;
-  text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 /*FOOTER*/

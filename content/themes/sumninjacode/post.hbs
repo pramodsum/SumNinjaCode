@@ -6,20 +6,31 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
+<!-- more visible social buttons for post -->
+<ul class="social-fixed">
+  <li><a class="btn subscribe" href="http://eepurl.com/7XFkD"><i class="ion ion-social-rss"></i></a></li>
+  <li><a class="btn comments" href="{{url}}#disqus_thread"><i class="ion ion-chatbubble"></i></a></li>
+  <li><a class="btn twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"><i class="ion ion-social-twitter"></i></a></li>
+  <li><a class="btn facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"><i class="ion ion-social-facebook"></i></a></li>
+  <li><a class="btn gplus" href="https://plus.google.com/share?url={{url absolute="true"}}"><i class="ion ion-social-googleplus"></i></a></li>
+</ul>
+
 <main class="content container" role="main">
 
     <article class="post {{post_class}}">
         <header class="text-center">
-            <h1 class="blog-post-title">
+            <h1 class="post-title">
             <div class="title">{ <span class="title">{{title}}</span> }</div>
             <small>
-              <p class="date">
-                <span class="ion-calendar"></span>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time>
-              </p>
+              <div class="post-meta date">
+                  <i class="ion-pricetag"></i> {{tags}}
+                  <br>
+                  <i class="ion-calendar"></i> <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                  <i class="ion-chatbubble"></i> <a href="{{url}}#disqus_thread">Leave a Comment</a>
+              </div>
             </small>
             <h1>
-            
+
         </header>
 
         <section class="post-content">
@@ -41,8 +52,8 @@
                         <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" class="btn-circle btn-social"><i class="ion-social-twitter animated"></i></a>
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" class="btn-circle btn-social"><i class="ion-social-facebook animated"></i></a>
                         <a href="https://plus.google.com/share?url={{url absolute="true"}}" class="btn-circle btn-social"><i class="ion-social-googleplus animated"></i></a>
-{{!-- 
-                        {{#if image }} 
+{{!--
+                        {{#if image }}
                             <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}&media={{image}}&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
                         {{else}}
                             <a href="http://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}{{#if image}}&media={{image}}{{else}}&media=https://s3-us-west-2.amazonaws.com/sumninjacode/img/pinterestpost.png{{/if}}&description={{title}} | SumNinjaCode" class="btn-circle btn-social"><i class="ion-social-pinterest animated"></i></a>
@@ -72,7 +83,7 @@
                         })();
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    
+
             </section>
 
         </footer>

@@ -11,10 +11,12 @@
             { <a href="{{url}}">{{title}}</a> }
             <br>
             <small>
-              <p class="date">
-                <span class="ion-calendar"></span>
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM DD YYYY"}}</time>
-              </p>
+              <div class="post-meta date">
+                  <i class="ion-pricetag"></i> {{tags}}
+                  <br>
+                  <i class="ion-calendar"></i> <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                  <i class="ion-chatbubble"></i> <a href="{{url}}#disqus_thread">Leave a Comment</a>
+              </div>
             </small>
 
         </h2>
@@ -30,3 +32,15 @@
 
 {{! Previous/next page links - displayed on every page }}
 <div class="text-center">{{pagination}}</div>
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'sumninjacode'; // required: replace example with your forum shortname
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
