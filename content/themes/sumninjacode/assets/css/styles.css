@@ -154,8 +154,7 @@ h6 a:hover, h6 a:focus {
   padding: 0;
 }
 
-a#about:hover, a#about:focus,
-header li a:hover, header li a:focus {
+a#about:hover, a#about:focus {
   background: transparent;
   padding: 0;
 }
@@ -269,6 +268,15 @@ header {
   font-family: coolhandluke;
   text-align: center;
   /*font-size: 8rem;*/
+}
+
+.topics ul li a {
+  padding: 2px 4px;
+}
+
+.topics ul li {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #mc_embed_signup h1 {
