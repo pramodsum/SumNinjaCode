@@ -107,7 +107,7 @@ i.ion-pound {
 .page-title{
     font-size: 6rem;
     color: #bf62a7;
-    text-shadow: 2px 2px aqua;
+    text-shadow: 2px 2px #5effd4;
     font-weight: bolder;
     padding: 0 .35em;
     margin: 0 auto;
@@ -127,7 +127,7 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
-  color: aqua;
+  color: #5effd4;
   text-shadow: none;
   background: rgba(191,95,200, 0.5);
   padding: 2px 4px;
@@ -140,7 +140,7 @@ h3 a, h3 a,
 h4 a, h4 a,
 h5 a, h5 a,
 h6 a, h6 a {
-  text-shadow: 2px 2px aqua;
+  text-shadow: 2px 2px #5effd4;
 }
 
 h1 a:hover, h1 a:focus,
@@ -180,13 +180,13 @@ a.navbar-brand:focus i.ion-pound{
 .quote a:hover,
 .quote a:focus {
   color: black;
-  text-shadow: 1px 1px aqua;
+  text-shadow: 1px 1px #5effd4;
   padding: 0;
   background: transparent;
 }
 .quote a:hover blockquote:before,
 .quote a:focus blockquote:before {
-  color: aqua;
+  color: #5effd4;
   text-shadow: 2px 2px #bf62a7;
 }
 
@@ -213,6 +213,7 @@ img.profile{
 /*GENERAL*/
 body {
   /*background: black;*/
+  background: #fffffa;
 }
 
 .content {
@@ -478,7 +479,7 @@ blockquote:before {
   /*margin-right: 0.25em;*/
   vertical-align: -0.4em;
   color: #bf62a7;
-  text-shadow: 2px 2px aqua;
+  text-shadow: 2px 2px #5effd4;
 }
 
 blockquote p {
