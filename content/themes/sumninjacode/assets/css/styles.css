@@ -98,7 +98,7 @@ strong {
 }
 
 i.ion-pound {
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   text-shadow: 2px 2px #bf62a7;
   padding-right: 4px;
   margin-top: -2px;
@@ -107,7 +107,7 @@ i.ion-pound {
 .page-title{
     font-size: 6rem;
     color: #bf62a7;
-    text-shadow: 2px 2px #5effd4;
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75);
     font-weight: bolder;
     padding: 0 .35em;
     margin: 0 auto;
@@ -127,7 +127,7 @@ a {
 
 a:hover, a:focus {
   text-decoration: none;
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   text-shadow: none;
   background: rgba(191,95,200, 0.5);
   padding: 2px 4px;
@@ -140,7 +140,7 @@ h3 a, h3 a,
 h4 a, h4 a,
 h5 a, h5 a,
 h6 a, h6 a {
-  text-shadow: 2px 2px #5effd4;
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75);
 }
 
 h1 a:hover, h1 a:focus,
@@ -161,14 +161,14 @@ a#about:hover, a#about:focus {
 
 .navbar-brand:hover, .navbar-brand:focus {
   color: black;
-  text-shadow: 2px 2px #5effd4;
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75);
   padding: 15px;
 }
 
 a.navbar-brand:hover i.ion-pound,
 a.navbar-brand:focus i.ion-pound{
   color: #bf62a7;
-  text-shadow: 2px 2px #5effd4
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 .navbar-nav>li>a:hover,
@@ -180,13 +180,13 @@ a.navbar-brand:focus i.ion-pound{
 .quote a:hover,
 .quote a:focus {
   color: black;
-  text-shadow: 1px 1px #5effd4;
+  text-shadow: 1px 1px rgba(94, 255, 212, 0.75);
   padding: 0;
   background: transparent;
 }
 .quote a:hover blockquote:before,
 .quote a:focus blockquote:before {
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   text-shadow: 2px 2px #bf62a7;
 }
 
@@ -213,13 +213,12 @@ img.profile{
 /*GENERAL*/
 body {
   /*background: black;*/
-  background: #fffffa;
+  background: #F9F9F9FF;
 }
 
 .content {
   padding-top: 20px;
   width: 90%;
-  background: white;
 }
 
 /*MEDIA QUERIES*/
@@ -303,7 +302,7 @@ input#mc-embedded-subscribe.button {
 
 input#mc-embedded-subscribe.button:hover,
 input#mc-embedded-subscribe.button:focus {
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   background: black
 }
 
@@ -330,12 +329,12 @@ a.blog-img:focus {
 
 div span.title{
   color: #bf62a7;
-  text-shadow: 2px 2px #5effd4
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 time.post-date{
   color: rgba(191,95,200, 1);
-  /*text-shadow: 1px 1px #5effd4*/
+  /*text-shadow: 1px 1px rgba(94, 255, 212, 0.75)*/
 }
 
 .blog-post,
@@ -347,7 +346,7 @@ time.post-date{
 .blog-post,
 .post .blog-post-meta{
   margin: 0 auto;
-  color: #5effd4
+  color: rgba(94, 255, 212, 0.75)
 }
 
 .blog-post,
@@ -371,7 +370,7 @@ time.post-date{
 .post h1 a: focus,
 .blog-post,
 .post h1 a: hover{
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   text-shadow: 2px 2px #bf62a7
 }
 
@@ -385,7 +384,7 @@ time.post-date{
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -395,7 +394,7 @@ time.post-date{
 
 .tags a:hover,
 .tags a:focus{
-  background: #5effd4!important;
+  background: rgba(94, 255, 212, 0.75)!important;
   border: none!important;
   color: #bf62a7!important;
   text-shadow: none!important
@@ -414,7 +413,7 @@ time.post-date{
 
 .ion-calendar{
   color: #bf62a7;
-  text-shadow: 2px 2px #5effd4
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 /*FOOTER*/
@@ -431,14 +430,14 @@ h2.mailchimp.text-center{
 }
 
 input#mc-embedded-subscribe.button{
-  background-color: #5effd4;
+  background-color: rgba(94, 255, 212, 0.5);
   margin: 0
 }
 
 input#mc-embedded-subscribe.button: hover,
 input#mc-embedded-subscribe.button: focus{
   background-color: #000;
-  color: #5effd4;
+  color: rgba(94, 255, 212, 0.75);
   margin: 0
 }
 
@@ -479,7 +478,7 @@ blockquote:before {
   /*margin-right: 0.25em;*/
   vertical-align: -0.4em;
   color: #bf62a7;
-  text-shadow: 2px 2px #5effd4;
+  text-shadow: 2px 2px rgba(94, 255, 212, 0.75);
 }
 
 blockquote p {
@@ -532,20 +531,20 @@ blockquote p {
 
 .mini-intro .brand-heading{
     margin: 0;
-    color: #5effd4;
+    color: rgba(94, 255, 212, 0.75);
     text-shadow: 2px 2px #bf62a7
 }
 
 .intro .intro-body .brand-heading{
     font-size: 40px;
-    color: #5effd4;
+    color: rgba(94, 255, 212, 0.75);
     text-shadow: 2px 2px #bf62a7
 }
 
 .intro .intro-body .brand-heading a: hover,
 .intro .intro-body .brand-heading a: focus{
     color: #000;
-    text-shadow: 2px 2px #5effd4;
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75);
     text-decoration: none
 }
 
@@ -556,7 +555,7 @@ blockquote p {
 }
 
 a{
-    color: #5effd4;
+    color: rgba(94, 255, 212, 0.75);
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out
@@ -565,7 +564,7 @@ a{
 a: hover, a: focus{
     text-decoration: none;
     color: #bf62a7;
-    text-shadow: 2px 2px #5effd4;
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75);
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -577,7 +576,7 @@ a: hover, a: focus{
 }
 
 i.ion-pound{
-    color: #5effd4;
+    color: rgba(94, 255, 212, 0.75);
     text-shadow: 2px 2px #bf62a7
 }
 
@@ -586,13 +585,13 @@ i.ion-pound: focus,
 a: hover i.ion-pound,
 a: focus i.ion-pound, {
     color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 .links a: hover,
 .links a: focus{
     color: #bf62a7!important;
-    border: 3px solid #5effd4;
+    border: 3px solid rgba(94, 255, 212, 0.75);
     display: inline-block;
     font-weight: bold;
     border-radius-radius: 5px
@@ -623,14 +622,14 @@ a: focus i.ion-pound, {
 
 ::-moz-selection{
     text-shadow: none;
-    background: #5effd4;
+    background: rgba(94, 255, 212, 0.75);
     background: rgba(94, 255, 212,
         .2)
 }
 
 ::selection{
     text-shadow: none;
-    background: #5effd4;
+    background: rgba(94, 255, 212, 0.75);
     background: rgba(94, 255, 212,
         .2)
 }
@@ -1057,27 +1056,27 @@ time{
 #resume a: focus,
 #resume a: hover, {
     color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 #resume ul li: focus,
 #resume ul li: hover{
     a{
       color: #bf62a7;
-      text-shadow: 2px 2px #5effd4
+      text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
   }
 }
 
 #resume i.ion-pound{
     color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 #resume i.ion-pound: hover,
 #resume i.ion-pound: focus,
 #resume a: hover i.ion-pound,
 #resume a: focus i.ion-pound, {
-    color: #5effd4;
+    color: rgba(94, 255, 212, 0.75);
     text-shadow: 2px 2px #bf62a7
 }
 
@@ -1087,7 +1086,7 @@ time{
 
 #resume h2 a: focus,
 #resume h2 a: hover{
-    color: #5effd4;
+    color: rgba(94, 255, 212, 0.75);
     text-shadow: 2px 2px #bf62a7
 }
 
@@ -1191,7 +1190,7 @@ footer{
 
 pre code::selection{
     color: #bf62a7;
-    text-shadow: 2px 2px #5effd4
+    text-shadow: 2px 2px rgba(94, 255, 212, 0.75)
 }
 
 #map{
