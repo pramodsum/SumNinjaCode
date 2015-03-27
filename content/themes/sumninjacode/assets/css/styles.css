@@ -177,6 +177,23 @@ a.navbar-brand:focus i.ion-pound{
   font-weight: bold;
 }
 
+ul.list-inline.nav.nav-pills.nav-stacked {
+  /*background: #333;*/
+  /*background: rgba(94, 255, 212, 0.5);*/
+  border-radius: 5px;
+}
+
+.nav>li>a {
+  color: black;
+  /*background: rgba(94, 255, 212, 0.5);*/
+}
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+  /*background: none;*/
+  /*text-shadow: 0 0 5px rgb(191,95,200);*/
+}
+
 .quote a:hover,
 .quote a:focus {
   color: black;
@@ -340,7 +357,7 @@ header {
 }
 
 .topics ul li a {
-  padding: 2px 4px;
+  padding: 4px;
 }
 
 .topics ul li {
@@ -589,6 +606,46 @@ blockquote p {
 }
 
 /*ABOUT*/
+
+/*SUBSCRIBE BOTTOM*/
+.subscribe-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 2%;
+  z-index: 15000;
+  background: rgba(94, 255, 212, 0.9);
+  padding: 10px;
+  margin-bottom: 0;
+  max-width: 250px;
+  border: 1px #000;
+  border-radius: 5px;
+}
+
+.subscribe-bottom>div {
+  border: 1px dashed grey;
+  border-color: rgba(124, 124, 124, 0.5);
+  padding: 10px;
+}
+
+.subscribe-bottom button.close {
+  right: 0;
+  top: -5px;
+  color: black;
+}
+
+.subscribe-bottom #mc-embedded-subscribe {
+  background: #333;
+  color: white;
+  border: none;
+  /*background: rgba(191,95,200, 1);*/
+}
+.subscribe-bottom #mc-embedded-subscribe:hover,
+.subscribe-bottom #mc-embedded-subscribe:focus {
+  background: rgba(191,95,200, 0.85);
+  color: black;
+  /*background: rgba(191,95,200, 1);*/
+}
+
 
 /*
 .intro{
