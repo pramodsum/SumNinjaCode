@@ -344,6 +344,10 @@ body {padding: 50px 0;}
   .topics ul.list-inline {padding-top: 20px;}
 }
 
+@media (max-width: 637px) {
+    div.subscribe-bottom { display: none; }
+}
+
 /*HEADER/SIDEBAR*/
 header {
   margin: auto;
